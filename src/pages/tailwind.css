@@ -1,6 +1,5 @@
 @tailwind base;
 @tailwind components;
-@tailwind utilities;
 
 body {
   -webkit-font-smoothing: antialiased;
@@ -10,3 +9,18 @@ body {
 .small-caps {
   font-variant-caps: all-small-caps;
 }
+
+.footer-clip-path {
+  clip-path: polygon(0 3vw,100% 0,100% 100%,0 100%);
+}
+
+.api-status {
+  @apply inline-flex items-center;
+}
+
+.api-status::before {
+  content: '';
+  @apply w-2 h-2 bg-green-200 bg-green-500 rounded-full mr-2; 
+}
+
+@tailwind utilities;

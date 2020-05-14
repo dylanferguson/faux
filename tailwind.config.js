@@ -7,6 +7,10 @@ module.exports = {
             secondary: '#79dbc0',
             ...defaultTheme.colors
         },
+        container: {
+            center: true,
+            padding: '0.5rem'
+        },
         extend: {
             fontFamily: {
                 sans: [
