@@ -7,7 +7,7 @@ type NavItemProps = {
 };
 
 const NavItem = ({ link, label }: NavItemProps) => (
-  <li className="list-none inline-block text-xl m-4 text-indigo-600 hover:text-indigo-800 small-caps">
+  <li className="list-none inline-block text-xl text-indigo-600 hover:text-indigo-800 transition ease-in duration-100 small-caps">
     <Link href={link}>
       <a>{label}</a>
     </Link>
@@ -16,7 +16,7 @@ const NavItem = ({ link, label }: NavItemProps) => (
 
 const NavMenu = () => (
   <nav>
-    <ol>
+    <ol className="space-x-6">
       <NavItem link="" label="Cards" />
       <NavItem link="" label="Blog" />
       <NavItem link="" label="Help" />
@@ -30,16 +30,16 @@ export const Header = () => (
       <Link href="/">
         <a
           href="/"
-          className="text-indigo-600 text-3xl font-bold leading-none small-caps"
+          className="text-indigo-600 italic text-3xl font-bold leading-none small-caps"
         >
-          Faux
+          Faux!
         </a>
         {/* <img src="" alt="Faux" /> */}
       </Link>
       <div className="flex items-center">
         <NavMenu />
-        <div className="ml-10">
-          <Button href="/login" secondary className="mr-3">
+        <div className="ml-10 space-x-3">
+          <Button href="/login" secondary>
             Sign up!
           </Button>
           <Button href="/login">Log in</Button>

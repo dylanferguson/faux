@@ -17,7 +17,7 @@ const primaryStyles =
   "text-white bg-indigo-500 hover:bg-indigo-600 active:bg-indigo-700";
 const secondaryStyles =
   "text-indigo-500 bg-white hover:text-indigo-400 active:text-indigo-800";
-const styles = (secondary: boolean, className?: string) =>
+const styles = (secondary = false, className?: string) =>
   classNames(
     commonStyles,
     secondary ? secondaryStyles : primaryStyles,
