@@ -1,5 +1,14 @@
 import Link from "next/link";
 import { ButtonLink as Button } from "../components/Button";
+import { useState } from "react";
+
+const Hamburger = () => (
+  <>
+    <span></span>
+    <span></span>
+    <span></span>
+  </>
+);
 
 type NavItemProps = {
   link: string;
@@ -24,27 +33,34 @@ const NavMenu = () => (
   </nav>
 );
 
-export const Header = () => (
-  <div className="w-full border-b border-gray-200">
-    <header className="mx-auto max-w-screen-xl flex justify-between items-center h-20">
-      <Link href="/">
-        <a
-          href="/"
-          className="text-indigo-600 italic text-3xl font-bold leading-none small-caps"
-        >
-          Faux!
-        </a>
-        {/* <img src="" alt="Faux" /> */}
-      </Link>
-      <div className="flex items-center">
-        <NavMenu />
-        <div className="ml-10 space-x-3">
-          <Button href="/login" secondary>
-            Sign up!
-          </Button>
-          <Button href="/login">Log in</Button>
-        </div>
-      </div>
-    </header>
-  </div>
+const MenuContent = () => (
+  <>
+    <NavMenu />
+    <div className="ml-10 space-x-3">
+      <Button href="/login" secondary>
+        Sign up!
+      </Button>
+      <Button href="/login">Log in</Button>
+    </div>
+  </>
 );
+
+export const Header = () => {
+  return (
+    <div className="sticky top-0 z-10 w-full border-b border-gray-200 bg-white">
+      <header className="container flex justify-between items-center h-20">
+        <Link href="/">
+          <a
+            href="/"
+            className="text-indigo-600 italic text-3xl font-bold leading-none small-caps"
+          >
+            Faux!
+          </a>
+        </Link>
+        <div className="items-center hidden sm:flex">
+          <MenuContent />
+        </div>
+      </header>
+    </div>
+  );
+};

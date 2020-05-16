@@ -1,6 +1,7 @@
 import Head from "next/head";
 
 import { Header } from "../components/Header";
+import { Hero } from "../components/Hero";
 import { Footer } from "../components/Footer";
 
 export default function Home() {
@@ -16,6 +17,7 @@ export default function Home() {
       </Head>
       <div className="flex flex-col min-h-screen">
         <Header />
+        <Hero />
         <main className="flex-1"></main>
         <Footer />
       </div>
