@@ -6,12 +6,62 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Brand stuff */
+.logo {
+  @apply text-indigo-600 italic text-3xl font-bold leading-none small-caps;
+}
+
+.btn-common {
+  @apply inline-block rounded cursor-pointer py-1 px-4 text-xl small-caps shadow transition ease-in duration-100;
+}
+
+.btn-common:hover {
+  @apply shadow-md;
+}
+
+.btn-primary {
+  @apply btn-common text-white bg-indigo-500;
+}
+
+.btn-primary:hover {
+  @apply bg-indigo-600;
+}
+
+.btn-primary:active {
+  @apply bg-indigo-700;
+}
+
+.btn-secondary {
+  @apply btn-common text-indigo-500 bg-white;
+}
+
+.btn-secondary:hover {
+  @apply text-indigo-400;
+}
+
+.btn-secondary:active {
+  @apply text-indigo-800;
+}
+
+/* Some utils Tailwind didn't have */
 .small-caps {
   font-variant-caps: all-small-caps;
 }
 
+/* Bulldozing browser default outlines */
+.focus-outline {
+  transition: box-shadow 0.2s ease-out;
+}
+
+.focus-outline:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(100, 149, 237, 0.25);
+}
+
+/* Component specific classes */
+/* --- Footer */
 .footer-clip-path {
-  clip-path: polygon(0 3vw,100% 0,100% 100%,0 100%);
+  clip-path: polygon(0 3vw, 100% 0, 100% 100%, 0 100%);
 }
 
 .api-status {
@@ -19,8 +69,8 @@ body {
 }
 
 .api-status::before {
-  content: '';
-  @apply w-2 h-2 bg-green-200 bg-green-500 rounded-full mr-2; 
+  content: "";
+  @apply w-2 h-2 bg-green-200 bg-green-500 rounded-full mr-2;
 }
 
 @tailwind utilities;

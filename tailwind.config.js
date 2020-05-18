@@ -7,6 +7,8 @@ module.exports = {
             secondary: '#79dbc0',
             ...defaultTheme.colors
         },
+        variants: {
+        },
         container: {
             center: true,
             padding: '0.5rem'

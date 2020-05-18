@@ -52,7 +52,7 @@ export const Header = () => {
         <Link href="/">
           <a
             href="/"
-            className="text-indigo-600 italic text-3xl font-bold leading-none small-caps"
+            className="logo"
           >
             Faux!
           </a>
