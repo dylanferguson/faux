@@ -1,20 +1,30 @@
 import { ButtonLink as Button, ButtonLink } from "./Button";
 
 export const Hero = () => (
-  <div className="bg-indigo-700">
-    <div className="container space-x-2">
-      <div className="w-1/2 text-white">
-        <p className="small-caps">Subtitle</p>
-        <h1>Hero Title</h1>
-        <p>Subtitle goes here whatever it is</p>
-        <div>
-          <ButtonLink href="">Go here</ButtonLink>
-          <ButtonLink href="">Go here</ButtonLink>
+  <div
+    className="pb-12 bg-indigo-700"
+    style={{
+      clipPath: "polygon(0 0, 100% 0, 100% calc(100% - 3vw), 0 100%)",
+    }}
+  >
+    <div className="container space-x-2 flex items-center">
+      <div className="px-4 py-6 w-full md:w-1/2 text-white my-10">
+        <p className="small-caps text-2xl">New!</p>
+        <h1 className="text-5xl sm:text-6xl leading-snug font-bold">Faux Card</h1>
+        <p className="text-2xl">A credit card for now</p>
+        <div className="my-6">
+          <ButtonLink href="" className="mr-3">
+            Apply now
+          </ButtonLink>
+          <ButtonLink secondary href="">
+            Find out more
+          </ButtonLink>
         </div>
       </div>
-      <div className="w-1/2">
-          <img src="/static/credit-card.png">
-          </img>
+      <div
+        className="w-1/2 hidden md:block"
+      >
+        <img src="/static/credit-card.png" className="mx-auto"></img>
       </div>
     </div>
   </div>
