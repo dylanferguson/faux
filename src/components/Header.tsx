@@ -50,9 +50,7 @@ export const Header = () => {
     <div className="sticky top-0 z-10 w-full border-b border-gray-200 bg-white">
       <header className="container flex justify-between items-center h-20">
         <Link href="/">
-          <a href="/" className="logo">
-            Faux!
-          </a>
+          <a href="/" className="logo"></a>
         </Link>
         <div className="items-center hidden sm:flex">
           <MenuContent />

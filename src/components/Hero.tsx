@@ -9,9 +9,9 @@ export const Hero = () => (
   >
     <div className="container space-x-2 flex items-center">
       <div className="px-4 py-6 w-full md:w-1/2 text-white my-10">
-        <p className="small-caps text-2xl">New!</p>
+        <div className="small-caps text-2xl">New!</div>
         <h1 className="text-5xl sm:text-6xl leading-snug font-bold">Faux Card</h1>
-        <p className="text-2xl">A credit card for now</p>
+        <div className="text-2xl">A credit card for now</div>
         <div className="my-6">
           <ButtonLink href="" className="mr-3">
             Apply now
