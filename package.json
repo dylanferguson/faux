@@ -14,12 +14,15 @@
     "react-dom": "16.13.1"
   },
   "devDependencies": {
+    "@contentful/rich-text-react-renderer": "^13.4.0",
     "@fullhuman/postcss-purgecss": "^2.2.0",
     "@next/bundle-analyzer": "^9.4.0",
     "@types/classnames": "^2.2.10",
     "@types/node": "^13.13.5",
     "@types/react": "^16.9.35",
     "autoprefixer": "^9.7.6",
+    "contentful": "^7.14.4",
+    "dotenv": "^8.2.0",
     "postcss-import": "^12.0.1",
     "postcss-preset-env": "^6.7.0",
     "tailwindcss": "^1.4.6",

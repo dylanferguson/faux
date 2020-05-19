@@ -1,5 +1,14 @@
+require("dotenv").config({ path: '.env.local'});
+
 const withBundleAnalyzer = require("@next/bundle-analyzer")({
   enabled: process.env.ANALYZE === "true",
 });
 
-module.exports = withBundleAnalyzer({});
+module.exports = withBundleAnalyzer({
+  env: {
+    CONTENTFUL_SPACE_ID: process.env.CONTENTFUL_SPACE_ID,
+    CONTENT_ACCESS_TOKEN: process.env.CONTENT_ACCESS_TOKEN,
+    CONTENTFUL_PREVIEW_ACCESS_TOKEN:
+      process.env.CONTENTFUL_PREVIEW_ACCESS_TOKEN,
+  },
+});
