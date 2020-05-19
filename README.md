@@ -9,6 +9,10 @@
     - /cards
     - /help
 - Model for fetching, parsing data: colocate with pages?
+    - Automated release note publishing: Publish changelog to Contentful, parsing the release notes via a [markdown parser](https://github.com/markdown-it/markdown-it)
+    - GraphQL could help cleanup the queries if they get annoying to manage
+- [Preview Mode](https://nextjs.org/docs/advanced-features/preview-mode)
+- Simplify [env var setup](https://nextjs.org/docs/api-reference/next.config.js/environment-variables)
 - Building out a component library:
     - Contentful Models
     - Generated types
