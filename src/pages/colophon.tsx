@@ -1,4 +1,4 @@
-import { Icon as UnstyledIcon, IconName } from "../components/Icon";
+import { Icon as UnstyledIcon, IconName } from "components/Icon";
 
 type IconProps = {
   id: IconName;

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ButtonLink as Button } from "../components/Button";
+import { ButtonLink as Button } from "components/Button";
 
 const Hamburger = () => (
   <>
