@@ -6,6 +6,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+::selection {
+  background: rgb(217, 235, 254);
+}
+
 /* Some utils Tailwind didn't have */
 .small-caps {
   font-variant-caps: all-small-caps;
