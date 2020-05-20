@@ -7,7 +7,7 @@ const withBundleAnalyzer = require("@next/bundle-analyzer")({
 module.exports = withBundleAnalyzer({
   env: {
     CONTENTFUL_SPACE_ID: process.env.CONTENTFUL_SPACE_ID,
-    CONTENT_ACCESS_TOKEN: process.env.CONTENT_ACCESS_TOKEN,
+    CONTENTFUL_ACCESS_TOKEN: process.env.CONTENTFUL_ACCESS_TOKEN,
     CONTENTFUL_PREVIEW_ACCESS_TOKEN:
       process.env.CONTENTFUL_PREVIEW_ACCESS_TOKEN,
   },
