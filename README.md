@@ -4,6 +4,9 @@
 
 - Pages:
     - /releaes-notes
+        - pagination: `/release-notes/page/2`
+        - fallback to `/release-notes` on `/release-notes/page/1`
+        - simplfieid views on index pages
     - /blog
     - /colophon
     - /cards
@@ -17,6 +20,7 @@
     - Contentful Models
     - Generated types
     - Documentation
+- Content sync and restore
 - Tests
 - CI
 - Deployment
