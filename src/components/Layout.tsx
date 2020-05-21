@@ -1,6 +1,6 @@
 import Head from "next/head";
 
-import { Header } from "components/Header";
+import { Nav } from "components/Nav";
 import { Footer } from "components/Footer";
 
 type LayoutProps = {
@@ -18,7 +18,7 @@ export const Layout = ({ children }: LayoutProps) => (
       />
     </Head>
     <div className="flex flex-col min-h-screen">
-      <Header />
+      <Nav />
       <main className="flex-1">{children}</main>
       <Footer />
     </div>

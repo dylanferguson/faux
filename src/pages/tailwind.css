@@ -86,59 +86,14 @@ body {
   @apply w-2 h-2 bg-green-200 bg-green-500 rounded-full mr-2;
 }
 
-/* Changelog -- */
-.changelog-tag::before {
-  @apply px-3 mb-2 small-caps rounded-md text-lg inline-block text-white;
+/* Release-Notes -- */
+.release-note ul {
+  @apply list-disc pl-6;
 }
 
-@screen md {
-  .changelog-tag::before {
-    @apply absolute;
-    background-color: rgb(217, 235, 254);
-    color: rgb(66, 86, 171);
-  }
-}
-
-.cl-features::before {
-  /* background-color: rgb(217, 235, 254);
-  color: rgb(66, 86, 171); */
-  content: "features";
-}
-
-.cl-fixes::before {
-  /* background-color: rgb(249, 227, 222);
-  color: rgb(152, 55, 82); */
-  content: "fixes";
-}
-
-.cl-enhancements::before {
-  /* background-color: rgb(211, 239, 201);
-  color: rgb(43, 94, 68); */
-  content: "enhancements";
-}
-
-.cl-performance::before {
-  /* background-color: rgb(245, 228, 187);
-  color: rgb(143, 65, 27); */
-  content: "performance";
-}
-
-@screen md {
-  .cl-features::before {
-    margin-left: -111px;
-  }
-
-  .cl-fixes::before {
-    margin-left: -79px;
-  }
-
-  .cl-enhancements::before {
-    margin-left: -158px;
-  }
-
-  .cl-performance::before {
-    margin-left: -147px;
-  }
+.release-note li {
+  @apply mb-2 pl-3 leading-normal;
+  max-width: 70ch;
 }
 
 @tailwind utilities;

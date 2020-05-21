@@ -1,7 +1,9 @@
+import moment from 'moment';
+
 type timeProps = {
-  dateString: string;
+  date: string;
 };
 
-export const Date = ({ dateString }: timeProps) => (
-  <time dateTime={dateString}>{dateString}</time>
+export const Date = ({ date }: timeProps) => (
+  <time dateTime={date}>{moment(date).format('MMMM D, YYYY')}</time>
 );
