@@ -3,23 +3,24 @@
 ## To Do
 
 - Pages:
-    - /releaes-notes
-        - pagination: `/release-notes/page/2`
-        - fallback to `/release-notes` on `/release-notes/page/1`
-        - simplfieid views on index pages
-    - /blog
-    - /colophon
-    - /cards
-    - /help
+  - /releaes-notes
+    - pagination: `/release-notes/page/2`
+    - fallback to `/release-notes` on `/release-notes/page/1`
+    - simplfieid views on index pages
+  - /blog
+  - /colophon
+  - /cards
+  - /help
+- Create SDK wrapper that filters all the extraneous junk that's returned with queries, and safely filters it down to the fields.
 - Model for fetching, parsing data: colocate with pages?
-    - Automated release note publishing: Publish changelog to Contentful, parsing the release notes via a [markdown parser](https://github.com/markdown-it/markdown-it)
-    - GraphQL could help cleanup the queries if they get annoying to manage
+  - Automated release note publishing: Publish changelog to Contentful, parsing the release notes via a [markdown parser](https://github.com/markdown-it/markdown-it)
+  - GraphQL could help cleanup the queries if they get annoying to manage
 - [Preview Mode](https://nextjs.org/docs/advanced-features/preview-mode)
 - Simplify [env var setup](https://nextjs.org/docs/api-reference/next.config.js/environment-variables)
 - Building out a component library:
-    - Contentful Models
-    - Generated types
-    - Documentation
+  - Contentful Models
+  - Generated types
+  - Documentation
 - Content sync and restore
 - Tests
 - CI
