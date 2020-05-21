@@ -3,23 +3,26 @@
 import { Asset, Entry } from "contentful";
 import { Document } from "@contentful/rich-text-types";
 
-export interface IReleaseFields {
+export interface IReleaseNoteFields {
+  /** Version */
+  version?: string | undefined;
+
+  /** Category */
+  category: "Marketing Site" | "App" | "SDK" | "Open Banking API";
+
   /** Release Date */
   releaseDate: string;
-
-  /** Version */
-  version: string;
 
   /** Description */
   description?: string | undefined;
 
-  /** contents */
-  contents?: Record<string, any> | undefined;
+  /** scope */
+  scope?:
+    | ("bug fixes" | "enhancements" | "performance" | "security" | "features")[]
+    | undefined;
 }
 
-/** Details of a release, including version, date and what it contains sorted between features / fixes / enhancements / performance */
-
-export interface IRelease extends Entry<IReleaseFields> {
+export interface IReleaseNote extends Entry<IReleaseNoteFields> {
   sys: {
     id: string;
     type: string;
@@ -28,7 +31,7 @@ export interface IRelease extends Entry<IReleaseFields> {
     locale: string;
     contentType: {
       sys: {
-        id: "release";
+        id: "releaseNote";
         linkType: "ContentType";
         type: "Link";
       };
@@ -36,7 +39,7 @@ export interface IRelease extends Entry<IReleaseFields> {
   };
 }
 
-export type CONTENT_TYPE = "release";
+export type CONTENT_TYPE = "releaseNote";
 
 export type LOCALE_CODE = "en-US";
 
