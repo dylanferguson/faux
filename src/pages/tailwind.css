@@ -93,7 +93,6 @@ body {
 
 .release-note li {
   @apply mb-2 pl-3 leading-normal;
-  max-width: 70ch;
 }
 
 @tailwind utilities;

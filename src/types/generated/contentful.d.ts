@@ -5,7 +5,7 @@ import { Document } from "@contentful/rich-text-types";
 
 export interface IReleaseNoteFields {
   /** Version */
-  version?: string | undefined;
+  version: string;
 
   /** Category */
   category: "Marketing Site" | "App" | "SDK" | "Open Banking API";
@@ -16,10 +16,14 @@ export interface IReleaseNoteFields {
   /** Description */
   description?: string | undefined;
 
-  /** scope */
-  scope?:
-    | ("bug fixes" | "enhancements" | "performance" | "security" | "features")[]
-    | undefined;
+  /** Scope */
+  scope: (
+    | "bug fixes"
+    | "enhancements"
+    | "performance"
+    | "security"
+    | "features"
+  )[];
 }
 
 export interface IReleaseNote extends Entry<IReleaseNoteFields> {

@@ -11,7 +11,6 @@ export const Header = ({ title, children }: HeaderProps) => (
           <strong className="header-stripe">{title}</strong>
         </h1>
         <div className="text-2xl">
-          <span className="logo inline-block pr-1"></span>
           {children}
         </div>
       </div>
