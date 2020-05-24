@@ -7,7 +7,7 @@ import { Header } from "components/Header";
 import { Icon } from "components/Icon";
 import Link from "next/link";
 
-// Featured release, more prominent in the header https://www.abstract.com/release-notes/
+// New release, more prominent in the header https://www.abstract.com/release-notes/
 type PageLinkProps = {
   page: number;
   newer?: boolean;
@@ -36,6 +36,7 @@ type ReleaseNotePageProps = {
   total: number;
 };
 
+// Good candidate for a reusable pagination component
 export default ({ data, page, total }: ReleaseNotePageProps) => (
   <div className="mb-24">
     <Header title="Release Notes">

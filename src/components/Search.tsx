@@ -54,7 +54,6 @@ export const Search = ({ className }: SearchProps) => {
     search(currentQuery).then(({ hits }) => {
       setResults(hits);
       setLoading(false);
-      console.log(hits);
     });
   };
 
@@ -79,6 +78,9 @@ export const Search = ({ className }: SearchProps) => {
           text-xl py-4 px-4 text-gray-700 leading-tight focus-outline"
             placeholder="Big Friendly Search"
             onChange={handleChange}
+            onBlur={() => {
+              setQuery("");
+            }}
           />
           <Icon
             className="absolute right-0 w-10 h-10 z-10 mr-3 pointer-events-none fill-current text-gray-300 hover:opacity-75"

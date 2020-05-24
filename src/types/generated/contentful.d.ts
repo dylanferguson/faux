@@ -28,6 +28,34 @@ export interface IAuthor extends Entry<IAuthorFields> {
   };
 }
 
+export interface IFaqFields {
+  /** Question */
+  question: string;
+
+  /** Answer */
+  answer: string;
+
+  /** Category */
+  category: ("general" | "credit cards")[];
+}
+
+export interface IFaq extends Entry<IFaqFields> {
+  sys: {
+    id: string;
+    type: string;
+    createdAt: string;
+    updatedAt: string;
+    locale: string;
+    contentType: {
+      sys: {
+        id: "faq";
+        linkType: "ContentType";
+        type: "Link";
+      };
+    };
+  };
+}
+
 export interface IPostFields {
   /** Title */
   title: string;
@@ -111,7 +139,7 @@ export interface IReleaseNote extends Entry<IReleaseNoteFields> {
   };
 }
 
-export type CONTENT_TYPE = "author" | "post" | "releaseNote";
+export type CONTENT_TYPE = "author" | "faq" | "post" | "releaseNote";
 
 export type LOCALE_CODE = "en-US";
 

@@ -25,7 +25,7 @@ const NavItem = ({ link, label }: NavItemProps) => (
 const NavMenu = () => (
   <nav>
     <ol className="space-x-6">
-      <NavItem link="/release-notes/page/1" label="Release Notes" />
+      <NavItem link="/release-notes" label="Release Notes" />
       <NavItem link="/cards" label="Cards" />
       <NavItem link="/blog" label="Blog" />
       <NavItem link="/help" label="Help!" />
@@ -47,7 +47,7 @@ const MenuContent = () => (
 
 export const Nav = () => {
   return (
-    <div className="sticky top-0 z-10 w-full border-b border-gray-200 bg-white">
+    <div className="sticky top-0 z-10 w-full border-b border-gray-200 bg-white z-50">
       <header className="container flex justify-between items-center h-20">
         <Link href="/">
           <a href="/" className="logo"></a>

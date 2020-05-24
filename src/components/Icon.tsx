@@ -27,6 +27,14 @@ const icons: Icons = {
       );
     },
   },
+  chevronDown: {
+    label: "Chevron-Down",
+    data() {
+      return (
+        <path d="M17.418 6.109a.697.697 0 01.979 0 .68.68 0 010 .969l-7.908 7.83a.697.697 0 01-.979 0l-7.908-7.83a.68.68 0 010-.969.697.697 0 01.979 0L10 13.25l7.418-7.141z" />
+      );
+    },
+  },
   magnifyingGlass: {
     label: "Magnifying glass",
     data() {
@@ -138,4 +146,3 @@ export const Icon = ({ id, className, style }: IconProps) => (
     {icons[id].data()}
   </svg>
 );
- 
