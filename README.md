@@ -2,20 +2,13 @@
 
 ## To Do
 
-- Rebrand to Phở? pho.rodeo is available…
 - Pages:
-  - /releaes-notes
-    - pagination: `/release-notes/page/2`
-    - fallback to `/release-notes` on `/release-notes/page/1`
-    - simplfieid views on index pages
-  - /blog
-  - /colophon
-  - /cards
-  - /help
-- Create SDK wrapper that filters all the extraneous junk that's returned with queries, and safely filters it down to the fields.
-- Model for fetching, parsing data: colocate with pages?
-  - Automated release note publishing: Publish changelog to Contentful, parsing the release notes via a [markdown parser](https://github.com/markdown-it/markdown-it)
-  - GraphQL could help cleanup the queries if they get annoying to manage
+  - /blog:
+    - Text styles: https://github.com/zeit/next.js/blob/canary/examples/cms-contentful/components/markdown-styles.module.css
+    - Post business case in parts
+  - /cards: Abstract content => View
+  - /slug: Assemble blocks => View
+- Organise components in an Atomic design system
 - [Preview Mode](https://nextjs.org/docs/advanced-features/preview-mode)
 - Simplify [env var setup](https://nextjs.org/docs/api-reference/next.config.js/environment-variables)
 - Building out a component library:
@@ -26,16 +19,7 @@
 - Tests
 - CI
 - Deployment
-- Logo
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/zeit/next.js/) - your feedback and contributions are welcome!
+- Fork => Phở? => pho.rodeo, implement with DatoCMS
 
 ## Deploy on Vercel
 
