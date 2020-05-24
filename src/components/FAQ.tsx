@@ -32,7 +32,7 @@ export const FAQ = ({ question, children }: FAQProps) => {
       </h3>
       <p
         className={classNames(
-          "transition-all duration-300 linear text-gray-700 leading-normal text-xl leading-relaxed mt-2",
+          "transition-all duration-300 ease-in-out text-gray-700 leading-normal text-xl leading-relaxed mt-2",
           { "opacity-0": !open }
         )}
         style={{ maxHeight: open ? "400px" : "0" }}

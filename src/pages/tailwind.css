@@ -29,6 +29,19 @@ body {
   box-shadow: 0 0 0 3px rgba(100, 149, 237, 0.5);
 }
 
+/* Post -- text styles */
+article {
+  @apply text-gray-800 leading-relaxed;
+}
+
+article p {
+  @apply mb-8;
+}
+
+article h2 {
+  @apply font-semibold text-3xl mt-12 mb-2;
+}
+
 /* Brand stuff */
 .logo {
   @apply text-indigo-600 italic text-3xl font-bold leading-none small-caps;
@@ -97,6 +110,11 @@ body {
 
 .release-note li {
   @apply mb-2 pl-3 leading-normal;
+}
+
+/* Post -- */
+.post-hero:before {
+  background: linear-gradient(rgba(76, 81, 191, 0.7), rgba(102, 126, 234, 0.7));
 }
 
 @tailwind utilities;

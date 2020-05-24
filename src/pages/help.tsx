@@ -5,7 +5,6 @@ import { client } from "lib/contentful";
 import { IFaqFields } from "types/generated/contentful";
 import { EntryCollection } from "contentful";
 import { FAQ } from "components/FAQ";
-import marked from "marked";
 
 type HelpProps = {
   faqs: IFaqFields[];
