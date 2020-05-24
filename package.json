@@ -6,10 +6,13 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "contentful:generate-types": "contentful-typescript-codegen --output src/types/generated/contentful.d.ts "
+    "contentful:generate-types": "contentful-typescript-codegen --output src/types/generated/contentful.d.ts ",
+    "generate-barrels": "barrelsby --delete --directory './src/components'"
   },
   "dependencies": {
+    "algoliasearch": "^4.2.0",
     "classnames": "^2.2.6",
+    "instantsearch.js": "^4.5.0",
     "marked": "^1.1.0",
     "moment": "^2.26.0",
     "next": "9.4.0",
@@ -20,11 +23,13 @@
     "@contentful/rich-text-react-renderer": "^13.4.0",
     "@fullhuman/postcss-purgecss": "^2.2.0",
     "@next/bundle-analyzer": "^9.4.0",
+    "@types/algoliasearch": "^3.34.10",
     "@types/classnames": "^2.2.10",
     "@types/marked": "^0.7.4",
     "@types/node": "^13.13.5",
     "@types/react": "^16.9.35",
     "autoprefixer": "^9.7.6",
+    "barrelsby": "^2.2.0",
     "contentful": "^7.14.4",
     "contentful-management": "^5.26.3",
     "contentful-typescript-codegen": "^3.2.1",

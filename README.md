@@ -2,6 +2,7 @@
 
 ## To Do
 
+- Rebrand to Phở? pho.rodeo is available…
 - Pages:
   - /releaes-notes
     - pagination: `/release-notes/page/2`
