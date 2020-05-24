@@ -9,7 +9,7 @@ export default ReleaseNote;
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   const entries: EntryCollection<IReleaseNoteFields> = await client.getEntries({
     content_type: "releaseNote",
-    "fields.version[in]": params?.version?.slice(1),
+    "fields.version[in]": params?.version,
     limit: 1,
   });
 
@@ -28,7 +28,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
   return {
     paths: entries.items.map(
-      ({ fields }) => `/release-notes/v${fields.version}`
+      ({ fields }) => `/release-notes/${fields.version}`
     ),
     fallback: false,
   };

@@ -25,10 +25,10 @@ const NavItem = ({ link, label }: NavItemProps) => (
 const NavMenu = () => (
   <nav>
     <ol className="space-x-6">
-      <NavItem link="/release-notes" label="Release Notes" />
+      <NavItem link="/release-notes/page/1" label="Release Notes" />
       <NavItem link="/cards" label="Cards" />
       <NavItem link="/blog" label="Blog" />
-      <NavItem link="/help" label="Help" />
+      <NavItem link="/help" label="Help!" />
     </ol>
   </nav>
 );

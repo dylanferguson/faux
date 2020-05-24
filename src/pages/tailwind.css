@@ -31,7 +31,7 @@ body {
 }
 
 .logo::before {
-  content: "Faux!";
+  content: "Phở!";
 }
 
 .header-stripe {

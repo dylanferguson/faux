@@ -73,8 +73,6 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     order: "-sys.createdAt",
   });
 
-  console.log(entries);
-
   return {
     props: {
       data: entries.items,
