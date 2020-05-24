@@ -3,6 +3,74 @@
 import { Asset, Entry } from "contentful";
 import { Document } from "@contentful/rich-text-types";
 
+export interface IAuthorFields {
+  /** Name */
+  name: string;
+
+  /** Avatar */
+  avatar?: Asset | undefined;
+}
+
+export interface IAuthor extends Entry<IAuthorFields> {
+  sys: {
+    id: string;
+    type: string;
+    createdAt: string;
+    updatedAt: string;
+    locale: string;
+    contentType: {
+      sys: {
+        id: "author";
+        linkType: "ContentType";
+        type: "Link";
+      };
+    };
+  };
+}
+
+export interface IPostFields {
+  /** Title */
+  title: string;
+
+  /** Slug */
+  slug: string;
+
+  /** Publish Date */
+  publishDate: string;
+
+  /** Tags */
+  tags?: ("Engineering" | "Marketing")[] | undefined;
+
+  /** Hero Image */
+  heroImage?: Asset | undefined;
+
+  /** Description */
+  description?: string | undefined;
+
+  /** Body */
+  body: Document;
+
+  /** Author */
+  author: IAuthor;
+}
+
+export interface IPost extends Entry<IPostFields> {
+  sys: {
+    id: string;
+    type: string;
+    createdAt: string;
+    updatedAt: string;
+    locale: string;
+    contentType: {
+      sys: {
+        id: "post";
+        linkType: "ContentType";
+        type: "Link";
+      };
+    };
+  };
+}
+
 export interface IReleaseNoteFields {
   /** Version */
   version: string;
@@ -43,7 +111,7 @@ export interface IReleaseNote extends Entry<IReleaseNoteFields> {
   };
 }
 
-export type CONTENT_TYPE = "releaseNote";
+export type CONTENT_TYPE = "author" | "post" | "releaseNote";
 
 export type LOCALE_CODE = "en-US";
 
