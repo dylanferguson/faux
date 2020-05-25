@@ -1,0 +1,19 @@
+/* Post -- text styles */
+.article {
+  @apply text-gray-800 text-lg leading-relaxed;
+}
+
+.article p,
+.article ul,
+.article ol,
+.article blockquote {
+  @apply mb-8;
+}
+
+.article h2 {
+  @apply font-semibold text-3xl mt-12 mb-4 leading-snug;
+}
+
+.article h3 {
+  @apply font-semibold text-2xl mt-8 mb-4 leading-snug;
+}

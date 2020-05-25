@@ -4,6 +4,8 @@ import { client, richTextRender } from "lib/contentful";
 import { IPostFields } from "types/generated/contentful";
 import { EntryCollection } from "contentful";
 import { PostHero } from "components/Post";
+import postStyles from "components/Post.module.css";
+import classNames from "classnames";
 
 export default ({
   title,
@@ -25,7 +27,12 @@ export default ({
         publishDate={publishDate}
         author={author}
       />
-      <article className="container mx-auto my-24 space-y-8 text-xl text-gray-900">
+      <article
+        className={classNames(
+          "container mx-auto my-24 space-y-8 text-xl text-gray-900",
+          postStyles.article
+        )}
+      >
         <div className="mx-auto" style={{ maxWidth: "65ch" }}>
           {richTextRender(body)}
         </div>

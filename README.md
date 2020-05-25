@@ -4,7 +4,7 @@
 
 - Pages:
   - /blog:
-    - Text styles: https://github.com/zeit/next.js/blob/canary/examples/cms-contentful/components/markdown-styles.module.css
+    - Index page
     - Post business case in parts
   - /cards: Abstract content => View
   - /slug: Assemble blocks => View
@@ -13,7 +13,6 @@
 - Simplify [env var setup](https://nextjs.org/docs/api-reference/next.config.js/environment-variables)
 - Building out a component library:
   - Contentful Models
-  - Generated types
   - Documentation
 - Content sync and restore
 - Tests
