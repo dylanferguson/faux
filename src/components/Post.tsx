@@ -15,8 +15,11 @@ export const PostHero = ({
   author,
 }: PostHeroProps) => (
   <div
-    className="py-20 relative flex bg-indigo-600"
-    style={{ minHeight: "480px" }}
+    className="py-20 relative flex"
+    style={{
+      minHeight: "480px",
+      background: "linear-gradient(45deg, #4c51bf, #667eea)",
+    }}
   >
     <div className="container mx-auto flex z-10">
       <div className="sm:w-3/5 flex flex-col justify-center items-start">

@@ -47,6 +47,30 @@ body {
   line-height: 1em;
 }
 
+.group .hover-stripe {
+  transition: all ease-in-out 0.1s;
+  background-size: 0% 0.6em;
+  background-position: 0 70%;
+}
+
+.group:hover .hover-stripe {
+  background-image: linear-gradient(120deg, #a3bffa, #7f9cf5);
+  background-repeat: no-repeat;
+  background-size: 100% 0.6em;
+  background-position: 0 70%;
+}
+
+.gradient-text {
+  background-image: linear-gradient(45deg, #667eea, #7f9cf5);
+  background-size: 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  text-fill-color: transparent;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
 .btn {
   @apply inline-block rounded cursor-pointer py-1 px-4 text-xl small-caps shadow transition ease-in duration-100 focus-outline;
 }

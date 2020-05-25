@@ -48,7 +48,10 @@ export const Footer = () => (
   <>
     <footer
       className="bg-indigo-700"
-      style={{ clipPath: "polygon(0 3vw, 100% 0, 100% 100%, 0 100%)" }}
+      style={{
+        clipPath: "polygon(0 3vw, 100% 0, 100% 100%, 0 100%)",
+        background: "linear-gradient(#667eea, #4c51bf)",
+      }}
     >
       <div className="my-20 container pt-12 sm:pt-24">
         <nav className="flex flex-wrap">

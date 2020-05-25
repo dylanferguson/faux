@@ -20,7 +20,7 @@ export const ReleaseNote = ({
   <article className="container text-gray-800 my-16">
     <div className="mx-3 sm:w-2/3 sm:mx-auto">
       <h2 className="text-4xl sm:text-5xl font-semibold leading-snug">
-        <Link href={`/release-notes/${version}`}>
+        <Link href="/release-notes/[version]" as={`/release-notes/${version}`}>
           <a>{version}</a>
         </Link>
       </h2>
