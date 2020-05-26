@@ -3,14 +3,21 @@ import { client } from "lib/contentful";
 import { IPageFields, IPage } from "types/generated/contentful";
 import { EntryCollection } from "contentful";
 import Head from "next/head";
+import { Hero } from "components/blocks";
 
-export default ({ pageTitle }: IPageFields) => {
+export default ({ pageTitle, content }: IPageFields) => {
   return (
-    <div>
+    <>
       <Head>
         <title>{pageTitle} | Faux</title>
       </Head>
-    </div>
+      <div>
+        {content.map((block) => (
+          // <div>{block.sys.contentType.sys.id}</div>
+          <Hero key={block.sys.id} {...block.fields} />
+        ))}
+      </div>
+    </>
   );
 };
 
@@ -18,6 +25,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   const slug = params?.slug as string[];
   const entries: EntryCollection<IPageFields> = await client.getEntries({
     content_type: "page",
+    include: 10,
     "fields.slug[in]": "/" + slug.join("/"),
   });
 

@@ -2,22 +2,20 @@
 
 ## To Do
 
+- Dynamic block component
 - Pages:
-  - /blog:
-    - Index page
-    - Post business case in parts
   - /cards: Abstract content => View
   - /slug: Assemble blocks => View
-- Organise components in an Atomic design system
 - [Preview Mode](https://nextjs.org/docs/advanced-features/preview-mode)
 - Simplify [env var setup](https://nextjs.org/docs/api-reference/next.config.js/environment-variables)
+- Post business case in parts
 - Building out a component library:
   - Contentful Models
   - Documentation
 - Content sync and restore
 - Tests
 - CI
-- Deployment
+- Deployment: GCP
 - Fork => Phở? => pho.rodeo, implement with DatoCMS
 - [Make README good](https://www.makeareadme.com/)
 

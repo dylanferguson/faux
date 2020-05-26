@@ -30,13 +30,13 @@ export interface IAuthor extends Entry<IAuthorFields> {
 
 export interface IButtonFields {
   /** Button Text */
-  buttonText?: string | undefined;
+  buttonText: string;
 
   /** Link */
-  link?: string | undefined;
+  link: string;
 
   /** Secondary */
-  secondary?: boolean | undefined;
+  secondary: boolean;
 }
 
 export interface IButton extends Entry<IButtonFields> {
