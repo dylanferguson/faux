@@ -2,7 +2,7 @@ import React from "react";
 import App from "next/app";
 import "./tailwind.css";
 
-import { Layout } from "components/Layout";
+import { Layout } from "components/organisms/Layout";
 
 // TODO: Relay to analytics provider
 // https://nextjs.org/docs/advanced-features/measuring-performance

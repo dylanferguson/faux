@@ -1,4 +1,4 @@
-import { ButtonLink as Button, ButtonLink } from "./Button";
+import { ButtonLink } from "components/atoms";
 
 export const Hero = () => (
   <div
@@ -10,7 +10,9 @@ export const Hero = () => (
     <div className="container space-x-2 flex items-center">
       <div className="px-4 py-6 w-full md:w-1/2 text-white my-10">
         <div className="small-caps text-2xl">New!</div>
-        <h1 className="text-5xl sm:text-6xl leading-snug font-bold">Faux Card</h1>
+        <h1 className="text-5xl sm:text-6xl leading-snug font-bold">
+          All-New Faux Card
+        </h1>
         <div className="text-2xl">A credit card for now</div>
         <div className="my-6">
           <ButtonLink href="" className="mr-3">
@@ -21,9 +23,7 @@ export const Hero = () => (
           </ButtonLink>
         </div>
       </div>
-      <div
-        className="w-1/2 hidden md:block"
-      >
+      <div className="w-1/2 hidden md:block">
         <img src="/static/credit-card.png" className="mx-auto"></img>
       </div>
     </div>

@@ -1,15 +1,6 @@
 import Link from "next/link";
-import { useState } from "react";
 import { useRouter } from "next/router";
 
-/**
- * Trying out an uncontrolled form.
- * https://www.swyx.io/writing/no-controlled-forms/
- * https://www.youtube.com/watch?v=X51J2KyPxL4
- * https://github.com/react-hook-form/react-hook-form
- * https://reactjs.org/docs/uncontrolled-components.html
- * https://goshakkk.name/controlled-vs-uncontrolled-inputs-react/
- */
 const Login = () => {
   const router = useRouter();
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>): boolean => {

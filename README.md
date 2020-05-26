@@ -19,6 +19,7 @@
 - CI
 - Deployment
 - Fork => Phở? => pho.rodeo, implement with DatoCMS
+- [Make README good](https://www.makeareadme.com/)
 
 ## Deploy on Vercel
 

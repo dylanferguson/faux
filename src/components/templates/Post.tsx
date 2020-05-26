@@ -1,19 +1,12 @@
 import { IPostFields } from "types/generated/contentful";
-import { Date } from "components/Date";
-import { Avatar } from "components/Avatar";
+import { Avatar } from "components/atoms";
 
 type PostHeroProps = Pick<
   IPostFields,
   "title" | "heroImage" | "tags" | "publishDate" | "author"
 >;
 
-export const PostHero = ({
-  title,
-  heroImage,
-  tags,
-  publishDate,
-  author,
-}: PostHeroProps) => (
+export const PostHero = ({ title, heroImage, tags, author }: PostHeroProps) => (
   <div
     className="py-20 relative flex"
     style={{

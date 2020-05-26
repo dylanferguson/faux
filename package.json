@@ -8,7 +8,7 @@
     "start": "next start",
     "contentful:generate-types": "contentful-typescript-codegen --output src/types/generated/contentful.d.ts ",
     "contentful:export-content": "exit 1",
-    "generate-barrels": "barrelsby --delete --directory './src/components'"
+    "generate-barrels": "barrelsby --delete --directory './src/components' --location below"
   },
   "dependencies": {
     "@contentful/rich-text-html-renderer": "^13.4.0",

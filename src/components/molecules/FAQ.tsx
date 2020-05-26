@@ -1,7 +1,7 @@
 import { useState } from "react";
 import classNames from "classnames";
 
-import { Icon } from "components/Icon";
+import { Icon } from "components/atoms";
 
 type FAQProps = {
   question: string;

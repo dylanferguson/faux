@@ -1,5 +1,5 @@
 import classNames from "classnames";
-import { Icon } from "components/Icon";
+import { Icon } from "components/atoms";
 import { useCallback, useState } from "react";
 import { search } from "lib/algolia";
 

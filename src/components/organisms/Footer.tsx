@@ -1,6 +1,6 @@
 import className from "classnames";
 import Link from "next/link";
-import { Icon, IconName } from "components/Icon";
+import { Icon, IconName } from "components/atoms";
 
 type FooterMenuProps = {
   title: string;

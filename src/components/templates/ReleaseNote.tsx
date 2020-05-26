@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Date } from "components/Date";
+import { Date } from "components/atoms";
 import { IReleaseNoteFields } from "types/generated/contentful";
 import marked from "marked";
 

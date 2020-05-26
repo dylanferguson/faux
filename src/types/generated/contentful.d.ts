@@ -28,6 +28,77 @@ export interface IAuthor extends Entry<IAuthorFields> {
   };
 }
 
+export interface IButtonFields {
+  /** Button Text */
+  buttonText?: string | undefined;
+
+  /** Link */
+  link?: string | undefined;
+
+  /** Secondary */
+  secondary?: boolean | undefined;
+}
+
+export interface IButton extends Entry<IButtonFields> {
+  sys: {
+    id: string;
+    type: string;
+    createdAt: string;
+    updatedAt: string;
+    locale: string;
+    contentType: {
+      sys: {
+        id: "button";
+        linkType: "ContentType";
+        type: "Link";
+      };
+    };
+  };
+}
+
+export interface ICreditCardFields {
+  /** Card Name */
+  cardName: string;
+
+  /** Category */
+  category: "Rewards" | "Qantas Rewards" | "Low Annual Fee" | "Low Rate";
+
+  /** Special Offers */
+  specialOffers?: ISpecialOffer[] | undefined;
+
+  /** Standard Purchase Rate */
+  standardPurchaseRate: number;
+
+  /** Cash Advance Rate */
+  cashAdvanceRate: number;
+
+  /** Card Fee */
+  cardFee?: number | undefined;
+
+  /** Interest Free Days */
+  interestFreeDays: number;
+
+  /** Minimum Credit Limit */
+  minimumCreditLimit: number;
+}
+
+export interface ICreditCard extends Entry<ICreditCardFields> {
+  sys: {
+    id: string;
+    type: string;
+    createdAt: string;
+    updatedAt: string;
+    locale: string;
+    contentType: {
+      sys: {
+        id: "creditCard";
+        linkType: "ContentType";
+        type: "Link";
+      };
+    };
+  };
+}
+
 export interface IFaqFields {
   /** Question */
   question: string;
@@ -49,6 +120,68 @@ export interface IFaq extends Entry<IFaqFields> {
     contentType: {
       sys: {
         id: "faq";
+        linkType: "ContentType";
+        type: "Link";
+      };
+    };
+  };
+}
+
+export interface IHeroFields {
+  /** Title */
+  title: string;
+
+  /** Subtitle */
+  subtitle?: string | undefined;
+
+  /** Accent Text */
+  accentText?: string | undefined;
+
+  /** Buttons */
+  buttons?: IButton[] | undefined;
+
+  /** Image */
+  image?: Asset | undefined;
+}
+
+export interface IHero extends Entry<IHeroFields> {
+  sys: {
+    id: string;
+    type: string;
+    createdAt: string;
+    updatedAt: string;
+    locale: string;
+    contentType: {
+      sys: {
+        id: "hero";
+        linkType: "ContentType";
+        type: "Link";
+      };
+    };
+  };
+}
+
+export interface IPageFields {
+  /** Page Title */
+  pageTitle: string;
+
+  /** Slug */
+  slug: string;
+
+  /** Content */
+  content: IHero[];
+}
+
+export interface IPage extends Entry<IPageFields> {
+  sys: {
+    id: string;
+    type: string;
+    createdAt: string;
+    updatedAt: string;
+    locale: string;
+    contentType: {
+      sys: {
+        id: "page";
         linkType: "ContentType";
         type: "Link";
       };
@@ -139,7 +272,41 @@ export interface IReleaseNote extends Entry<IReleaseNoteFields> {
   };
 }
 
-export type CONTENT_TYPE = "author" | "faq" | "post" | "releaseNote";
+export interface ISpecialOfferFields {
+  /** Title */
+  title?: string | undefined;
+
+  /** details */
+  details?: string | undefined;
+}
+
+export interface ISpecialOffer extends Entry<ISpecialOfferFields> {
+  sys: {
+    id: string;
+    type: string;
+    createdAt: string;
+    updatedAt: string;
+    locale: string;
+    contentType: {
+      sys: {
+        id: "specialOffer";
+        linkType: "ContentType";
+        type: "Link";
+      };
+    };
+  };
+}
+
+export type CONTENT_TYPE =
+  | "author"
+  | "button"
+  | "creditCard"
+  | "faq"
+  | "hero"
+  | "page"
+  | "post"
+  | "releaseNote"
+  | "specialOffer";
 
 export type LOCALE_CODE = "en-US";
 

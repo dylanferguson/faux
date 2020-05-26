@@ -1,4 +1,4 @@
-import { ReleaseNote } from "components/ReleaseNote";
+import { ReleaseNote } from "components/templates";
 import { GetStaticProps, GetStaticPaths } from "next";
 import { client } from "lib/contentful";
 import { IReleaseNoteFields } from "types/generated/contentful";

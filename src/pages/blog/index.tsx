@@ -3,8 +3,7 @@ import { client } from "lib/contentful";
 import { IPost, IPostFields } from "types/generated/contentful";
 import { EntryCollection } from "contentful";
 import Link from "next/link";
-import { Header } from "components/Header";
-import { Date } from "components/Date";
+import { Header } from "components/organisms";
 
 type BlogIndexProps = {
   data: IPostFields[];
@@ -42,10 +41,8 @@ export default ({ data }: BlogIndexProps) => (
 export const getStaticProps: GetStaticProps = async () => {
   const entries: EntryCollection<IPost> = await client.getEntries({
     content_type: "post",
-    select: "fields",
+    select: "fields.tags,fields.slug,fields.title,fields.description",
   });
-
-  console.log(entries.items);
 
   return {
     props: {

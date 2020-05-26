@@ -2,9 +2,9 @@ import { GetStaticProps, GetStaticPaths } from "next";
 import { client } from "lib/contentful";
 import { IReleaseNoteFields, IReleaseNote } from "types/generated/contentful";
 import { EntryCollection } from "contentful";
-import { ReleaseNote } from "components/ReleaseNote";
-import { Header } from "components/Header";
-import { Icon } from "components/Icon";
+import { ReleaseNote } from "components/templates";
+import { Header } from "components/organisms";
+import { Icon } from "components/atoms";
 import Link from "next/link";
 
 // New release, more prominent in the header https://www.abstract.com/release-notes/

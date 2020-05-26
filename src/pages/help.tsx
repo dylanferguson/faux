@@ -1,10 +1,9 @@
-import { Search as SearchBar } from "components/Search";
-import { HeaderTitle } from "components/Header";
+import { Search as SearchBar, FAQ } from "components/molecules";
+import { HeaderTitle } from "components/organisms";
 import { GetStaticProps } from "next";
 import { client } from "lib/contentful";
 import { IFaqFields } from "types/generated/contentful";
 import { EntryCollection } from "contentful";
-import { FAQ } from "components/FAQ";
 
 type HelpProps = {
   faqs: IFaqFields[];
