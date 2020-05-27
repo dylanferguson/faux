@@ -1,11 +1,9 @@
 import { GetStaticProps, GetStaticPaths } from "next";
 import { client } from "lib/contentful";
-import { IPageFields, IPage } from "types/generated/contentful";
+import { IPageFields } from "types/generated/contentful";
 import { EntryCollection } from "contentful";
 import Head from "next/head";
-import dynamic from "next/dynamic";
-
-const capitalise = (str: string) => str.charAt(0).toUpperCase() + str.slice(1);
+import { Block } from "components/blocks";
 
 export default ({ pageTitle, content }: IPageFields) => {
   return (
@@ -14,14 +12,13 @@ export default ({ pageTitle, content }: IPageFields) => {
         <title>{pageTitle} | Faux</title>
       </Head>
       <div>
-        {content.map((block) => {
-          const Block = dynamic(() =>
-            import(
-              `components/blocks/${capitalise(block.sys.contentType.sys.id)}`
-            )
-          );
-          return <Block key={block.sys.id} {...block.fields} />;
-        })}
+        {content.map((block) => (
+          <Block
+            key={block.sys.id}
+            id={block.sys.contentType.sys.id}
+            {...block.fields}
+          />
+        ))}
       </div>
     </>
   );
