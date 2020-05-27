@@ -3,7 +3,9 @@ import { client } from "lib/contentful";
 import { IPageFields, IPage } from "types/generated/contentful";
 import { EntryCollection } from "contentful";
 import Head from "next/head";
-import { Hero } from "components/blocks";
+import dynamic from "next/dynamic";
+
+const capitalise = (str: string) => str.charAt(0).toUpperCase() + str.slice(1);
 
 export default ({ pageTitle, content }: IPageFields) => {
   return (
@@ -12,10 +14,14 @@ export default ({ pageTitle, content }: IPageFields) => {
         <title>{pageTitle} | Faux</title>
       </Head>
       <div>
-        {content.map((block) => (
-          // <div>{block.sys.contentType.sys.id}</div>
-          <Hero key={block.sys.id} {...block.fields} />
-        ))}
+        {content.map((block) => {
+          const Block = dynamic(() =>
+            import(
+              `components/blocks/${capitalise(block.sys.contentType.sys.id)}`
+            )
+          );
+          return <Block key={block.sys.id} {...block.fields} />;
+        })}
       </div>
     </>
   );

@@ -4,7 +4,7 @@ import { client, richTextRender } from "lib/contentful";
 import { IPostFields } from "types/generated/contentful";
 import { EntryCollection } from "contentful";
 import { PostHero } from "components/templates";
-import postStyles from "components/Post.module.css";
+import postStyles from "components/templates/Post.module.css";
 import classNames from "classnames";
 
 export default ({
