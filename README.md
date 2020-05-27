@@ -2,7 +2,9 @@
 
 ## To Do
 
-- Dynamic block component
+- Final section blocks:
+ - Ticked section
+ - Blog cards
 - Pages:
   - /cards: Abstract content => View
   - /slug: Assemble blocks => View
