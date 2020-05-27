@@ -127,7 +127,86 @@ export interface IFaq extends Entry<IFaqFields> {
   };
 }
 
-export interface IHeroFields {
+export interface IFaqSectionFields {
+  /** title */
+  title: string;
+
+  /** FAQs */
+  faqs: IFaq[];
+}
+
+export interface IFaqSection extends Entry<IFaqSectionFields> {
+  sys: {
+    id: string;
+    type: string;
+    createdAt: string;
+    updatedAt: string;
+    locale: string;
+    contentType: {
+      sys: {
+        id: "FAQSection";
+        linkType: "ContentType";
+        type: "Link";
+      };
+    };
+  };
+}
+
+export interface IFeatureDetailFields {
+  /** Icon */
+  icon: string;
+
+  /** Title */
+  title: string;
+
+  /** Body */
+  body: string;
+}
+
+export interface IFeatureDetail extends Entry<IFeatureDetailFields> {
+  sys: {
+    id: string;
+    type: string;
+    createdAt: string;
+    updatedAt: string;
+    locale: string;
+    contentType: {
+      sys: {
+        id: "FeatureDetail";
+        linkType: "ContentType";
+        type: "Link";
+      };
+    };
+  };
+}
+
+export interface IFeatureDetailSectionFields {
+  /** title */
+  title?: string | undefined;
+
+  /** Feature Details */
+  featureDetails: IFeatureDetail[];
+}
+
+export interface IFeatureDetailSection
+  extends Entry<IFeatureDetailSectionFields> {
+  sys: {
+    id: string;
+    type: string;
+    createdAt: string;
+    updatedAt: string;
+    locale: string;
+    contentType: {
+      sys: {
+        id: "FeatureDetailSection";
+        linkType: "ContentType";
+        type: "Link";
+      };
+    };
+  };
+}
+
+export interface IHeroSectionFields {
   /** Title */
   title: string;
 
@@ -144,7 +223,7 @@ export interface IHeroFields {
   image?: Asset | undefined;
 }
 
-export interface IHero extends Entry<IHeroFields> {
+export interface IHeroSection extends Entry<IHeroSectionFields> {
   sys: {
     id: string;
     type: string;
@@ -153,7 +232,32 @@ export interface IHero extends Entry<IHeroFields> {
     locale: string;
     contentType: {
       sys: {
-        id: "hero";
+        id: "HeroSection";
+        linkType: "ContentType";
+        type: "Link";
+      };
+    };
+  };
+}
+
+export interface IIntroTextSectionFields {
+  /** Title */
+  title?: string | undefined;
+
+  /** body */
+  body: string;
+}
+
+export interface IIntroTextSection extends Entry<IIntroTextSectionFields> {
+  sys: {
+    id: string;
+    type: string;
+    createdAt: string;
+    updatedAt: string;
+    locale: string;
+    contentType: {
+      sys: {
+        id: "IntroTextSection";
         linkType: "ContentType";
         type: "Link";
       };
@@ -169,7 +273,12 @@ export interface IPageFields {
   slug: string;
 
   /** Content */
-  content: IHero[];
+  content: (
+    | IFaqSection
+    | IFeatureDetailSection
+    | IHeroSection
+    | IIntroTextSection
+  )[];
 }
 
 export interface IPage extends Entry<IPageFields> {
@@ -302,7 +411,11 @@ export type CONTENT_TYPE =
   | "button"
   | "creditCard"
   | "faq"
-  | "hero"
+  | "FAQSection"
+  | "FeatureDetail"
+  | "FeatureDetailSection"
+  | "HeroSection"
+  | "IntroTextSection"
   | "page"
   | "post"
   | "releaseNote"

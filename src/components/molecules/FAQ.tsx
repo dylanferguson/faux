@@ -5,10 +5,10 @@ import { Icon } from "components/atoms";
 
 type FAQProps = {
   question: string;
-  children: React.ReactNode;
+  answer: string;
 };
 
-export const FAQ = ({ question, children }: FAQProps) => {
+export const FAQ = ({ question, answer }: FAQProps) => {
   const [open, setOpen] = useState(false);
 
   return (
@@ -37,7 +37,7 @@ export const FAQ = ({ question, children }: FAQProps) => {
         )}
         style={{ maxHeight: open ? "400px" : "0" }}
       >
-        {children}
+        {answer}
       </p>
     </div>
   );

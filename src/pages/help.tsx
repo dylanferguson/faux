@@ -1,9 +1,10 @@
-import { Search as SearchBar, FAQ } from "components/molecules";
+import { Search, FAQ } from "components/molecules";
 import { HeaderTitle } from "components/organisms";
 import { GetStaticProps } from "next";
 import { client } from "lib/contentful";
 import { IFaqFields } from "types/generated/contentful";
 import { EntryCollection } from "contentful";
+import { FeatureDetail } from "components/molecules";
 
 type HelpProps = {
   faqs: IFaqFields[];
@@ -17,17 +18,20 @@ export default ({ faqs }: HelpProps) => {
     >
       <HeaderTitle>Help!</HeaderTitle>
       <div className="flex items-center">
-        <SearchBar className="w-full md:w-1/2 mx-auto mb-24" />
+        <Search className="w-full md:w-1/2 mx-auto mb-24" />
       </div>
+      <FeatureDetail
+        icon="air"
+        title="Get started instantly"
+        body="All you need to apply is a Stripe account—no paperwork or personal guarantee required. Get up and running with a virtual card in minutes."
+      />
       <div>
         <h2 className="text-4xl text-gray-800 font-bold my-12">
           Frequently Asked Questions
         </h2>
         <div className="faq-answer text-gray-800 sm:w-2/3 mx-auto mb-20">
           {faqs.map(({ answer, question }) => (
-            <FAQ key={question} question={question}>
-              {answer}
-            </FAQ>
+            <FAQ key={question} question={question} answer={answer} />
           ))}
         </div>
       </div>

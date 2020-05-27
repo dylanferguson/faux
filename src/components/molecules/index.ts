@@ -3,4 +3,5 @@
  */
 
 export * from "./FAQ";
+export * from "./FeatureDetail";
 export * from "./Search";
