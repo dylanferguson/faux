@@ -6,6 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "cypress:open": "cypress open",
     "contentful:generate-types": "contentful-typescript-codegen --output src/types/generated/contentful.d.ts ",
     "contentful:export-content": "exit 1",
     "generate-barrels": "barrelsby --delete --directory './src/components' --location below"
@@ -34,6 +35,7 @@
     "contentful": "^7.14.4",
     "contentful-management": "^5.26.3",
     "contentful-typescript-codegen": "^3.2.1",
+    "cypress": "^4.7.0",
     "dotenv": "^8.2.0",
     "postcss-import": "^12.0.1",
     "postcss-preset-env": "^6.7.0",
