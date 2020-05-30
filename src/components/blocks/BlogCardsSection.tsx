@@ -35,8 +35,8 @@ const BlogCard = ({
         <h3 className="text-indigo-500 text-2xl font-medium mb-4">
           <span className="align-middle">{title}</span>
           <Icon
-            id="chevronRight"
-            className="w-8 h-8 inline-block align-middle fill-current transition ease-in-out duration-200 transform group-hover:translate-x-1"
+            id="arrowRight"
+            className="w-6 h-6 ml-3 inline-block align-middle fill-current transition ease-in-out duration-200 transform group-hover:translate-x-1"
           />
         </h3>
         <p
