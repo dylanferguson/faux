@@ -27,7 +27,7 @@ const BlogCard = ({
       <div
         className="w-1/4 flex-none bg-cover rounded-tl-lg rounded-bl-lg bg-center"
         style={{
-          backgroundImage: `linear-gradient(rgba(76, 81, 191, 0.7), rgba(102, 126, 234, 0.7)), url(${heroImage?.fields.file.url})`,
+          backgroundImage: `linear-gradient(rgba(76, 81, 191, 0.7), rgba(102, 126, 234, 0.7)), url(${heroImage?.fields.file.url}?h=250&fit=scale)`,
           clipPath: "polygon(0 0, 100% 0, 85% 100%, 0 100%)",
         }}
       ></div>
