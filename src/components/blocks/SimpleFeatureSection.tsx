@@ -11,7 +11,10 @@ export const SimpleFeatureSection = ({
     </h2>
     <ul className="flex flex-wrap xl:w-5/6 mx-auto">
       {features.map((feature) => (
-        <li className="flex items-top w-full md:w-1/2 text-gray-800 text-xl leading-normal mb-6 pr-6 text-left">
+        <li
+          key={feature}
+          className="flex items-top w-full md:w-1/2 text-gray-800 text-xl leading-normal mb-6 pr-6 text-left"
+        >
           <Icon
             id="check"
             className="w-8 h-8 fill-current text-indigo-700 mr-4 flex-none"

@@ -8,7 +8,7 @@ export const FAQSection = ({ title, faqs }: IFaqSectionFields) => (
     </h1>
     <div className="sm:w-3/4 mx-auto mb-20">
       {faqs.map(({ fields }) => (
-        <FAQ {...fields} />
+        <FAQ key={fields.question} {...fields} />
       ))}
     </div>
   </section>
