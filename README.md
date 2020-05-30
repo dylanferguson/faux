@@ -2,9 +2,6 @@
 
 ## To Do
 
-- Final section blocks:
-  - Blog cards
-  - Contact Section
 - Pages:
   - /cards: Abstract content => View
 - [Preview Mode](https://nextjs.org/docs/advanced-features/preview-mode)

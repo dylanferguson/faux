@@ -5,7 +5,7 @@ export const SimpleFeatureSection = ({
   title,
   features,
 }: ISimpleFeatureSectionFields) => (
-  <div className="my-24 container">
+  <section className="my-24 container">
     <h2 className="text-gray-800 font-bold leading-loose text-center text-4xl my-12">
       {title}
     </h2>
@@ -20,5 +20,5 @@ export const SimpleFeatureSection = ({
         </li>
       ))}
     </ul>
-  </div>
+  </section>
 );

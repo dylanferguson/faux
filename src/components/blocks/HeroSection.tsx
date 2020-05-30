@@ -8,7 +8,7 @@ export const HeroSection = ({
   buttons,
   image,
 }: IHeroSectionFields) => (
-  <div
+  <section
     className="pb-12 bg-indigo-700"
     style={{
       clipPath: "polygon(0 0, 100% 0, 100% calc(100% - 3vw), 0 100%)",
@@ -39,5 +39,5 @@ export const HeroSection = ({
         <img src={image?.fields.file.url} className="mx-auto"></img>
       </div>
     </div>
-  </div>
+  </section>
 );

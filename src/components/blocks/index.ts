@@ -3,6 +3,7 @@
  */
 
 export * from "./Block";
+export * from "./BlogCardsSection";
 export * from "./FAQSection";
 export * from "./FeatureDetailsSection";
 export * from "./HeroSection";

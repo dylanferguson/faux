@@ -31,7 +31,7 @@ export const QuickLinksSection = ({
   title,
   links,
 }: IQuickLinksSectionFields) => (
-  <div className="container mx-auto mb-32 ">
+  <div className="container mx-auto mb-32">
     <h2 className="text-4xl text-gray-800 text-center font-bold leading-relaxed mb-16">
       {title}
     </h2>

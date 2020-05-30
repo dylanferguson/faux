@@ -1,7 +1,7 @@
 import { IIntroTextSectionFields } from "types/generated/contentful";
 
 export const IntroTextSection = ({ title, body }: IIntroTextSectionFields) => (
-  <div className="container mx-auto mt-32 mb-40 text-indigo-900">
+  <section className="container mx-auto mt-32 mb-40 text-indigo-900">
     <h2>{title}</h2>
     <p
       className="text-2xl leading-relaxed text-center mx-auto font-light"
@@ -9,5 +9,5 @@ export const IntroTextSection = ({ title, body }: IIntroTextSectionFields) => (
     >
       {body}
     </p>
-  </div>
+  </section>
 );

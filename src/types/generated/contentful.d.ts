@@ -28,6 +28,31 @@ export interface IAuthor extends Entry<IAuthorFields> {
   };
 }
 
+export interface IBlogCardsSectionFields {
+  /** title */
+  title?: string | undefined;
+
+  /** posts */
+  posts: IPost[];
+}
+
+export interface IBlogCardsSection extends Entry<IBlogCardsSectionFields> {
+  sys: {
+    id: string;
+    type: string;
+    createdAt: string;
+    updatedAt: string;
+    locale: string;
+    contentType: {
+      sys: {
+        id: "BlogCardsSection";
+        linkType: "ContentType";
+        type: "Link";
+      };
+    };
+  };
+}
+
 export interface IButtonFields {
   /** Button Text */
   buttonText: string;
@@ -278,6 +303,7 @@ export interface IPageFields {
     | IFeatureDetailsSection
     | IHeroSection
     | IIntroTextSection
+    | IQuickLinksSection
     | ISimpleFeatureSection
   )[];
 }
@@ -488,6 +514,7 @@ export interface ISpecialOffer extends Entry<ISpecialOfferFields> {
 
 export type CONTENT_TYPE =
   | "author"
+  | "BlogCardsSection"
   | "button"
   | "creditCard"
   | "faq"

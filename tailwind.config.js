@@ -7,9 +7,6 @@ module.exports = {
       secondary: "#79dbc0",
       ...defaultTheme.colors,
     },
-    variants: {
-      textColor: ["responsive", "hover", "focus", "group-hover"],
-    },
     container: {
       center: true,
       padding: "0.5rem",
@@ -19,5 +16,9 @@ module.exports = {
         sans: ["Fira Sans", ...defaultTheme.fontFamily.sans],
       },
     },
+  },
+  variants: {
+    shadow: ["responsive", "hover", "focus", "group-hover"],
+    translate: ["responsive", "hover", "focus", "group-hover"],
   },
 };
