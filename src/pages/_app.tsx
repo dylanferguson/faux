@@ -1,6 +1,7 @@
+import "./tailwind.css";
+
 import React from "react";
 import App from "next/app";
-import "./tailwind.css";
 
 import { Layout } from "components/organisms/Layout";
 

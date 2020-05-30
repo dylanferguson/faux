@@ -2,7 +2,8 @@
 @tailwind components;
 
 html {
-  /* scroll-behavior: smooth; */
+  @apply font-sans;
+  scroll-behavior: smooth;
 }
 
 body {

@@ -1,17 +1,26 @@
-const purgecss = [
-  "@fullhuman/postcss-purgecss",
-  {
-    content: ["./components/**/*.tsx", "./pages/**/*.tsx"],
-    defaultExtractor: (content) => content.match(/[\w-/:]+(?<!:)/g) || [],
-  },
-];
-
 module.exports = {
-  plugins: [
-    "postcss-import",
-    "tailwindcss",
-    ...(process.env.NODE_ENV === "production" ? [purgecss] : []),
-    "autoprefixer",
-    "postcss-preset-env",
-  ],
+  plugins: {
+    tailwindcss: {},
+    autoprefixer: {},
+    ...(process.env.NODE_ENV === "production"
+      ? {
+          "@fullhuman/postcss-purgecss": {
+            content: ["./src/components/**/*.tsx", "./src/pages/**/*.tsx"],
+            defaultExtractor: (content) =>
+              content.match(/[\w-/:]+(?<!:)/g) || [],
+          },
+        }
+      : {}),
+    "postcss-import": {},
+    "postcss-flexbugs-fixes": {},
+    "postcss-preset-env": {
+      autoprefixer: {
+        flexbox: "no-2009",
+      },
+      stage: 3,
+      features: {
+        "custom-properties": false,
+      },
+    },
+  },
 };
