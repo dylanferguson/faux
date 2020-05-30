@@ -6,7 +6,7 @@ type BlockProps = {
 
 export const Block = ({ id, ...props }: BlockProps) => {
   const blocks = {
-    ...Blocks,
+    ...(Blocks as any), // ugh
   };
 
   const Component = blocks[id];

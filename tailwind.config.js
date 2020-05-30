@@ -1,6 +1,7 @@
 const defaultTheme = require("tailwindcss/defaultTheme");
 
 module.exports = {
+  purge: ["./src/components/**/*.tsx", "./src/pages/**/*.tsx"],
   theme: {
     colors: {
       primary: "#635bfc",
