@@ -32,6 +32,7 @@ export default ({
           "container mx-auto my-24 space-y-8 text-xl text-gray-900",
           postStyles.article
         )}
+        data-cy="blog-post"
       >
         <div className="mx-auto" style={{ maxWidth: "65ch" }}>
           {richTextRender(body)}

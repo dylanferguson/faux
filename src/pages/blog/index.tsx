@@ -11,13 +11,13 @@ type BlogIndexProps = {
 
 export default ({ data }: BlogIndexProps) => (
   <div className="container mx-auto">
-    <Header title="Phở! Blog">
+    <Header title="Phở! Blog" data-cy="blog-index-header">
       News, tips and highlights from the team at <span className="logo" />
     </Header>
     <div className="w-full md:w-3/5 mx-auto space-y-12">
       {data.map((post) => (
         <Link as={`/blog/${post.slug}`} href="/blog/[slug]">
-          <a className="group block my-16">
+          <a className="group block my-16" data-cy="blog-post-link">
             <div className="my-1 space-x-4">
               {post.tags?.map((tag) => (
                 <span className="rounded-lg text-indigo-400 bg-white py-1 px-2 text-lg small-caps leading-snug border-2 border-indigo-400">

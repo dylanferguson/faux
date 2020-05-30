@@ -7,6 +7,8 @@
     "build": "next build",
     "start": "next start",
     "cypress:open": "cypress open",
+    "cypress:run": "cypress run",
+    "cypress:run:customer-journeys": "cypress run --spec 'cypress/integration/customer-journeys/**/*'",
     "contentful:generate-types": "contentful-typescript-codegen --output src/types/generated/contentful.d.ts ",
     "contentful:export-content": "exit 1",
     "generate-barrels": "barrelsby --delete --directory './src/components' --location below"
@@ -32,6 +34,7 @@
     "@types/react": "^16.9.35",
     "autoprefixer": "^9.7.6",
     "barrelsby": "^2.2.0",
+    "chromatic": "^4.0.3",
     "contentful": "^7.14.4",
     "contentful-management": "^5.26.3",
     "contentful-typescript-codegen": "^3.2.1",

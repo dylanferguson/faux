@@ -19,7 +19,9 @@ type ResultItemProps = {
   result: { [key: string]: any };
 };
 
-const ResultItem = ({ result }: ResultItemProps) => <div>{result.title}</div>;
+const ResultItem = ({ result }: ResultItemProps) => (
+  <div data-cy="search-result">{result.title}</div>
+);
 
 type ResultsProps = {
   results: { [key: string]: any }[]; // ugh
@@ -34,7 +36,7 @@ const Results = ({ results, query }: ResultsProps) => (
     {results.length ? (
       results.map((result) => <ResultItem key={result.title} result={result} />)
     ) : (
-      <span>
+      <span data-cy="no-search-result">
         No results found for query <strong>{query}</strong>
       </span>
     )}
@@ -74,13 +76,13 @@ export const Search = ({ className }: SearchProps) => {
         <fieldset className="w-full relative  flex items-center">
           <input
             type="search"
-            className="shadow appearance-none border rounded w-full
-          text-xl py-4 px-4 text-gray-700 leading-tight focus-outline"
+            className="shadow appearance-none border rounded w-full text-xl py-4 px-4 text-gray-700 leading-tight focus-outline"
             placeholder="Big Friendly Search"
             onChange={handleChange}
             onBlur={() => {
               setQuery("");
             }}
+            data-cy="search-input"
           />
           <Icon
             className="absolute right-0 w-10 h-10 z-10 mr-3 pointer-events-none fill-current text-gray-300 hover:opacity-75"

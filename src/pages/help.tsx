@@ -20,18 +20,18 @@ export default ({ faqs }: HelpProps) => {
       <div className="flex items-center">
         <Search className="w-full md:w-1/2 mx-auto mb-24" />
       </div>
-      <FeatureDetail
-        icon="air"
-        title="Get started instantly"
-        body="All you need to apply is a Stripe account—no paperwork or personal guarantee required. Get up and running with a virtual card in minutes."
-      />
       <div>
         <h2 className="text-4xl text-gray-800 font-bold my-12">
           Frequently Asked Questions
         </h2>
         <div className="faq-answer text-gray-800 sm:w-2/3 mx-auto mb-20">
           {faqs.map(({ answer, question }) => (
-            <FAQ key={question} question={question} answer={answer} />
+            <FAQ
+              key={question}
+              question={question}
+              answer={answer}
+              data-cy="faq"
+            />
           ))}
         </div>
       </div>

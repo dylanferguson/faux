@@ -22,6 +22,7 @@ const Login = () => {
       <form
         onSubmit={handleSubmit}
         className="bg-white sm:shadow-lg rounded px-8 pt-8 pb-8 mb-4 w-full sm:max-w-md"
+        data-cy="login-form"
       >
         <h2 className="text-gray-700 text-2xl">Sign in to your account</h2>
         <div className="mt-6 mb-10">
@@ -38,6 +39,7 @@ const Login = () => {
             name="userId"
             required
             className="border border-gray-300 rounded w-full py-3 px-4 text-base focus-outline"
+            data-cy="login-email-input"
           />
         </div>
         <div className="mt-6 mb-10">
@@ -58,12 +60,14 @@ const Login = () => {
             id="password"
             required
             className="border border-gray-300 rounded w-full py-3 px-4 text-base focus-outline"
+            data-cy="login-password-input"
           />
         </div>
         <input
           type="submit"
           value="Sign In"
           className="btn-primary w-full my-2 focus-outline"
+          data-cy="login-submit-button"
         />
       </form>
     </div>

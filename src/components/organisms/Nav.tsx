@@ -48,7 +48,10 @@ const MenuContent = () => (
 export const Nav = () => {
   return (
     <div className="sticky top-0 z-10 w-full border-b border-gray-200 bg-white z-50">
-      <header className="container flex justify-between items-center h-20">
+      <header
+        className="container flex justify-between items-center h-20"
+        data-cy="nav"
+      >
         <Link href="/">
           <a href="/" className="logo"></a>
         </Link>
