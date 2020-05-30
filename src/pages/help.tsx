@@ -21,10 +21,8 @@ export default ({ faqs }: HelpProps) => {
         <Search className="w-full md:w-1/2 mx-auto mb-24" />
       </div>
       <div>
-        <h2 className="text-4xl text-gray-800 font-bold my-12">
-          Frequently Asked Questions
-        </h2>
-        <div className="faq-answer text-gray-800 sm:w-2/3 mx-auto mb-20">
+        <h2 className="text-4xl font-bold my-12">Frequently Asked Questions</h2>
+        <div className="faq-answer sm:w-2/3 mx-auto mb-20">
           {faqs.map(({ answer, question }) => (
             <FAQ key={question} question={question} answer={answer} />
           ))}

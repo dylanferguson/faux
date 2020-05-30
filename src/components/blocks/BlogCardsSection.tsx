@@ -40,7 +40,7 @@ const BlogCard = ({
           />
         </h3>
         <p
-          className="text-gray-800 text-lg leading-relaxed font-light overflow-hidden"
+          className="text-lg leading-relaxed font-light overflow-hidden"
           style={{
             display: "-webkit-box",
             WebkitLineClamp: 3,

@@ -22,7 +22,7 @@ const QuickLink = ({ title, link, icon, className }: QuickLinkProps) => (
         id={icon}
         className="block w-8 h-8 fill-current text-indigo-600 mb-4"
       />
-      <p className="text-gray-800 text-xl font-medium leading-snug ">{title}</p>
+      <p className="text-xl font-medium leading-snug ">{title}</p>
     </a>
   </Link>
 );
@@ -32,7 +32,7 @@ export const QuickLinksSection = ({
   links,
 }: IQuickLinksSectionFields) => (
   <div className="container mx-auto mb-32">
-    <h2 className="text-4xl text-gray-800 text-center font-bold leading-relaxed mb-16">
+    <h2 className="text-4xl text-center font-bold leading-relaxed mb-16">
       {title}
     </h2>
     <div

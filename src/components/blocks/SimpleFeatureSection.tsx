@@ -6,14 +6,14 @@ export const SimpleFeatureSection = ({
   features,
 }: ISimpleFeatureSectionFields) => (
   <section className="my-24 container">
-    <h2 className="text-gray-800 font-bold leading-loose text-center text-4xl my-12">
+    <h2 className="font-bold leading-loose text-center text-4xl my-12">
       {title}
     </h2>
     <ul className="flex flex-wrap xl:w-5/6 mx-auto">
       {features.map((feature) => (
         <li
           key={feature}
-          className="flex items-top w-full md:w-1/2 text-gray-800 text-xl leading-normal mb-6 pr-6 text-left"
+          className="flex items-top w-full md:w-1/2 text-xl leading-normal mb-6 pr-6 text-left"
         >
           <Icon
             id="check"

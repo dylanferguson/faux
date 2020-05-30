@@ -19,7 +19,7 @@ export const FAQ = ({ question, answer }: FAQProps) => {
         setOpen(!open);
       }}
     >
-      <h3 className="text-gray-800 text-2xl font-semibold my-2 flex items-center justify-between">
+      <h3 className="text-2xl font-semibold my-2 flex items-center justify-between">
         {question}
         <Icon
           id="chevronDown"

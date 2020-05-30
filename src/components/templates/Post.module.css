@@ -1,6 +1,6 @@
 /* Post -- text styles */
 .article {
-  @apply text-gray-800 text-lg leading-relaxed;
+  @apply text-lg leading-relaxed;
 }
 
 .article p,

@@ -94,7 +94,7 @@ export const Footer = () => (
         </nav>
       </div>
     </footer>
-    <div className="flex justify-between my-4 text-gray-800 container">
+    <div className="flex justify-between my-4 container">
       <span>© Faux 2020</span>
       <span>A totally legit bank</span>
     </div>

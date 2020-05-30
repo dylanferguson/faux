@@ -2,13 +2,11 @@
 @tailwind components;
 
 html {
-  @apply font-sans;
   scroll-behavior: smooth;
 }
 
 body {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  @apply font-sans text-gray-800 antialiased;
 }
 
 ::selection {
