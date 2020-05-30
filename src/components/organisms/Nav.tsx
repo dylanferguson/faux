@@ -1,13 +1,6 @@
 import Link from "next/link";
-import { ButtonLink as Button } from "components/atoms";
-
-const Hamburger = () => (
-  <>
-    <span></span>
-    <span></span>
-    <span></span>
-  </>
-);
+import { ButtonLink as Button, MobileMenuToggle } from "components/atoms";
+import { useState } from "react";
 
 type NavItemProps = {
   link: string;
@@ -46,6 +39,8 @@ const MenuContent = () => (
 );
 
 export const Nav = () => {
+  const [toggle, setToggle] = useState(false);
+
   return (
     <div className="sticky top-0 z-10 w-full border-b border-gray-200 bg-white z-50">
       <header
@@ -53,10 +48,18 @@ export const Nav = () => {
         data-cy="nav"
       >
         <Link href="/">
-          <a href="/" className="logo"></a>
+          <a className="logo"></a>
         </Link>
-        <div className="items-center hidden sm:flex">
+        <div className="items-center hidden md:flex">
           <MenuContent />
+        </div>
+        <div className="md:hidden">
+          <MobileMenuToggle
+            open={toggle}
+            onClick={() => {
+              setToggle(!toggle);
+            }}
+          />
         </div>
       </header>
     </div>

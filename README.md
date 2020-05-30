@@ -12,7 +12,9 @@
   - Documentation
 - Content sync and restore
 - CI
+- Storybook + Chromatic
 - Deployment: GCP + Cloudflare workers (FAB?)
+- Containerise
 - Fork => Phở? => pho.rodeo, implement with DatoCMS
 - [Make README good](https://www.makeareadme.com/)
 

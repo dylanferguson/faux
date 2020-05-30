@@ -5,4 +5,5 @@
 export * from "./Avatar";
 export * from "./Button";
 export * from "./Date";
+export * from "./MobileMenuToggle";
 export * from "./Icon";
