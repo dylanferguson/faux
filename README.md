@@ -4,7 +4,6 @@
 
 - Final section blocks:
   - Blog cards
-  - Quick Links Section
   - Contact Section
 - Pages:
   - /cards: Abstract content => View

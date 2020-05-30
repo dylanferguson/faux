@@ -342,6 +342,59 @@ export interface IPost extends Entry<IPostFields> {
   };
 }
 
+export interface IQuickLinkFields {
+  /** title */
+  title: string;
+
+  /** link */
+  link: string;
+
+  /** Icon */
+  icon: string;
+}
+
+export interface IQuickLink extends Entry<IQuickLinkFields> {
+  sys: {
+    id: string;
+    type: string;
+    createdAt: string;
+    updatedAt: string;
+    locale: string;
+    contentType: {
+      sys: {
+        id: "quickLink";
+        linkType: "ContentType";
+        type: "Link";
+      };
+    };
+  };
+}
+
+export interface IQuickLinksSectionFields {
+  /** title */
+  title?: string | undefined;
+
+  /** links */
+  links: IQuickLink[];
+}
+
+export interface IQuickLinksSection extends Entry<IQuickLinksSectionFields> {
+  sys: {
+    id: string;
+    type: string;
+    createdAt: string;
+    updatedAt: string;
+    locale: string;
+    contentType: {
+      sys: {
+        id: "QuickLinksSection";
+        linkType: "ContentType";
+        type: "Link";
+      };
+    };
+  };
+}
+
 export interface IReleaseNoteFields {
   /** Version */
   version: string;
@@ -445,6 +498,8 @@ export type CONTENT_TYPE =
   | "IntroTextSection"
   | "page"
   | "post"
+  | "quickLink"
+  | "QuickLinksSection"
   | "releaseNote"
   | "SimpleFeatureSection"
   | "specialOffer";
