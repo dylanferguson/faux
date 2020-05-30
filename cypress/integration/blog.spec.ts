@@ -10,6 +10,6 @@ describe("Blog index", () => {
   });
 
   it("should render post links", () => {
-    cy.get("[data-cy='blog-post-link']").should("have.length.greaterThan", 4);
+    cy.get("[data-cy='blog-post-link']").should("have.length.gte", 1);
   });
 });

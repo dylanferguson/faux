@@ -30,7 +30,6 @@ export default ({ faqs }: HelpProps) => {
               key={question}
               question={question}
               answer={answer}
-              data-cy="faq"
             />
           ))}
         </div>

@@ -14,6 +14,7 @@ export const FAQ = ({ question, answer }: FAQProps) => {
   return (
     <div
       className="text-left mb-6 cursor-pointer rounded shadow px-6 py-6 overflow-hidden"
+      data-cy="faq"
       onClick={() => {
         setOpen(!open);
       }}

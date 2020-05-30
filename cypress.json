@@ -3,5 +3,6 @@
   "viewportWidth": 1200,
   "defaultCommandTimeout": 5000,
   "video": false,
+  "screenshotOnRunFailure": false,
   "blacklistHosts": ["*.google-analytics.com"]
 }

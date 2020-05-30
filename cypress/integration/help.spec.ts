@@ -3,15 +3,18 @@ describe("Help", () => {
     cy.visit("/help");
   });
 
+  beforeEach(() => {
+    cy.get("[data-cy='search-input']").clear();
+  });
+
   it("should render the search input", () => {
     cy.get("[data-cy='search-input']").scrollIntoView().should("be.visible");
   });
 
   it("should return results for a search query", () => {
-    const query = "0.6.9";
+    const query = "release";
     cy.get("[data-cy='search-input']").type(query).should("have.value", query);
     cy.get("[data-cy='search-result']")
-      .scrollIntoView()
       .should("be.visible")
       .should("have.length.gte", 1);
   });
@@ -26,9 +29,6 @@ describe("Help", () => {
   });
 
   it("should render FAQs", () => {
-    cy.get("[data-cy='FAQ']")
-      .scrollIntoView()
-      .should("be.visible")
-      .should("have.length.greaterThan", 4);
+    cy.get("[data-cy='faq']").should("have.length.gte", 1);
   });
 });

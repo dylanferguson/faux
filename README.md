@@ -15,7 +15,6 @@
   - Contentful Models
   - Documentation
 - Content sync and restore
-- Tests
 - CI
 - Deployment: GCP
 - Fork => Phở? => pho.rodeo, implement with DatoCMS

@@ -10,8 +10,8 @@ type BlogIndexProps = {
 };
 
 export default ({ data }: BlogIndexProps) => (
-  <div className="container mx-auto">
-    <Header title="Phở! Blog" data-cy="blog-index-header">
+  <div className="container mx-auto" data-cy="blog-index-header">
+    <Header title="Phở! Blog">
       News, tips and highlights from the team at <span className="logo" />
     </Header>
     <div className="w-full md:w-3/5 mx-auto space-y-12">
