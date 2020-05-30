@@ -4,7 +4,7 @@ import { GetStaticProps } from "next";
 import { client } from "lib/contentful";
 import { IFaqFields } from "types/generated/contentful";
 import { EntryCollection } from "contentful";
-import { FeatureDetail } from "components/molecules";
+import { SimpleFeatureSection } from "components/blocks";
 
 type HelpProps = {
   faqs: IFaqFields[];
@@ -26,11 +26,7 @@ export default ({ faqs }: HelpProps) => {
         </h2>
         <div className="faq-answer text-gray-800 sm:w-2/3 mx-auto mb-20">
           {faqs.map(({ answer, question }) => (
-            <FAQ
-              key={question}
-              question={question}
-              answer={answer}
-            />
+            <FAQ key={question} question={question} answer={answer} />
           ))}
         </div>
       </div>

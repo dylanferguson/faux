@@ -3,11 +3,11 @@
 ## To Do
 
 - Final section blocks:
- - Ticked section
- - Blog cards
+  - Blog cards
+  - Quick Links Section
+  - Contact Section
 - Pages:
   - /cards: Abstract content => View
-  - /slug: Assemble blocks => View
 - [Preview Mode](https://nextjs.org/docs/advanced-features/preview-mode)
 - Simplify [env var setup](https://nextjs.org/docs/api-reference/next.config.js/environment-variables)
 - Post business case in parts
@@ -16,7 +16,7 @@
   - Documentation
 - Content sync and restore
 - CI
-- Deployment: GCP
+- Deployment: GCP + Cloudflare workers (FAB?)
 - Fork => Phở? => pho.rodeo, implement with DatoCMS
 - [Make README good](https://www.makeareadme.com/)
 

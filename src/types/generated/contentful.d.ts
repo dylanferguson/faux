@@ -180,7 +180,7 @@ export interface IFeatureDetail extends Entry<IFeatureDetailFields> {
   };
 }
 
-export interface IFeatureDetailSectionFields {
+export interface IFeatureDetailsSectionFields {
   /** title */
   title?: string | undefined;
 
@@ -188,8 +188,8 @@ export interface IFeatureDetailSectionFields {
   featureDetails: IFeatureDetail[];
 }
 
-export interface IFeatureDetailSection
-  extends Entry<IFeatureDetailSectionFields> {
+export interface IFeatureDetailsSection
+  extends Entry<IFeatureDetailsSectionFields> {
   sys: {
     id: string;
     type: string;
@@ -198,7 +198,7 @@ export interface IFeatureDetailSection
     locale: string;
     contentType: {
       sys: {
-        id: "FeatureDetailSection";
+        id: "FeatureDetailsSection";
         linkType: "ContentType";
         type: "Link";
       };
@@ -275,9 +275,10 @@ export interface IPageFields {
   /** Content */
   content: (
     | IFaqSection
-    | IFeatureDetailSection
+    | IFeatureDetailsSection
     | IHeroSection
     | IIntroTextSection
+    | ISimpleFeatureSection
   )[];
 }
 
@@ -381,6 +382,32 @@ export interface IReleaseNote extends Entry<IReleaseNoteFields> {
   };
 }
 
+export interface ISimpleFeatureSectionFields {
+  /** title */
+  title?: string | undefined;
+
+  /** features */
+  features: string[];
+}
+
+export interface ISimpleFeatureSection
+  extends Entry<ISimpleFeatureSectionFields> {
+  sys: {
+    id: string;
+    type: string;
+    createdAt: string;
+    updatedAt: string;
+    locale: string;
+    contentType: {
+      sys: {
+        id: "SimpleFeatureSection";
+        linkType: "ContentType";
+        type: "Link";
+      };
+    };
+  };
+}
+
 export interface ISpecialOfferFields {
   /** Title */
   title?: string | undefined;
@@ -413,12 +440,13 @@ export type CONTENT_TYPE =
   | "faq"
   | "FAQSection"
   | "FeatureDetail"
-  | "FeatureDetailSection"
+  | "FeatureDetailsSection"
   | "HeroSection"
   | "IntroTextSection"
   | "page"
   | "post"
   | "releaseNote"
+  | "SimpleFeatureSection"
   | "specialOffer";
 
 export type LOCALE_CODE = "en-US";
