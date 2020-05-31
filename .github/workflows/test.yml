@@ -11,5 +11,9 @@ jobs:
       - name: Node install
         shell: bash -l {0}
         run: nvm install
-      - name: npm install
-        run: npm ci
+      - name: Cypress run
+        uses: cypress-io/github-action@v1
+        with:
+          build: npm run build
+          start: npm start
+          wait-on: http://localhost:3000

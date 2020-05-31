@@ -18,7 +18,6 @@ const Login = () => {
 
   return (
     <div className="min-h-screen bg-white bg-opacity-25 flex flex-col items-center justify-center pt-10 pb-20">
-      {/* <h1 className="logo mb-8 text-4xl">Faux!</h1> */}
       <form
         onSubmit={handleSubmit}
         className="bg-white sm:shadow-lg rounded px-8 pt-8 pb-8 mb-4 w-full sm:max-w-md"
