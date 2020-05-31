@@ -4,7 +4,6 @@ import { GetStaticProps } from "next";
 import { client } from "lib/contentful";
 import { IFaqFields } from "types/generated/contentful";
 import { EntryCollection } from "contentful";
-import { QuickLinksSection } from "components/blocks";
 
 type HelpProps = {
   faqs: IFaqFields[];
