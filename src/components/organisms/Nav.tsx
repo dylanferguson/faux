@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { ButtonLink as Button, MobileMenuToggle } from "components/atoms";
 import { useState } from "react";
+import classNames from "classnames";
 
 type NavItemProps = {
   link: string;
@@ -15,9 +16,13 @@ const NavItem = ({ link, label }: NavItemProps) => (
   </li>
 );
 
-const NavMenu = () => (
+type NavMenuProps = {
+  mobile?: boolean;
+};
+
+const NavMenu = ({ mobile }: NavMenuProps) => (
   <nav>
-    <ol className="space-x-6">
+    <ol className={mobile ? "space-y-2" : "space-x-6"}>
       <NavItem link="/release-notes" label="Release Notes" />
       <NavItem link="/cards" label="Cards" />
       <NavItem link="/blog" label="Blog" />
@@ -60,6 +65,22 @@ export const Nav = () => {
               setToggle(!toggle);
             }}
           />
+          {toggle && (
+            <div
+              className="fixed top w-full left-0 py-8 bg-white border-b border-t border-gray-200"
+              style={{ top: "5rem" }}
+            >
+              <div className="container mx-auto mobile-menu space-y-4">
+                <NavMenu mobile={true} />
+                <div className="space-x-3">
+                  <Button href="/login" secondary>
+                    Sign up!
+                  </Button>
+                  <Button href="/login">Log in</Button>
+                </div>
+              </div>
+            </div>
+          )}
         </div>
       </header>
     </div>

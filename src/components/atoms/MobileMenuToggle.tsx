@@ -7,18 +7,23 @@ type MobileMenuToggleProps = {
 
 export const MobileMenuToggle = ({ open, onClick }: MobileMenuToggleProps) => (
   <button
-    className="mobile-toggle w-8 h-6 ml-6 flex flex-col justify-between"
+    className="mobile-toggle w-8 h-6 ml-6 flex flex-col justify-between group"
     aria-label="Menu"
     aria-controls="navigation"
     onClick={onClick}
   >
     <span
+      className="group-hover:bg-indigo-400"
       style={open ? { transform: "translate3d(0, 10px, 0) rotate(45deg)" } : {}}
     />
     <span
-      className={classNames({ "transform -translate-x-2 opacity-0": open })}
+      className={classNames(
+        { "transform -translate-x-2 opacity-0": open },
+        "group-hover:bg-indigo-400"
+      )}
     />
     <span
+      className="group-hover:bg-indigo-400"
       style={
         open ? { transform: "translate3d(0, -10px, 0) rotate(-45deg)" } : {}
       }

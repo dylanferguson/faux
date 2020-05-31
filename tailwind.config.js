@@ -21,5 +21,6 @@ module.exports = {
   variants: {
     shadow: ["responsive", "hover", "focus", "group-hover"],
     translate: ["responsive", "hover", "focus", "group-hover"],
+    backgroundColor: ["responsive", "hover", "focus", "group-hover"],
   },
 };
