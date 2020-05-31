@@ -1,0 +1,15 @@
+name: Test
+on:
+  pull_request:
+    types: [opened, synchronize]
+jobs:
+  test:
+    name: Run Integration testss
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Node install
+        shell: bash -l {0}
+        run: nvm install
+      - name: npm install
+        run: npm ci

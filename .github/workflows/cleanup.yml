@@ -1,0 +1,12 @@
+name: Branch Cleanup
+on: 
+  pull_request:
+    types: [ closed ]
+jobs:
+  cleanup:
+    runs-on: ubuntu-latest
+    steps:
+      - name: cleanup
+        uses: jessfraz/branch-cleanup-action@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
