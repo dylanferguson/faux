@@ -12,6 +12,7 @@
   - Documentation
 - Content sync and restore
 - CI
+- LH server to retain historical build reports
 - Storybook + Chromatic
 - Deployment: GCP + Cloudflare workers (FAB?)
 - Containerise

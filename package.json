@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "build:static": "next build && next export",
     "build:analyse": "ANALYZE=true next build",
     "start": "next start",
     "cypress:open": "cypress open",
