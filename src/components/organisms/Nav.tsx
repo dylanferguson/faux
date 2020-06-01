@@ -23,10 +23,10 @@ type NavMenuProps = {
 const NavMenu = ({ mobile }: NavMenuProps) => (
   <nav>
     <ol className={mobile ? "space-y-2" : "space-x-6"}>
-      <NavItem link="/release-notes" label="Release Notes" />
-      <NavItem link="/cards" label="Cards" />
-      <NavItem link="/blog" label="Blog" />
-      <NavItem link="/help" label="Help!" />
+      <NavItem link="/release-notes/" label="Release Notes" />
+      <NavItem link="/cards/" label="Cards" />
+      <NavItem link="/blog/" label="Blog" />
+      <NavItem link="/help/" label="Help!" />
     </ol>
   </nav>
 );
@@ -35,10 +35,10 @@ const MenuContent = () => (
   <>
     <NavMenu />
     <div className="ml-10 space-x-3">
-      <Button href="/login" secondary>
+      <Button href="/login/" secondary>
         Sign up!
       </Button>
-      <Button href="/login">Log in</Button>
+      <Button href="/login/">Log in</Button>
     </div>
   </>
 );
@@ -73,10 +73,10 @@ export const Nav = () => {
               <div className="container mx-auto mobile-menu space-y-4">
                 <NavMenu mobile={true} />
                 <div className="space-x-3">
-                  <Button href="/login" secondary>
+                  <Button href="/login/" secondary>
                     Sign up!
                   </Button>
-                  <Button href="/login">Log in</Button>
+                  <Button href="/login/">Log in</Button>
                 </div>
               </div>
             </div>

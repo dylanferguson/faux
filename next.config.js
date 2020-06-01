@@ -15,5 +15,6 @@ module.exports = withBundleAnalyzer({
     NEXT_PUBLIC_ALGOLIA_SEARCH_ONLY_API_KEY:
       process.env.ALGOLIA_SEARCH_ONLY_API_KEY,
     NEXT_PUBLIC_ALGOLIA_INDEX: process.env.ALGOLIA_INDEX,
+    NEXT_PUBLIC_GA_TRACKING_ID: process.env.GA_TRACKING_ID,
   },
 });

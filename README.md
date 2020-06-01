@@ -12,10 +12,7 @@
   - Documentation
 - Content sync and restore
 - CI
-
-  - Fix LH issues identified
-  - LH server to retain historical build reports
-- Analytics: GA
+  - LH server to retain historical build reports, either as a container or [via Heroku](https://github.com/GoogleChrome/lighthouse-ci/tree/master/docs/recipes/heroku-server)
 - A/B Testing via Google Optimize
 - RUM via Sentry.io
 - Storybook + Chromatic
