@@ -9,11 +9,11 @@ type FooterMenuProps = {
 
 const FooterMenu = ({ title, items }: FooterMenuProps) => (
   <nav className="text-white w-1/2 sm:w-1/4 lg:w-1/5 md:px-3 mb-8">
-    <h4 className="font-bold small-caps">{title}</h4>
+    <p className="font-bold small-caps">{title}</p>
     <ul>
       {items.map((item, i) => (
         <li key={item} className="my-3">
-          <Link href="">
+          <Link href="/">
             <a
               className={className("hover:text-indigo-200", {
                 "api-status": item === "API Status",
@@ -32,7 +32,7 @@ const IconIds: IconName[] = ["instagram", "facebook", "twitter", "linkedin"];
 const Icons = () => (
   <div className="flex flex-wrap lg:justify-around w-full py-8 sm:py-0 lg:w-1/5 space-x-8 lg:space-x-0 items-start">
     {IconIds.map((id) => (
-      <Link href="" key={id}>
+      <Link href="/" key={id}>
         <a>
           <Icon
             id={id}
