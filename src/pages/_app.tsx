@@ -3,7 +3,9 @@ import "./tailwind.css";
 import { useEffect } from "react";
 import Router from "next/router";
 import { AppProps } from "next/app";
+import Head from "next/head";
 import * as analytics from "lib/analytics";
+import * as Sentry from "@sentry/browser";
 
 import { Layout } from "components/organisms/Layout";
 
@@ -35,6 +37,11 @@ export const reportWebVitals = ({
   });
 };
 
+Sentry.init({
+  enabled: process.env.NODE_ENV === "production",
+  dsn: process.env.NEXT_PUBLIC_SENTRY_DSN,
+});
+
 const App = ({ Component, pageProps }: AppProps) => {
   useEffect(() => {
     const handleRouteChange = (url: string) => {
@@ -48,6 +55,10 @@ const App = ({ Component, pageProps }: AppProps) => {
 
   return (
     <Layout>
+      <Head>
+        <title>Faux</title>
+        <meta name="description" content="Faux marketing site" />
+      </Head>
       <Component {...pageProps} />
     </Layout>
   );

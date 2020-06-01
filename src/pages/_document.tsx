@@ -16,8 +16,6 @@ class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
-          <title>Faux</title>
-          <meta name="description" content="Faux marketing site" />
           <link rel="icon" href="/favicon.ico" />
           <link
             rel="preconnect"
