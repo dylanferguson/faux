@@ -9,6 +9,7 @@ export const MobileMenuToggle = ({ open, onClick }: MobileMenuToggleProps) => (
   <button
     className="mobile-toggle w-8 h-6 ml-6 flex flex-col justify-between group"
     onClick={onClick}
+    aria-label={open ? "Close mobile menu" : "Open mobile menu"}
   >
     <span
       className="group-hover:bg-indigo-400"

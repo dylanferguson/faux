@@ -33,7 +33,7 @@ const Icons = () => (
   <div className="flex flex-wrap lg:justify-around w-full py-8 sm:py-0 lg:w-1/5 space-x-8 lg:space-x-0 items-start">
     {IconIds.map((id) => (
       <Link href="/" key={id}>
-        <a>
+        <a aria-label={`${id}`}>
           <Icon
             id={id}
             className="w-6 h-6 fill-current text-white hover:opacity-75"
