@@ -12,7 +12,12 @@
   - Documentation
 - Content sync and restore
 - CI
-- LH server to retain historical build reports
+  - Run LH and Cypress against Server, not the full build
+  - Fix LH issues identified
+  - LH server to retain historical build reports
+- Analytics: GA
+- A/B Testing via Google Optimize
+- RUM via Sentry.io
 - Storybook + Chromatic
 - Deployment: GCP + Cloudflare workers (FAB?)
 - Containerise
