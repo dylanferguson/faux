@@ -5,7 +5,6 @@ type timeProps = {
 
 const DateTime = ({ date, className }: timeProps) => {
   const [year, month, day] = date.split("-").map((x) => Number(x));
-  console.log(year, month, day, date);
   return (
     <time className={className} dateTime={date}>
       {new Date(Date.UTC(year, month, day)).toLocaleDateString("en-AU", {
