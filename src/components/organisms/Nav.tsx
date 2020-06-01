@@ -53,7 +53,7 @@ export const Nav = () => {
         data-cy="nav"
       >
         <Link href="/">
-          <a className="logo"></a>
+          <a aria-label="Faux logo" className="logo"></a>
         </Link>
         <div className="items-center hidden md:flex">
           <MenuContent />

@@ -35,7 +35,7 @@ export const PostHero = ({ title, heroImage, tags, author }: PostHeroProps) => (
     <div
       className="absolute right-0 top-0 h-full w-2/5 bg-cover bg-center"
       style={{
-        backgroundImage: `linear-gradient(rgba(76, 81, 191, 0.7), rgba(102, 126, 234, 0.7)), url(${heroImage?.fields.file.url})`,
+        backgroundImage: `linear-gradient(rgba(76, 81, 191, 0.7), rgba(102, 126, 234, 0.7)), url(${heroImage?.fields.file.url}?h=520&fit=scale)`,
         clipPath: "polygon(20% 0, 100% 0, 100% 100%, 0 100%)",
       }}
     ></div>

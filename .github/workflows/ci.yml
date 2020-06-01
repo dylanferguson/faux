@@ -10,7 +10,7 @@ env:
   ALGOLIA_INDEX: ${{ secrets.ALGOLIA_INDEX }}
 jobs:
   cypress:
-    name: Run Integration tests
+    name: Integration tests
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -24,7 +24,7 @@ jobs:
           start: npm start
           wait-on: http://localhost:3000
   lighthouse:
-    name: Lighthouse CI
+    name: Lighthouse
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -35,5 +35,5 @@ jobs:
       - run: npm run build:static
       - name: Run Lighthouse CI
         run: npx @lhci/cli@0.4.x autorun --config-path=./lighthouserc.json
-    env:
-      LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
+        env:
+          LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}

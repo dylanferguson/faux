@@ -10,6 +10,7 @@ export const Layout = ({ children }: LayoutProps) => (
   <>
     <Head>
       <title>Faux</title>
+      <meta name="description" content="Faux marketing site" />
       <link rel="icon" href="/favicon.ico" />
       <link rel="preconnect" href="https://fonts.gstatic.com/" crossOrigin="" />
       <link
