@@ -12,7 +12,7 @@
   - Documentation
 - Content sync and restore
 - CI
-  - Run LH and Cypress against Server, not the full build
+
   - Fix LH issues identified
   - LH server to retain historical build reports
 - Analytics: GA

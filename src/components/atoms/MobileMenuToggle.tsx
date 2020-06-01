@@ -8,8 +8,6 @@ type MobileMenuToggleProps = {
 export const MobileMenuToggle = ({ open, onClick }: MobileMenuToggleProps) => (
   <button
     className="mobile-toggle w-8 h-6 ml-6 flex flex-col justify-between group"
-    aria-label="Menu"
-    aria-controls="navigation"
     onClick={onClick}
   >
     <span
