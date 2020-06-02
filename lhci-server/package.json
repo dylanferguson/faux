@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "private": true,
   "main": "server.js",
+  "engines": {
+    "node": "12.17.x"
+  },
   "dependencies": {
     "@lhci/server": "0.4.x",
     "pg": "^7.12.1",
