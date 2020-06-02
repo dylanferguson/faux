@@ -1,0 +1,11 @@
+{
+  "name": "lhci",
+  "version": "1.0.0",
+  "private": true,
+  "main": "server.js",
+  "dependencies": {
+    "@lhci/server": "0.4.x",
+    "pg": "^7.12.1",
+    "pg-hstore": "^2.3.3"
+  }
+}
