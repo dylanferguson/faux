@@ -11,8 +11,6 @@
   - Contentful Models
   - Documentation
 - Content sync and restore
-- CI
-  - LH server to retain historical build reports, either as a container or [via Heroku](https://github.com/GoogleChrome/lighthouse-ci/tree/master/docs/recipes/heroku-server)
 - Storybook + Chromatic
 - Deployment: GCP + Cloudflare workers (FAB?)
 - Containerise
