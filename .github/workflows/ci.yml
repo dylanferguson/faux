@@ -2,6 +2,9 @@ name: CI
 on:
   pull_request:
     types: [opened, synchronize]
+  push:
+    branches:
+      - master
 env:
   CONTENTFUL_SPACE_ID: ${{ secrets.CONTENTFUL_SPACE_ID }}
   CONTENTFUL_ACCESS_TOKEN: ${{ secrets.CONTENTFUL_ACCESS_TOKEN }}
@@ -10,8 +13,9 @@ env:
   ALGOLIA_INDEX: ${{ secrets.ALGOLIA_INDEX }}
 jobs:
   cypress:
-    name: Integration tests
+    name: Cypress integration tests
     runs-on: ubuntu-latest
+    if: github.event == 'pull_request'
     steps:
       - uses: actions/checkout@v2
       - name: Node install
@@ -24,7 +28,7 @@ jobs:
           start: npm start
           wait-on: http://localhost:3000
   lighthouse:
-    name: Lighthouse
+    name: Lighthouse audit
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
