@@ -1,6 +1,7 @@
 import { GetStaticProps, GetStaticPaths } from "next";
 import Head from "next/head";
-import { client, richTextRender } from "lib/contentful";
+import { client } from "lib/contentful";
+import { richTextRenderer } from "lib/richTextRenderer";
 import { IPostFields } from "types/generated/contentful";
 import { EntryCollection } from "contentful";
 import { PostHero } from "components/templates";
@@ -35,7 +36,7 @@ export default ({
         data-cy="blog-post"
       >
         <div className="mx-auto" style={{ maxWidth: "65ch" }}>
-          {richTextRender(body)}
+          {richTextRenderer(body)}
         </div>
       </article>
     </>

@@ -1,5 +1,4 @@
-require("dotenv").config({ path: ".env.local" });
-
+require("dotenv").config({ path: "./.env.local" });
 const contentfulManagement = require("contentful-management");
 
 module.exports = function () {

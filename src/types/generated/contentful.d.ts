@@ -299,6 +299,7 @@ export interface IPageFields {
 
   /** Content */
   content: (
+    | IBlogCardsSection
     | IFaqSection
     | IFeatureDetailsSection
     | IHeroSection

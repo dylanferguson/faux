@@ -8,20 +8,23 @@ on:
 env:
   CONTENTFUL_SPACE_ID: ${{ secrets.CONTENTFUL_SPACE_ID }}
   CONTENTFUL_ACCESS_TOKEN: ${{ secrets.CONTENTFUL_ACCESS_TOKEN }}
-  ALGOLIA_APP_ID: ${{ secrets.ALGOLIA_APP_ID }}
-  ALGOLIA_SEARCH_ONLY_API_KEY: ${{ secrets.ALGOLIA_SEARCH_ONLY_API_KEY }}
-  ALGOLIA_INDEX: ${{ secrets.ALGOLIA_INDEX }}
+  NEXT_PUBLIC_ALGOLIA_APP_ID: ${{ secrets.NEXT_PUBLIC_ALGOLIA_APP_ID }}
+  NEXT_PUBLIC_ALGOLIA_SEARCH_ONLY_API_KEY: ${{ secrets.NEXT_PUBLIC_ALGOLIA_SEARCH_ONLY_API_KEY }}
+  NEXT_PUBLIC_ALGOLIA_INDEX: ${{ secrets.NEXT_PUBLIC_ALGOLIA_INDEX }}
+  NEXT_PUBLIC_GA_TRACKING_ID: ${{ secrets.NEXT_PUBLIC_GA_TRACKING_ID }}
+  NEXT_PUBLIC_SENTRY_DSN: ${{ secrets.NEXT_PUBLIC_SENTRY_DSN }}
 jobs:
   cypress:
-    name: Cypress integration tests
+    name: Integration
     runs-on: ubuntu-latest
     if: github.event == 'pull_request'
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout
+        uses: actions/checkout@v2
       - name: Node install
         shell: bash -l {0}
         run: nvm install
-      - name: Cypress Run
+      - name: Run Cypress
         uses: cypress-io/github-action@v1
         with:
           build: npm run build
@@ -31,14 +34,15 @@ jobs:
     name: Lighthouse audit
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout
+        uses: actions/checkout@v2
       - name: Install Node
         shell: bash -l {0}
         run: nvm install
       - run: npm install
       - run: npm run build:static
-      - name: Run Lighthouse CI
-        run: npx @lhci/cli@0.4.x autorun --config-path=./lighthouserc.json
+      - name: Run Lighthouse audit
+        run: npx @lhci/cli@0.4.x autorun
         env:
           LHCI_BUILD_TOKEN: ${{ secrets.LHCI_BUILD_TOKEN }}
           LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
