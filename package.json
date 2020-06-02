@@ -13,7 +13,8 @@
     "cypress:run:customer-journeys": "cypress run --spec 'cypress/integration/customer-journeys/**/*'",
     "contentful:generate-types": "contentful-typescript-codegen --output src/types/generated/contentful.d.ts ",
     "contentful:export-content": "exit 1",
-    "generate-barrels": "barrelsby --delete --directory './src/components' --location below"
+    "generate-barrels": "barrelsby --delete --directory './src/components' --location below",
+    "lchi:deploy": "git subtree push --prefix lhci-server heroku master"
   },
   "dependencies": {
     "@contentful/rich-text-html-renderer": "^13.4.0",

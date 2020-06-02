@@ -36,4 +36,5 @@ jobs:
       - name: Run Lighthouse CI
         run: npx @lhci/cli@0.4.x autorun --config-path=./lighthouserc.json
         env:
+          LHCI_BUILD_TOKEN: ${{ secrets.LHCI_BUILD_TOKEN }}
           LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
