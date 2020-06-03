@@ -11,6 +11,10 @@
 # next.js
 /.next/
 /out/
+.vercel
+
+# wrangler
+/dist
 
 # production
 /build
@@ -29,6 +33,5 @@ yarn-error.log*
 .env.test.local
 .env.production.local
 
-.vercel
 
-out
+

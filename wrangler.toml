@@ -1,0 +1,10 @@
+name = "faux"
+type = "webpack"
+account_id = "9d8cb165350db659cf7741e5aaab1922"
+workers_dev = true
+route = ""
+zone_id = ""
+
+[site]
+bucket = "./out"
+entry-point = "workers-site"

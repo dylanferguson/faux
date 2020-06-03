@@ -7,6 +7,8 @@
     "build": "next build",
     "build:static": "next build && next export",
     "build:analyse": "ANALYZE=true next build",
+    "predeploy": "rm -rf ./out && npm run build:static && rm -rf ./out/__next/static/development",
+    "deploy": "wrangler publish",
     "start": "next start",
     "cypress:open": "cypress open",
     "cypress:run": "cypress run",
@@ -27,6 +29,7 @@
     "react-dom": "16.13.1"
   },
   "devDependencies": {
+    "@cloudflare/wrangler": "^1.9.2",
     "@contentful/rich-text-react-renderer": "^13.4.0",
     "@fullhuman/postcss-purgecss": "^2.2.0",
     "@next/bundle-analyzer": "^9.4.4",
