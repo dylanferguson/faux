@@ -1,0 +1,28 @@
+name: Deploy
+on:
+  push:
+    branches:
+      - master
+env:
+  CONTENTFUL_SPACE_ID: ${{ secrets.CONTENTFUL_SPACE_ID }}
+  CONTENTFUL_ACCESS_TOKEN: ${{ secrets.CONTENTFUL_ACCESS_TOKEN }}
+  NEXT_PUBLIC_ALGOLIA_APP_ID: ${{ secrets.NEXT_PUBLIC_ALGOLIA_APP_ID }}
+  NEXT_PUBLIC_ALGOLIA_SEARCH_ONLY_API_KEY: ${{ secrets.NEXT_PUBLIC_ALGOLIA_SEARCH_ONLY_API_KEY }}
+  NEXT_PUBLIC_ALGOLIA_INDEX: ${{ secrets.NEXT_PUBLIC_ALGOLIA_INDEX }}
+  NEXT_PUBLIC_GA_TRACKING_ID: ${{ secrets.NEXT_PUBLIC_GA_TRACKING_ID }}
+  NEXT_PUBLIC_SENTRY_DSN: ${{ secrets.NEXT_PUBLIC_SENTRY_DSN }}
+jobs:
+  deploy:
+    name: "Deploy to Cloudflare Workers"
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Node install
+        shell: bash -l {0}
+        run: nvm install
+      - run: npm install
+      - name: Deploy
+        run: npm run deploy
+        env:
+          CF_API_KEY: ${{ secrets.CF_API_KEY }}
