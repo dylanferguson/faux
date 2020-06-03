@@ -1,0 +1,6642 @@
+{
+  "contentTypes": [
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "c9u7f3lehmub"
+          }
+        },
+        "id": "releaseNote",
+        "type": "ContentType",
+        "createdAt": "2020-05-21T12:49:02.981Z",
+        "updatedAt": "2020-05-23T06:10:16.684Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 23,
+        "publishedAt": "2020-05-23T06:10:16.684Z",
+        "firstPublishedAt": "2020-05-21T12:49:05.150Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "publishedCounter": 12,
+        "version": 24,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        }
+      },
+      "displayField": "version",
+      "name": "Release Note",
+      "description": "",
+      "fields": [
+        {
+          "id": "version",
+          "name": "Version",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "unique": true
+            },
+            {
+              "regexp": {
+                "pattern": "^v(0|[1-9]\\d*)\\.(0|[1-9]\\d*)\\.(0|[1-9]\\d*)(?:-((?:0|[1-9]\\d*|\\d*[a-zA-Z-][0-9a-zA-Z-]*)(?:\\.(?:0|[1-9]\\d*|\\d*[a-zA-Z-][0-9a-zA-Z-]*))*))?(?:\\+([0-9a-zA-Z-]+(?:\\.[0-9a-zA-Z-]+)*))?$",
+                "flags": null
+              },
+              "message": "Version must be a valid SemVer pattern"
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "category",
+          "name": "Category",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "in": [
+                "Marketing Site",
+                "App",
+                "SDK",
+                "Open Banking API"
+              ]
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "releaseDate",
+          "name": "Release Date",
+          "type": "Date",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "description",
+          "name": "Description",
+          "type": "Text",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "scope",
+          "name": "Scope",
+          "type": "Array",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "items": {
+            "type": "Symbol",
+            "validations": [
+              {
+                "in": [
+                  "bug fixes",
+                  "enhancements",
+                  "performance",
+                  "security",
+                  "features"
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "c9u7f3lehmub"
+          }
+        },
+        "id": "post",
+        "type": "ContentType",
+        "createdAt": "2020-05-24T05:07:25.800Z",
+        "updatedAt": "2020-05-24T05:10:42.850Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 9,
+        "publishedAt": "2020-05-24T05:10:42.850Z",
+        "firstPublishedAt": "2020-05-24T05:07:27.042Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "publishedCounter": 5,
+        "version": 10,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        }
+      },
+      "displayField": "title",
+      "name": "Post",
+      "description": "",
+      "fields": [
+        {
+          "id": "title",
+          "name": "Title",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "unique": true
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "slug",
+          "name": "Slug",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "unique": true
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "publishDate",
+          "name": "Publish Date",
+          "type": "Date",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "tags",
+          "name": "Tags",
+          "type": "Array",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "items": {
+            "type": "Symbol",
+            "validations": [
+              {
+                "in": [
+                  "Engineering",
+                  "Marketing"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "heroImage",
+          "name": "Hero Image",
+          "type": "Link",
+          "localized": false,
+          "required": false,
+          "validations": [
+            {
+              "linkMimetypeGroup": [
+                "image"
+              ]
+            }
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Asset"
+        },
+        {
+          "id": "description",
+          "name": "Description",
+          "type": "Text",
+          "localized": false,
+          "required": false,
+          "validations": [
+            {
+              "size": {
+                "max": 500
+              },
+              "message": "Contain your enthusiasm, stick to less than 500 characters for the descrption."
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "body",
+          "name": "Body",
+          "type": "RichText",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "nodes": {
+              }
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "author",
+          "name": "Author",
+          "type": "Link",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "linkContentType": [
+                "author"
+              ]
+            }
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Entry"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "c9u7f3lehmub"
+          }
+        },
+        "id": "author",
+        "type": "ContentType",
+        "createdAt": "2020-05-24T05:09:02.852Z",
+        "updatedAt": "2020-05-24T05:09:04.095Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 1,
+        "publishedAt": "2020-05-24T05:09:04.095Z",
+        "firstPublishedAt": "2020-05-24T05:09:04.095Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 2,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        }
+      },
+      "displayField": "name",
+      "name": "Author",
+      "description": "",
+      "fields": [
+        {
+          "id": "name",
+          "name": "Name",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "avatar",
+          "name": "Avatar",
+          "type": "Link",
+          "localized": false,
+          "required": false,
+          "validations": [
+            {
+              "linkMimetypeGroup": [
+                "image"
+              ]
+            }
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Asset"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "c9u7f3lehmub"
+          }
+        },
+        "id": "faq",
+        "type": "ContentType",
+        "createdAt": "2020-05-24T07:56:35.543Z",
+        "updatedAt": "2020-05-24T07:56:36.682Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 1,
+        "publishedAt": "2020-05-24T07:56:36.682Z",
+        "firstPublishedAt": "2020-05-24T07:56:36.682Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 2,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        }
+      },
+      "displayField": "question",
+      "name": "FAQ",
+      "description": "",
+      "fields": [
+        {
+          "id": "question",
+          "name": "Question",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "unique": true
+            },
+            {
+              "size": {
+                "max": 500
+              }
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "answer",
+          "name": "Answer",
+          "type": "Text",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "category",
+          "name": "Category",
+          "type": "Array",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "items": {
+            "type": "Symbol",
+            "validations": [
+              {
+                "in": [
+                  "general",
+                  "credit cards"
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "c9u7f3lehmub"
+          }
+        },
+        "id": "creditCard",
+        "type": "ContentType",
+        "createdAt": "2020-05-26T11:58:58.955Z",
+        "updatedAt": "2020-05-26T12:10:04.377Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 9,
+        "publishedAt": "2020-05-26T12:10:04.377Z",
+        "firstPublishedAt": "2020-05-26T11:59:01.249Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "publishedCounter": 5,
+        "version": 10,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        }
+      },
+      "displayField": "cardName",
+      "name": "Credit Card",
+      "description": "",
+      "fields": [
+        {
+          "id": "cardName",
+          "name": "Card Name",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "unique": true
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "category",
+          "name": "Category",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "in": [
+                "Rewards",
+                "Qantas Rewards",
+                "Low Annual Fee",
+                "Low Rate"
+              ]
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "specialOffers",
+          "name": "Special Offers",
+          "type": "Array",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "items": {
+            "type": "Link",
+            "validations": [
+              {
+                "linkContentType": [
+                  "specialOffer"
+                ]
+              }
+            ],
+            "linkType": "Entry"
+          }
+        },
+        {
+          "id": "standardPurchaseRate",
+          "name": "Standard Purchase Rate",
+          "type": "Number",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "range": {
+                "min": 0,
+                "max": 100
+              }
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "cashAdvanceRate",
+          "name": "Cash Advance Rate",
+          "type": "Number",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "range": {
+                "min": 0,
+                "max": 100
+              }
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "cardFee",
+          "name": "Card Fee",
+          "type": "Number",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "interestFreeDays",
+          "name": "Interest Free Days",
+          "type": "Integer",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "minimumCreditLimit",
+          "name": "Minimum Credit Limit",
+          "type": "Number",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "c9u7f3lehmub"
+          }
+        },
+        "id": "specialOffer",
+        "type": "ContentType",
+        "createdAt": "2020-05-26T12:01:27.403Z",
+        "updatedAt": "2020-05-26T12:01:28.137Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 1,
+        "publishedAt": "2020-05-26T12:01:28.137Z",
+        "firstPublishedAt": "2020-05-26T12:01:28.137Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 2,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        }
+      },
+      "displayField": "title",
+      "name": "Special Offer",
+      "description": "",
+      "fields": [
+        {
+          "id": "title",
+          "name": "Title",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "details",
+          "name": "details",
+          "type": "Text",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "c9u7f3lehmub"
+          }
+        },
+        "id": "button",
+        "type": "ContentType",
+        "createdAt": "2020-05-26T12:15:02.857Z",
+        "updatedAt": "2020-05-26T14:01:49.481Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 17,
+        "publishedAt": "2020-05-26T14:01:49.481Z",
+        "firstPublishedAt": "2020-05-26T12:15:04.134Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "publishedCounter": 9,
+        "version": 18,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        }
+      },
+      "displayField": "buttonText",
+      "name": "Button",
+      "description": "",
+      "fields": [
+        {
+          "id": "buttonText",
+          "name": "Button Text",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "link",
+          "name": "Link",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "secondary",
+          "name": "Secondary",
+          "type": "Boolean",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "c9u7f3lehmub"
+          }
+        },
+        "id": "page",
+        "type": "ContentType",
+        "createdAt": "2020-05-26T12:43:02.651Z",
+        "updatedAt": "2020-05-30T06:11:59.688Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 21,
+        "publishedAt": "2020-05-30T06:11:59.688Z",
+        "firstPublishedAt": "2020-05-26T12:43:03.287Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "publishedCounter": 11,
+        "version": 22,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        }
+      },
+      "displayField": "pageTitle",
+      "name": "Page",
+      "description": "",
+      "fields": [
+        {
+          "id": "pageTitle",
+          "name": "Page Title",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "slug",
+          "name": "Slug",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "unique": true
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "content",
+          "name": "Content",
+          "type": "Array",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "items": {
+            "type": "Link",
+            "validations": [
+              {
+                "linkContentType": [
+                  "BlogCardsSection",
+                  "FAQSection",
+                  "FeatureDetailsSection",
+                  "HeroSection",
+                  "IntroTextSection",
+                  "QuickLinksSection",
+                  "SimpleFeatureSection"
+                ]
+              }
+            ],
+            "linkType": "Entry"
+          }
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "c9u7f3lehmub"
+          }
+        },
+        "id": "IntroTextSection",
+        "type": "ContentType",
+        "createdAt": "2020-05-27T13:40:21.639Z",
+        "updatedAt": "2020-05-27T13:46:32.247Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "publishedAt": "2020-05-27T13:46:32.247Z",
+        "firstPublishedAt": "2020-05-27T13:40:22.302Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        }
+      },
+      "displayField": "body",
+      "name": "Intro Text Section",
+      "description": "",
+      "fields": [
+        {
+          "id": "title",
+          "name": "Title",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "body",
+          "name": "body",
+          "type": "Text",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "c9u7f3lehmub"
+          }
+        },
+        "id": "FAQSection",
+        "type": "ContentType",
+        "createdAt": "2020-05-27T14:06:47.763Z",
+        "updatedAt": "2020-05-27T14:24:25.599Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "publishedAt": "2020-05-27T14:24:25.599Z",
+        "firstPublishedAt": "2020-05-27T14:06:48.520Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        }
+      },
+      "displayField": "title",
+      "name": "FAQ Section",
+      "description": "",
+      "fields": [
+        {
+          "id": "title",
+          "name": "title",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "faqs",
+          "name": "FAQs",
+          "type": "Array",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "items": {
+            "type": "Link",
+            "validations": [
+              {
+                "linkContentType": [
+                  "faq"
+                ]
+              }
+            ],
+            "linkType": "Entry"
+          }
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "c9u7f3lehmub"
+          }
+        },
+        "id": "HeroSection",
+        "type": "ContentType",
+        "createdAt": "2020-05-27T14:32:32.556Z",
+        "updatedAt": "2020-05-27T14:32:33.323Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 1,
+        "publishedAt": "2020-05-27T14:32:33.323Z",
+        "firstPublishedAt": "2020-05-27T14:32:33.323Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 2,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        }
+      },
+      "displayField": "title",
+      "name": "Hero Section",
+      "description": "",
+      "fields": [
+        {
+          "id": "title",
+          "name": "Title",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "subtitle",
+          "name": "Subtitle",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "accentText",
+          "name": "Accent Text",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "buttons",
+          "name": "Buttons",
+          "type": "Array",
+          "localized": false,
+          "required": false,
+          "validations": [
+            {
+              "size": {
+                "min": 0,
+                "max": 2
+              }
+            }
+          ],
+          "disabled": false,
+          "omitted": false,
+          "items": {
+            "type": "Link",
+            "validations": [
+              {
+                "linkContentType": [
+                  "button"
+                ]
+              }
+            ],
+            "linkType": "Entry"
+          }
+        },
+        {
+          "id": "image",
+          "name": "Image",
+          "type": "Link",
+          "localized": false,
+          "required": false,
+          "validations": [
+            {
+              "linkMimetypeGroup": [
+                "image"
+              ]
+            }
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Asset"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "c9u7f3lehmub"
+          }
+        },
+        "id": "FeatureDetail",
+        "type": "ContentType",
+        "createdAt": "2020-05-27T15:17:05.168Z",
+        "updatedAt": "2020-05-27T15:28:08.983Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 5,
+        "publishedAt": "2020-05-27T15:28:08.983Z",
+        "firstPublishedAt": "2020-05-27T15:17:06.085Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "publishedCounter": 3,
+        "version": 6,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        }
+      },
+      "displayField": "title",
+      "name": "Feature Detail",
+      "description": "",
+      "fields": [
+        {
+          "id": "icon",
+          "name": "Icon",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "title",
+          "name": "Title",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "body",
+          "name": "Body",
+          "type": "Text",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "c9u7f3lehmub"
+          }
+        },
+        "id": "FeatureDetailsSection",
+        "type": "ContentType",
+        "createdAt": "2020-05-27T15:39:01.724Z",
+        "updatedAt": "2020-05-27T15:39:02.930Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 1,
+        "publishedAt": "2020-05-27T15:39:02.930Z",
+        "firstPublishedAt": "2020-05-27T15:39:02.930Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 2,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        }
+      },
+      "displayField": "title",
+      "name": "Feature Details Section",
+      "description": "",
+      "fields": [
+        {
+          "id": "title",
+          "name": "title",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "featureDetails",
+          "name": "Feature Details",
+          "type": "Array",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "size": {
+                "min": 2
+              }
+            }
+          ],
+          "disabled": false,
+          "omitted": false,
+          "items": {
+            "type": "Link",
+            "validations": [
+              {
+                "linkContentType": [
+                  "FeatureDetail"
+                ]
+              }
+            ],
+            "linkType": "Entry"
+          }
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "c9u7f3lehmub"
+          }
+        },
+        "id": "SimpleFeatureSection",
+        "type": "ContentType",
+        "createdAt": "2020-05-30T03:45:11.939Z",
+        "updatedAt": "2020-05-30T04:16:43.732Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 5,
+        "publishedAt": "2020-05-30T04:16:43.732Z",
+        "firstPublishedAt": "2020-05-30T03:45:12.660Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "publishedCounter": 3,
+        "version": 6,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        }
+      },
+      "displayField": "title",
+      "name": "SimpleFeatureSection",
+      "description": "",
+      "fields": [
+        {
+          "id": "title",
+          "name": "title",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "features",
+          "name": "features",
+          "type": "Array",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "items": {
+            "type": "Symbol",
+            "validations": [
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "c9u7f3lehmub"
+          }
+        },
+        "id": "quickLink",
+        "type": "ContentType",
+        "createdAt": "2020-05-30T04:28:08.964Z",
+        "updatedAt": "2020-05-30T04:46:45.677Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 5,
+        "publishedAt": "2020-05-30T04:46:45.677Z",
+        "firstPublishedAt": "2020-05-30T04:28:10.457Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "publishedCounter": 3,
+        "version": 6,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        }
+      },
+      "displayField": "title",
+      "name": "Quick Link",
+      "description": "",
+      "fields": [
+        {
+          "id": "title",
+          "name": "title",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "link",
+          "name": "link",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "icon",
+          "name": "Icon",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "c9u7f3lehmub"
+          }
+        },
+        "id": "QuickLinksSection",
+        "type": "ContentType",
+        "createdAt": "2020-05-30T04:29:03.125Z",
+        "updatedAt": "2020-05-30T04:43:09.454Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "publishedAt": "2020-05-30T04:43:09.454Z",
+        "firstPublishedAt": "2020-05-30T04:29:04.340Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        }
+      },
+      "displayField": "title",
+      "name": "Quick Links Section",
+      "description": "",
+      "fields": [
+        {
+          "id": "title",
+          "name": "title",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "links",
+          "name": "links",
+          "type": "Array",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "size": {
+                "min": 1
+              }
+            }
+          ],
+          "disabled": false,
+          "omitted": false,
+          "items": {
+            "type": "Link",
+            "validations": [
+              {
+                "linkContentType": [
+                  "quickLink"
+                ]
+              }
+            ],
+            "linkType": "Entry"
+          }
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "c9u7f3lehmub"
+          }
+        },
+        "id": "BlogCardsSection",
+        "type": "ContentType",
+        "createdAt": "2020-05-30T06:03:03.717Z",
+        "updatedAt": "2020-05-30T06:03:05.193Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 1,
+        "publishedAt": "2020-05-30T06:03:05.193Z",
+        "firstPublishedAt": "2020-05-30T06:03:05.193Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 2,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        }
+      },
+      "displayField": "title",
+      "name": "Blog Cards Section",
+      "description": "",
+      "fields": [
+        {
+          "id": "title",
+          "name": "title",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "posts",
+          "name": "posts",
+          "type": "Array",
+          "localized": false,
+          "required": true,
+          "validations": [
+            {
+              "size": {
+                "min": 1
+              }
+            }
+          ],
+          "disabled": false,
+          "omitted": false,
+          "items": {
+            "type": "Link",
+            "validations": [
+              {
+                "linkContentType": [
+                  "post"
+                ]
+              }
+            ],
+            "linkType": "Entry"
+          }
+        }
+      ]
+    }
+  ],
+  "editorInterfaces": [
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "c9u7f3lehmub",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 24,
+        "createdAt": "2020-05-21T12:49:05.209Z",
+        "createdBy": {
+          "sys": {
+            "id": "2ObTCD6vrU24nLlodS3mdK",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2020-05-23T06:10:17.423Z",
+        "updatedBy": {
+          "sys": {
+            "id": "2ObTCD6vrU24nLlodS3mdK",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "releaseNote",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "version",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "category",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "releaseDate",
+          "settings": {
+            "format": "dateonly"
+          },
+          "widgetId": "datePicker",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "description",
+          "widgetId": "markdown",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "scope",
+          "widgetId": "tagEditor",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "c9u7f3lehmub",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 10,
+        "createdAt": "2020-05-24T05:07:27.136Z",
+        "createdBy": {
+          "sys": {
+            "id": "2ObTCD6vrU24nLlodS3mdK",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2020-05-24T05:10:44.022Z",
+        "updatedBy": {
+          "sys": {
+            "id": "2ObTCD6vrU24nLlodS3mdK",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "post",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "title",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "slug",
+          "widgetId": "slugEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "publishDate",
+          "settings": {
+            "format": "dateonly"
+          },
+          "widgetId": "datePicker",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "tags",
+          "widgetId": "tagEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "heroImage",
+          "widgetId": "assetLinkEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "description",
+          "widgetId": "markdown",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "body",
+          "widgetId": "richTextEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "author",
+          "widgetId": "entryCardEditor",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "c9u7f3lehmub",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 2,
+        "createdAt": "2020-05-24T05:09:04.168Z",
+        "createdBy": {
+          "sys": {
+            "id": "2ObTCD6vrU24nLlodS3mdK",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2020-05-24T05:09:05.060Z",
+        "updatedBy": {
+          "sys": {
+            "id": "2ObTCD6vrU24nLlodS3mdK",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "author",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "name",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "avatar",
+          "widgetId": "assetLinkEditor",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "c9u7f3lehmub",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 2,
+        "createdAt": "2020-05-24T07:56:36.734Z",
+        "createdBy": {
+          "sys": {
+            "id": "2ObTCD6vrU24nLlodS3mdK",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2020-05-24T07:56:37.385Z",
+        "updatedBy": {
+          "sys": {
+            "id": "2ObTCD6vrU24nLlodS3mdK",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "faq",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "question",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "answer",
+          "widgetId": "markdown",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "category",
+          "widgetId": "tagEditor",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "c9u7f3lehmub",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 10,
+        "createdAt": "2020-05-26T11:59:01.303Z",
+        "createdBy": {
+          "sys": {
+            "id": "2ObTCD6vrU24nLlodS3mdK",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2020-05-26T12:10:06.343Z",
+        "updatedBy": {
+          "sys": {
+            "id": "2ObTCD6vrU24nLlodS3mdK",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "creditCard",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "cardName",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "category",
+          "settings": {
+            "helpText": "One of either Rewards, Qantas Rewards, Low Annual Fee, Low Rate"
+          },
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "specialOffers",
+          "settings": {
+            "bulkEditing": false,
+            "showLinkEntityAction": true,
+            "showCreateEntityAction": true
+          },
+          "widgetId": "entryLinksEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "standardPurchaseRate",
+          "settings": {
+            "helpText": "% p.a."
+          },
+          "widgetId": "numberEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "cashAdvanceRate",
+          "settings": {
+            "helpText": "% p.a."
+          },
+          "widgetId": "numberEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "cardFee",
+          "settings": {
+            "helpText": "$ p.a."
+          },
+          "widgetId": "numberEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "interestFreeDays",
+          "settings": {
+            "helpText": "Up to"
+          },
+          "widgetId": "numberEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "minimumCreditLimit",
+          "settings": {
+            "helpText": "$"
+          },
+          "widgetId": "numberEditor",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "c9u7f3lehmub",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 2,
+        "createdAt": "2020-05-26T12:01:28.190Z",
+        "createdBy": {
+          "sys": {
+            "id": "2ObTCD6vrU24nLlodS3mdK",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2020-05-26T12:01:30.353Z",
+        "updatedBy": {
+          "sys": {
+            "id": "2ObTCD6vrU24nLlodS3mdK",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "specialOffer",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "title",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "details",
+          "widgetId": "markdown",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "c9u7f3lehmub",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 18,
+        "createdAt": "2020-05-26T12:15:04.204Z",
+        "createdBy": {
+          "sys": {
+            "id": "2ObTCD6vrU24nLlodS3mdK",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2020-05-26T14:01:50.304Z",
+        "updatedBy": {
+          "sys": {
+            "id": "2ObTCD6vrU24nLlodS3mdK",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "button",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "buttonText",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "link",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "secondary",
+          "settings": {
+            "trueLabel": "Yes",
+            "falseLabel": "No"
+          },
+          "widgetId": "boolean",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "c9u7f3lehmub",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 22,
+        "createdAt": "2020-05-26T12:43:03.529Z",
+        "createdBy": {
+          "sys": {
+            "id": "2ObTCD6vrU24nLlodS3mdK",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2020-05-30T06:12:00.405Z",
+        "updatedBy": {
+          "sys": {
+            "id": "2ObTCD6vrU24nLlodS3mdK",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "page",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "pageTitle",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "slug",
+          "widgetId": "slugEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "content",
+          "settings": {
+            "bulkEditing": false,
+            "showLinkEntityAction": true,
+            "showCreateEntityAction": true
+          },
+          "widgetId": "entryLinksEditor",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "c9u7f3lehmub",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 4,
+        "createdAt": "2020-05-27T13:40:22.359Z",
+        "createdBy": {
+          "sys": {
+            "id": "2ObTCD6vrU24nLlodS3mdK",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2020-05-27T13:46:32.985Z",
+        "updatedBy": {
+          "sys": {
+            "id": "2ObTCD6vrU24nLlodS3mdK",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "IntroTextSection",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "title",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "body",
+          "widgetId": "markdown",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "c9u7f3lehmub",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 4,
+        "createdAt": "2020-05-27T14:06:48.598Z",
+        "createdBy": {
+          "sys": {
+            "id": "2ObTCD6vrU24nLlodS3mdK",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2020-05-27T14:24:27.735Z",
+        "updatedBy": {
+          "sys": {
+            "id": "2ObTCD6vrU24nLlodS3mdK",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "FAQSection",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "title",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "faqs",
+          "settings": {
+            "bulkEditing": false,
+            "showLinkEntityAction": true,
+            "showCreateEntityAction": true
+          },
+          "widgetId": "entryLinksEditor",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "c9u7f3lehmub",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 2,
+        "createdAt": "2020-05-27T14:32:33.384Z",
+        "createdBy": {
+          "sys": {
+            "id": "2ObTCD6vrU24nLlodS3mdK",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2020-05-27T14:32:34.156Z",
+        "updatedBy": {
+          "sys": {
+            "id": "2ObTCD6vrU24nLlodS3mdK",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "HeroSection",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "title",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "subtitle",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "accentText",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "buttons",
+          "settings": {
+            "bulkEditing": false,
+            "showLinkEntityAction": true,
+            "showCreateEntityAction": true
+          },
+          "widgetId": "entryLinksEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "image",
+          "settings": {
+            "showLinkEntityAction": true,
+            "showCreateEntityAction": true
+          },
+          "widgetId": "assetLinkEditor",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "c9u7f3lehmub",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 6,
+        "createdAt": "2020-05-27T15:17:06.146Z",
+        "createdBy": {
+          "sys": {
+            "id": "2ObTCD6vrU24nLlodS3mdK",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2020-05-27T15:28:10.693Z",
+        "updatedBy": {
+          "sys": {
+            "id": "2ObTCD6vrU24nLlodS3mdK",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "FeatureDetail",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "icon",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "title",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "body",
+          "widgetId": "markdown",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "c9u7f3lehmub",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 2,
+        "createdAt": "2020-05-27T15:39:02.998Z",
+        "createdBy": {
+          "sys": {
+            "id": "2ObTCD6vrU24nLlodS3mdK",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2020-05-27T15:39:04.093Z",
+        "updatedBy": {
+          "sys": {
+            "id": "2ObTCD6vrU24nLlodS3mdK",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "FeatureDetailsSection",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "title",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "featureDetails",
+          "settings": {
+            "bulkEditing": false,
+            "showLinkEntityAction": true,
+            "showCreateEntityAction": true
+          },
+          "widgetId": "entryLinksEditor",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "c9u7f3lehmub",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 6,
+        "createdAt": "2020-05-30T03:45:12.719Z",
+        "createdBy": {
+          "sys": {
+            "id": "2ObTCD6vrU24nLlodS3mdK",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2020-05-30T04:16:44.610Z",
+        "updatedBy": {
+          "sys": {
+            "id": "2ObTCD6vrU24nLlodS3mdK",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "SimpleFeatureSection",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "title",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "features",
+          "widgetId": "tagEditor",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "c9u7f3lehmub",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 6,
+        "createdAt": "2020-05-30T04:28:10.520Z",
+        "createdBy": {
+          "sys": {
+            "id": "2ObTCD6vrU24nLlodS3mdK",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2020-05-30T04:46:46.391Z",
+        "updatedBy": {
+          "sys": {
+            "id": "2ObTCD6vrU24nLlodS3mdK",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "quickLink",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "title",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "link",
+          "widgetId": "urlEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "icon",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "c9u7f3lehmub",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 4,
+        "createdAt": "2020-05-30T04:29:04.400Z",
+        "createdBy": {
+          "sys": {
+            "id": "2ObTCD6vrU24nLlodS3mdK",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2020-05-30T04:43:10.157Z",
+        "updatedBy": {
+          "sys": {
+            "id": "2ObTCD6vrU24nLlodS3mdK",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "QuickLinksSection",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "title",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "links",
+          "settings": {
+            "bulkEditing": false,
+            "showLinkEntityAction": true,
+            "showCreateEntityAction": true
+          },
+          "widgetId": "entryLinksEditor",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "c9u7f3lehmub",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 2,
+        "createdAt": "2020-05-30T06:03:05.258Z",
+        "createdBy": {
+          "sys": {
+            "id": "2ObTCD6vrU24nLlodS3mdK",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2020-05-30T06:03:06.282Z",
+        "updatedBy": {
+          "sys": {
+            "id": "2ObTCD6vrU24nLlodS3mdK",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "BlogCardsSection",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "title",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "posts",
+          "settings": {
+            "bulkEditing": false,
+            "showLinkEntityAction": true,
+            "showCreateEntityAction": true
+          },
+          "widgetId": "entryLinksEditor",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    }
+  ],
+  "entries": [
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "c9u7f3lehmub"
+          }
+        },
+        "id": "6Twg3fT2Ir6WXlPOewEsvV",
+        "type": "Entry",
+        "createdAt": "2020-05-21T13:17:41.067Z",
+        "updatedAt": "2020-05-24T02:24:19.742Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 26,
+        "publishedAt": "2020-05-24T02:24:19.742Z",
+        "firstPublishedAt": "2020-05-21T13:19:31.918Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "publishedCounter": 8,
+        "version": 27,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "releaseNote"
+          }
+        }
+      },
+      "fields": {
+        "version": {
+          "en-US": "v0.1.0"
+        },
+        "category": {
+          "en-US": "Marketing Site"
+        },
+        "releaseDate": {
+          "en-US": "2020-05-02"
+        },
+        "description": {
+          "en-US": "What’s New\n\n- From today, you'll notice a shiny new app button that matches our new logo. You can read more about it on our blog at SlackHQ.com. Change! Everyone loves it. (Having said that, nothing about Slack or how you use it has changed. Just the button.) \n\nBug Fixes\n\n- Users signing in with Single Sign-On would see the same message twice when logging in.\n- Users signing in with Single Sign-On would see the same message twice when logging in. This will not happen any more.\n- When trying to select a portion of a code-formatted block of text (text formatted with \\` or \\`\\`\\` at either end), some characters were proving slippery and hard to select. You can now copy and paste to your heart's content.\n- Several random, rare crashes — on launch and at other times — have been eliminated. More random and rare crashes inevitably exist, of course, and as soon as we know what they are, we'll eliminate those too.\n- The full screen shortcut was mistakenly listed as ‘Ctrl+F’ instead of ‘Ctrl+Shift+F’ in the \"View\" menu. We both apologize for this and hope that, because of it, someone out there discovered 'Ctrl+F' as a useful shortcut for searching the channel that you're in. Always look on the bright side of bugs. "
+        },
+        "scope": {
+          "en-US": [
+            "bug fixes",
+            "features"
+          ]
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "c9u7f3lehmub"
+          }
+        },
+        "id": "3M4B2dCm31qnDE7Vt3kgRo",
+        "type": "Entry",
+        "createdAt": "2020-05-22T10:21:20.745Z",
+        "updatedAt": "2020-05-24T02:24:20.128Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 32,
+        "publishedAt": "2020-05-24T02:24:20.128Z",
+        "firstPublishedAt": "2020-05-22T10:22:29.037Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "publishedCounter": 8,
+        "version": 33,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "releaseNote"
+          }
+        }
+      },
+      "fields": {
+        "version": {
+          "en-US": "v0.4.5"
+        },
+        "category": {
+          "en-US": "App"
+        },
+        "releaseDate": {
+          "en-US": "2020-05-13"
+        },
+        "description": {
+          "en-US": "Bug Fixes\n\n- An important security update. Security updates are always important. This is one of those."
+        },
+        "scope": {
+          "en-US": [
+            "security",
+            "bug fixes"
+          ]
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "c9u7f3lehmub"
+          }
+        },
+        "id": "5rIA481YqIfKbnw28l0gx6",
+        "type": "Entry",
+        "createdAt": "2020-05-22T10:36:00.056Z",
+        "updatedAt": "2020-05-24T02:24:20.145Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 14,
+        "publishedAt": "2020-05-24T02:24:20.145Z",
+        "firstPublishedAt": "2020-05-22T10:36:31.670Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "publishedCounter": 5,
+        "version": 15,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "releaseNote"
+          }
+        }
+      },
+      "fields": {
+        "version": {
+          "en-US": "v0.4.11"
+        },
+        "category": {
+          "en-US": "Open Banking API"
+        },
+        "releaseDate": {
+          "en-US": "2020-05-11"
+        },
+        "description": {
+          "en-US": "Bug Fixes\n\n- We got so excited about your emoji we kept requesting them, particularly at the moment you switched channels. This caused all manner of slowness. We've since bottled our enthusiasm, and now request emoji exactly one (1) time."
+        },
+        "scope": {
+          "en-US": [
+            "performance"
+          ]
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "c9u7f3lehmub"
+          }
+        },
+        "id": "4LpgjU6ik2PCsBIjp0nESo",
+        "type": "Entry",
+        "createdAt": "2020-05-22T10:36:58.924Z",
+        "updatedAt": "2020-05-24T02:24:19.749Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 15,
+        "publishedAt": "2020-05-24T02:24:19.749Z",
+        "firstPublishedAt": "2020-05-22T10:37:56.077Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "publishedCounter": 5,
+        "version": 16,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "releaseNote"
+          }
+        }
+      },
+      "fields": {
+        "version": {
+          "en-US": "v0.2.7"
+        },
+        "category": {
+          "en-US": "SDK"
+        },
+        "releaseDate": {
+          "en-US": "2020-05-03"
+        },
+        "description": {
+          "en-US": "Bug Fixes\n\n- You're nearly finished signing in when suddenly – bonk – you're brought back to the first page. Hey, what gives? Please accept our apologies and, in this version, 100% less bonking\n- Entering characters from the accent menu no longer inserts an extra character. Voilà señorita: that souffleé is now an (edible) soufflé."
+        },
+        "scope": {
+          "en-US": [
+            "bug fixes",
+            "features"
+          ]
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "c9u7f3lehmub"
+          }
+        },
+        "id": "32P0GrG4qWKIBwo7K1EAqc",
+        "type": "Entry",
+        "createdAt": "2020-05-22T10:38:06.493Z",
+        "updatedAt": "2020-05-24T02:24:19.745Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 15,
+        "publishedAt": "2020-05-24T02:24:19.745Z",
+        "firstPublishedAt": "2020-05-22T10:39:01.980Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "publishedCounter": 5,
+        "version": 16,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "releaseNote"
+          }
+        }
+      },
+      "fields": {
+        "version": {
+          "en-US": "v0.3.6"
+        },
+        "category": {
+          "en-US": "Open Banking API"
+        },
+        "releaseDate": {
+          "en-US": "2020-05-06"
+        },
+        "description": {
+          "en-US": "What’s New\n\n- Previously in Slack app releases: we fixed the Japanese input in 2.6.3. Then we re-broke it in 2.8.0. And now it’s fixed again. Stay tuned for the next thrilling installment.\n- An important Electron update improving security. A precautionary measure, but it’s always good to be up to date."
+        },
+        "scope": {
+          "en-US": [
+            "bug fixes",
+            "security"
+          ]
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "c9u7f3lehmub"
+          }
+        },
+        "id": "60oMYj0EmfHH8lBNPGIhAH",
+        "type": "Entry",
+        "createdAt": "2020-05-22T10:39:20.990Z",
+        "updatedAt": "2020-05-24T02:24:19.730Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 19,
+        "publishedAt": "2020-05-24T02:24:19.730Z",
+        "firstPublishedAt": "2020-05-22T10:41:45.611Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "publishedCounter": 5,
+        "version": 20,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "releaseNote"
+          }
+        }
+      },
+      "fields": {
+        "version": {
+          "en-US": "v0.4.0"
+        },
+        "category": {
+          "en-US": "Marketing Site"
+        },
+        "releaseDate": {
+          "en-US": "2020-05-09"
+        },
+        "description": {
+          "en-US": "What’s New\n\n- Myriad improvements for the people of Enterprise Grid, including quicker Quick Switching, better proxy support, and direct message draft syncing across multiple workspaces (meaning that whichever workspace you started typing that message in, you can finish in another.)\n\nBug Fixes\n\n- Unread badges were occasionally unreliable or inconsistent, so we tweaked a few doohickeys to improve them. It worked.\n- Smoothed some wrinkles in the loading of Slack calls and boosted general under-the-hood call performance while we were in there.\n- We tinkered with the workspace sign-in flow, updating how we handle errors and improving magic link support.\n- Copying email links now does what you’d expect (as long as you were expecting it to copy the email link. If you were expecting it to do something like file your taxes for you, you are still out of luck).\n- Slack will no longer interrupt macOS when restarting or shutting down.\n- After changing displays, pinch-to-zoom gestures will no longer insist on continuing to zoom the app when you pinch.\n- Twelve crashes have been fixed. Yes. 12. If you were unlucky enough to experience the full dozen, please accept a) this imaginary medal and b) our sincere apologies. "
+        },
+        "scope": {
+          "en-US": [
+            "bug fixes",
+            "security",
+            "performance"
+          ]
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "c9u7f3lehmub"
+          }
+        },
+        "id": "1wNT05Gy798RNsHQvsJBni",
+        "type": "Entry",
+        "createdAt": "2020-05-22T10:42:18.531Z",
+        "updatedAt": "2020-05-24T02:24:20.137Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 30,
+        "publishedAt": "2020-05-24T02:24:20.137Z",
+        "firstPublishedAt": "2020-05-22T10:42:57.550Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "publishedCounter": 10,
+        "version": 31,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "releaseNote"
+          }
+        }
+      },
+      "fields": {
+        "version": {
+          "en-US": "v0.5.2"
+        },
+        "category": {
+          "en-US": "Marketing Site"
+        },
+        "releaseDate": {
+          "en-US": "2020-05-22"
+        },
+        "description": {
+          "en-US": "Bug Fixes\n\n- All updates are important, of course. This one contains security updates, and as we know, they’re the most important kind of all."
+        },
+        "scope": {
+          "en-US": [
+            "security",
+            "bug fixes"
+          ]
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "c9u7f3lehmub"
+          }
+        },
+        "id": "6aRVDujyj22fELR6uwIJan",
+        "type": "Entry",
+        "createdAt": "2020-05-22T10:43:28.250Z",
+        "updatedAt": "2020-05-24T02:24:19.730Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 22,
+        "publishedAt": "2020-05-24T02:24:19.730Z",
+        "firstPublishedAt": "2020-05-22T10:44:55.256Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "publishedCounter": 5,
+        "version": 23,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "releaseNote"
+          }
+        }
+      },
+      "fields": {
+        "version": {
+          "en-US": "v0.6.9"
+        },
+        "category": {
+          "en-US": "Marketing Site"
+        },
+        "releaseDate": {
+          "en-US": "2020-05-24"
+        },
+        "description": {
+          "en-US": "What’s New\n\n- Slack is now a little faster, thanks to a few small but important changes.\n- Admins now have a little more control when configuring the ability to auto-update with a \"plist\". We've checked, and that's definitely the word. Admins: you apparently know what that means.\n\nBug Fixes\n\n- Drag and dropping files into Slack is much more stable now. Phew.\n- If you do need, for some reason, to reset the app data, this is now a smoother process than before.\n- Those in many workspaces will find that their icons are now more pleasingly aligned in the sidebar. It's a small thing, but very pleasing.\n- When DND is enabled, we no longer bounce the icon in the dock. Because DND means DND.\n- The process of updating Slack is now more stable — and we now more helpfully explain why we're asking for permissions to do that update.\n- Notifications were not making sounds that might notify you 100% of the time. Honestly, they had ONE job. They now perform it.\n- Customized Slack shortcuts on macOS that sometimes weren't working now do the thing you intended (and apologies that that wasn't the case for some).\n- Hardware acceleration can now be turned off without foregrounding Slack. If you know what that means, you'll know it's a good thing. And if you don't — it still is! And thank you for reading anyway."
+        },
+        "scope": {
+          "en-US": [
+            "performance",
+            "features",
+            "bug fixes",
+            "security"
+          ]
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "c9u7f3lehmub"
+          }
+        },
+        "id": "1H5BsfhuSePaGCJp2SL8nr",
+        "type": "Entry",
+        "createdAt": "2020-05-22T10:46:32.183Z",
+        "updatedAt": "2020-05-24T02:24:19.752Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 9,
+        "publishedAt": "2020-05-24T02:24:19.752Z",
+        "firstPublishedAt": "2020-05-22T10:46:55.936Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "publishedCounter": 4,
+        "version": 10,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "releaseNote"
+          }
+        }
+      },
+      "fields": {
+        "version": {
+          "en-US": "v0.7.1"
+        },
+        "category": {
+          "en-US": "Marketing Site"
+        },
+        "releaseDate": {
+          "en-US": "2020-05-25"
+        },
+        "description": {
+          "en-US": "Bug Fixes\n\n- We tuned up the engine and gave the interiors a thorough clean. Everything is now running smoothly again."
+        },
+        "scope": {
+          "en-US": [
+            "bug fixes"
+          ]
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "c9u7f3lehmub"
+          }
+        },
+        "id": "YZn1mXzwFcDoZGLtq58At",
+        "type": "Entry",
+        "createdAt": "2020-05-22T10:47:16.055Z",
+        "updatedAt": "2020-05-24T02:24:20.140Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 37,
+        "publishedAt": "2020-05-24T02:24:20.140Z",
+        "firstPublishedAt": "2020-05-22T10:47:56.803Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "publishedCounter": 8,
+        "version": 38,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "releaseNote"
+          }
+        }
+      },
+      "fields": {
+        "version": {
+          "en-US": "v0.8.2"
+        },
+        "category": {
+          "en-US": "Marketing Site"
+        },
+        "releaseDate": {
+          "en-US": "2020-05-28"
+        },
+        "description": {
+          "en-US": "(Yes! All of these release notes have been lovingly pillaged from Slack's [brilliant release notes](https://slack.com/intl/en-au/release-notes/mac) in order to fill the content void. Lorem Ipsum? Pfft.)\n\nWhat’s New\n\n- Batten the hatches! The app sandbox is now enabled for all web content. This is a fancy way of saying we’ve dialed up the security of the app. It wasn’t unsafe before, but it’s double safe now.\n- A preference that allows you to choose a unique save location per download, instead of choosing a folder for all of them. For the choosy types.\n\nBug Fixes\n\n- Downloading app updates is less prone to timing out on slow networks, as we’ve extended the timeout to something reasonable.\n- The Close button has returned to its rightful place on notifications, for all your dismissing needs.\n- If you found yourself, in some distant past, trying to start a song on Spotify with your keyboard’s play button, and it did not respond to your command while Slack was front and center, pesky hardware media keys were the problem. And this version is the cure.\n- The app should be less spicy to your CPU when you’re viewing certain network error pages.\n- When a download completes, we’ll show an in-app prompt rather than a bothersome system notification."
+        },
+        "scope": {
+          "en-US": [
+            "security",
+            "performance"
+          ]
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "c9u7f3lehmub"
+          }
+        },
+        "id": "n1y68lrJVO9Gj5NPIcM4Y",
+        "type": "Entry",
+        "createdAt": "2020-05-24T07:59:09.571Z",
+        "updatedAt": "2020-05-24T08:00:41.834Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 6,
+        "publishedAt": "2020-05-24T08:00:41.834Z",
+        "firstPublishedAt": "2020-05-24T08:00:41.834Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 7,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "faq"
+          }
+        }
+      },
+      "fields": {
+        "question": {
+          "en-US": "How do I set up my developer environment?"
+        },
+        "answer": {
+          "en-US": "There's no explicit sandbox or developer environment available to work against. Instead, you'll need to use a workspace you've created or are a member of.\n\nIt's best to keep your integration or app's ownership contained within the workspace that is responsible for it."
+        },
+        "category": {
+          "en-US": [
+            "general"
+          ]
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "c9u7f3lehmub"
+          }
+        },
+        "id": "7BzET3pJImeFY8hLC326XJ",
+        "type": "Entry",
+        "createdAt": "2020-05-24T08:01:08.396Z",
+        "updatedAt": "2020-05-24T08:01:28.649Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "publishedAt": "2020-05-24T08:01:28.649Z",
+        "firstPublishedAt": "2020-05-24T08:01:28.649Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "faq"
+          }
+        }
+      },
+      "fields": {
+        "question": {
+          "en-US": "How are incoming webhooks, slash commands, and bot users different?"
+        },
+        "answer": {
+          "en-US": "All three integration types allow you to post messages within a channel but differ in how those messages are triggered and how users interact with your app.\n\nYou can use all of these integration types together in your Slack app."
+        },
+        "category": {
+          "en-US": [
+            "general"
+          ]
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "c9u7f3lehmub"
+          }
+        },
+        "id": "5RES6FS4WJA8KwZGUtCWcF",
+        "type": "Entry",
+        "createdAt": "2020-05-24T08:01:56.039Z",
+        "updatedAt": "2020-05-24T08:02:21.286Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 4,
+        "publishedAt": "2020-05-24T08:02:21.286Z",
+        "firstPublishedAt": "2020-05-24T08:02:21.286Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "faq"
+          }
+        }
+      },
+      "fields": {
+        "question": {
+          "en-US": "Is Slack down?"
+        },
+        "answer": {
+          "en-US": "Of course we want Slack fully functional for users and developers at all times. Here are some tips in the unfortunate event you're having trouble and need to determine exactly how broken Slack might be."
+        },
+        "category": {
+          "en-US": [
+            "general"
+          ]
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "c9u7f3lehmub"
+          }
+        },
+        "id": "1MRNe1Hsp5CbemTvO0uqfo",
+        "type": "Entry",
+        "createdAt": "2020-05-24T08:02:32.892Z",
+        "updatedAt": "2020-05-24T08:02:56.718Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "publishedAt": "2020-05-24T08:02:56.718Z",
+        "firstPublishedAt": "2020-05-24T08:02:56.718Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "faq"
+          }
+        }
+      },
+      "fields": {
+        "question": {
+          "en-US": "How do I authenticate my requests to Slack?"
+        },
+        "answer": {
+          "en-US": "When working with Slack apps or Web API, you'll often need to send access tokens, also known as bearer tokens, along with inbound requests using the token query parameter.\n\nSome of the tokens you'll be given while going through the integration creation process. Other tokens you obtain by sending users through the OAuth 2.0 authentication flow."
+        },
+        "category": {
+          "en-US": [
+            "general"
+          ]
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "c9u7f3lehmub"
+          }
+        },
+        "id": "2bUMvn0BKsVhwjkmuBN0ee",
+        "type": "Entry",
+        "createdAt": "2020-05-24T08:03:15.093Z",
+        "updatedAt": "2020-05-24T08:03:28.755Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "publishedAt": "2020-05-24T08:03:28.755Z",
+        "firstPublishedAt": "2020-05-24T08:03:28.755Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "faq"
+          }
+        }
+      },
+      "fields": {
+        "question": {
+          "en-US": "How do I use API methods with my bot user token?"
+        },
+        "answer": {
+          "en-US": "When a Slack App is approved that contains a bot user, you're awarded two tokens. The bot user token is for performing certain actions directly as the bot user, like posting a message or connecting to the real time messaging API.\n\nIf you want to make Web API calls more generally, based on the scopes you've negotiated, you'll want to use the broader token you were awarded at approval time."
+        },
+        "category": {
+          "en-US": [
+            "general"
+          ]
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "c9u7f3lehmub"
+          }
+        },
+        "id": "5BHuek7mYjMGPWVnWPcp5r",
+        "type": "Entry",
+        "createdAt": "2020-05-24T08:03:38.464Z",
+        "updatedAt": "2020-05-24T08:03:58.265Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "publishedAt": "2020-05-24T08:03:58.265Z",
+        "firstPublishedAt": "2020-05-24T08:03:58.265Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "faq"
+          }
+        }
+      },
+      "fields": {
+        "question": {
+          "en-US": "Why does Slack never reach my slash command URL?"
+        },
+        "answer": {
+          "en-US": "Typically, if Slack cannot reach your slash command URL it's because it's either inaccessible, does not have a valid, verifiable SSL certificate, or because our request is timing out for some reason.\n\nSlack invokes slash command URLs from its servers rather than from a Slack client app like Slack for Mac. This means that the URL we're trying to reach must be accessible to Slack's servers.\n\nTo determine whether your certificate is valid, consider using this tool provided by SSL Labs."
+        },
+        "category": {
+          "en-US": [
+            "general"
+          ]
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "c9u7f3lehmub"
+          }
+        },
+        "id": "22KdJ7qjxOuurPvTZfvYHk",
+        "type": "Entry",
+        "createdAt": "2020-05-24T08:04:11.442Z",
+        "updatedAt": "2020-05-24T08:04:31.847Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 4,
+        "publishedAt": "2020-05-24T08:04:31.847Z",
+        "firstPublishedAt": "2020-05-24T08:04:31.847Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "faq"
+          }
+        }
+      },
+      "fields": {
+        "question": {
+          "en-US": "How is the API rate limited?"
+        },
+        "answer": {
+          "en-US": "Slack rate limits all aspects of platform use with many factors. Rate limits are currently unpublished. Review our rate limiting documentation for more detail.\n\nThe guiding spirit of Slack's rate limiting is to ensure that teams are able to communicate effortlessly and without distraction."
+        },
+        "category": {
+          "en-US": [
+            "general"
+          ]
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "c9u7f3lehmub"
+          }
+        },
+        "id": "6rFOrQK8ST5w5WEVOo0cnP",
+        "type": "Entry",
+        "createdAt": "2020-05-24T08:04:59.881Z",
+        "updatedAt": "2020-05-24T08:05:18.429Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "publishedAt": "2020-05-24T08:05:18.429Z",
+        "firstPublishedAt": "2020-05-24T08:05:18.429Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "faq"
+          }
+        }
+      },
+      "fields": {
+        "question": {
+          "en-US": "How do I connect to a websocket?"
+        },
+        "answer": {
+          "en-US": "The first step is making a typical HTTP request to the rtm.connect method. Within that response, you'll find a url field beginning with the URI protocol wss://.\n\nThen, use a Websocket client to open a long-lived connection to that time-sensitive URL. While the connection is open, you'll be streamed events associated with the workspace you're connecting on behalf of and can in turn send messages."
+        },
+        "category": {
+          "en-US": [
+            "general"
+          ]
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "c9u7f3lehmub"
+          }
+        },
+        "id": "IqifPRimsgal2tEcXtdDm",
+        "type": "Entry",
+        "createdAt": "2020-05-24T08:05:40.464Z",
+        "updatedAt": "2020-05-24T08:06:04.896Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 4,
+        "publishedAt": "2020-05-24T08:06:04.896Z",
+        "firstPublishedAt": "2020-05-24T08:06:04.896Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "faq"
+          }
+        }
+      },
+      "fields": {
+        "question": {
+          "en-US": "How do I validate a slash command's origin?"
+        },
+        "answer": {
+          "en-US": "Keep track of the validation tokens and team IDs Slack gives you when commands are created and teams approve your app. Always validate that the token field in an incoming slash command request has been issued to you by Slack and scope your data for that workspace."
+        },
+        "category": {
+          "en-US": [
+            "general"
+          ]
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "c9u7f3lehmub"
+          }
+        },
+        "id": "3qc0toNTrGeHzrmhP5xRzE",
+        "type": "Entry",
+        "createdAt": "2020-05-24T10:49:21.791Z",
+        "updatedAt": "2020-05-25T09:08:44.557Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 27,
+        "publishedAt": "2020-05-25T09:08:44.557Z",
+        "firstPublishedAt": "2020-05-24T10:55:10.482Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "publishedCounter": 7,
+        "version": 28,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "post"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Part I: Current State of the Service"
+        },
+        "slug": {
+          "en-US": "part-i-current-state-of-the-service"
+        },
+        "publishDate": {
+          "en-US": "2020-05-24"
+        },
+        "tags": {
+          "en-US": [
+            "Engineering"
+          ]
+        },
+        "heroImage": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "1S53d4HCDkenzXxLeQkiZT"
+            }
+          }
+        },
+        "description": {
+          "en-US": "This riverside park doesn't figure much in Warsaw criminal lore. You can usually find young mothers pushing strollers along the path, nuns out for a walk, or the occasional staggering drunk, all of them signs of safety and comfort."
+        },
+        "body": {
+          "en-US": {
+            "data": {
+            },
+            "content": [
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "Stripe enables businesses in many countries worldwide to onboard easily so they can accept payments as quickly as possible. Stripe’s scale makes our platform a common target for payments fraud and cybercrime, so we’ve built a deep understanding of the patterns bad actors use. We take these threats seriously because they harm both our users and our ecosystem; every fraudulent transaction we circumvent keeps anyone impacted from having a bad day.",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "We provide our risk analysts with automated tools to make informed decisions while sifting legitimate users from potentially fraudulent accounts. One of the most useful tools we’ve developed uses machine learning to identify similar clusters of accounts created by fraudsters trying to scale their operations. Many of these attempts are easy to detect and we can reverse engineer the fingerprints they leave behind to shut them down in real-time. In turn, this allows our analysts to spend more time on sophisticated cases that have the potential to do more harm to our users.",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "Fraud in the payments ecosystem",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "heading-2"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "Fraud can generally be separated into two large categories: transaction fraud and merchant fraud. Transaction fraud applies to individual charges (such as those protected by Radar), where a fraudster may purchase items with a stolen credit card to resell later.",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "Merchant fraud occurs when someone signs up for a Stripe account to later defraud cardholders. For example, a fraudster may attempt to use stolen card numbers through their account, so they’ll try to provide a valid website, account activity, and charge activity to appear legitimate. The fraudster hopes to be paid out to their bank account before Stripe finds out. Eventually, the actual cardholders will request a chargeback from their bank for the unauthorized transaction. Stripe will reimburse chargebacks to issuing banks (and by proxy, the cardholder) and attempt to debit the fraudster’s account. However, if they have already been paid out then it may be too late to recover those funds and Stripe ultimately covers those costs as fraud losses.",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "Fraudsters also may attempt to defraud Stripe at a larger scale by setting up a predatory or scam business. For example, the fraudster will create a Stripe account, claiming to sell expensive apparel or electronics for low prices. Unsuspecting customers think they are getting a great deal, but they never receive the product they ordered. Once again, the fraudster hopes to be paid out before they are shut down or overwhelmed with chargebacks.",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              }
+            ],
+            "nodeType": "document"
+          }
+        },
+        "author": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "3k4Z6jggdv52hNmZeaM6wb"
+            }
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "c9u7f3lehmub"
+          }
+        },
+        "id": "LfLSHkCJ9HPJmw1qZrxfG",
+        "type": "Entry",
+        "createdAt": "2020-05-24T10:52:03.316Z",
+        "updatedAt": "2020-05-24T10:55:01.377Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 4,
+        "publishedAt": "2020-05-24T10:55:01.377Z",
+        "firstPublishedAt": "2020-05-24T10:55:01.377Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "author"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "Oolon Colluphid"
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "c9u7f3lehmub"
+          }
+        },
+        "id": "3k4Z6jggdv52hNmZeaM6wb",
+        "type": "Entry",
+        "createdAt": "2020-05-24T10:56:03.335Z",
+        "updatedAt": "2020-05-24T13:11:07.176Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 4,
+        "publishedAt": "2020-05-24T13:11:07.176Z",
+        "firstPublishedAt": "2020-05-24T10:56:10.618Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "author"
+          }
+        }
+      },
+      "fields": {
+        "name": {
+          "en-US": "Dylan Ferguson"
+        },
+        "avatar": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "kpcx1dpmbxX9yB06MjbRm"
+            }
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "c9u7f3lehmub"
+          }
+        },
+        "id": "7HdCPq9LOnKTODatc4RTZb",
+        "type": "Entry",
+        "createdAt": "2020-05-26T12:02:57.411Z",
+        "updatedAt": "2020-05-26T12:03:56.139Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 7,
+        "publishedAt": "2020-05-26T12:03:56.139Z",
+        "firstPublishedAt": "2020-05-26T12:03:56.139Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 8,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "specialOffer"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "120,000 Bonus Points"
+        },
+        "details": {
+          "en-US": "90,000 bonus points when you spend $3,000 on everyday purchases within the first 60 days of account opening and 30,000 bonus points when you keep your card for over 12 months."
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "c9u7f3lehmub"
+          }
+        },
+        "id": "43L1f5rzdkdgtfOX87LzSx",
+        "type": "Entry",
+        "createdAt": "2020-05-26T12:04:17.796Z",
+        "updatedAt": "2020-05-26T12:23:01.874Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 10,
+        "publishedAt": "2020-05-26T12:23:01.874Z",
+        "firstPublishedAt": "2020-05-26T12:07:06.507Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 11,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "creditCard"
+          }
+        }
+      },
+      "fields": {
+        "cardName": {
+          "en-US": "Rewards Platinum Card"
+        },
+        "category": {
+          "en-US": "Rewards"
+        },
+        "specialOffers": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "7HdCPq9LOnKTODatc4RTZb"
+              }
+            }
+          ]
+        },
+        "standardPurchaseRate": {
+          "en-US": 19.99
+        },
+        "cashAdvanceRate": {
+          "en-US": 21.74
+        },
+        "cardFee": {
+          "en-US": 295
+        },
+        "interestFreeDays": {
+          "en-US": 44
+        },
+        "minimumCreditLimit": {
+          "en-US": 6000
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "c9u7f3lehmub"
+          }
+        },
+        "id": "5RClydx4IgxCKUr3b5zmAx",
+        "type": "Entry",
+        "createdAt": "2020-05-26T12:38:20.896Z",
+        "updatedAt": "2020-05-26T12:38:34.741Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "publishedAt": "2020-05-26T12:38:34.741Z",
+        "firstPublishedAt": "2020-05-26T12:38:34.741Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "button"
+          }
+        }
+      },
+      "fields": {
+        "buttonText": {
+          "en-US": "Apply Now"
+        },
+        "link": {
+          "en-US": "/"
+        },
+        "secondary": {
+          "en-US": false
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "c9u7f3lehmub"
+          }
+        },
+        "id": "1de6qgOyilXjWftkMC2e9g",
+        "type": "Entry",
+        "createdAt": "2020-05-26T12:38:39.719Z",
+        "updatedAt": "2020-05-26T12:38:55.614Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2020-05-26T12:38:55.614Z",
+        "firstPublishedAt": "2020-05-26T12:38:55.614Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "button"
+          }
+        }
+      },
+      "fields": {
+        "buttonText": {
+          "en-US": "Find out more"
+        },
+        "link": {
+          "en-US": "/"
+        },
+        "secondary": {
+          "en-US": true
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "c9u7f3lehmub"
+          }
+        },
+        "id": "Jvp7aqaIHIqIHCvUStN7q",
+        "type": "Entry",
+        "createdAt": "2020-05-26T12:43:28.959Z",
+        "updatedAt": "2020-05-30T06:13:16.705Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 49,
+        "publishedAt": "2020-05-30T06:13:16.705Z",
+        "firstPublishedAt": "2020-05-26T12:44:11.782Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "publishedCounter": 19,
+        "version": 50,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "page"
+          }
+        }
+      },
+      "fields": {
+        "pageTitle": {
+          "en-US": "Faux Card"
+        },
+        "slug": {
+          "en-US": "/credit-cards/new"
+        },
+        "content": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "4TVvF30bY1NRKelAErxltV"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "e6IR6Xj9hZAzCqQx1uE0w"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "6r09Yqt2R2Rin2WWYEcSWb"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "3UDC5ng5JSXPBBmWo2IofC"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "3xFJvTSYLxjuobD7EtIYvj"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "2mlGv7oBBbntvQ1yjMGgGH"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "5sUYJVd8a7Zeg13Dt2TpEw"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "c9u7f3lehmub"
+          }
+        },
+        "id": "e6IR6Xj9hZAzCqQx1uE0w",
+        "type": "Entry",
+        "createdAt": "2020-05-27T13:45:14.158Z",
+        "updatedAt": "2020-05-27T13:45:34.678Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2020-05-27T13:45:34.678Z",
+        "firstPublishedAt": "2020-05-27T13:45:34.678Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "IntroTextSection"
+          }
+        }
+      },
+      "fields": {
+        "body": {
+          "en-US": "The Faux Card is the easiest way for everyone in your company to handle expenses. Instantly provision cards, manage your company's spending in real-time, and get credit increases as your business grows. Rather than deal with complex rewards programs, you'll simply get extra cash back on the categories where you spent the most. It's the corporate card we wanted for ourselves."
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "c9u7f3lehmub"
+          }
+        },
+        "id": "3xFJvTSYLxjuobD7EtIYvj",
+        "type": "Entry",
+        "createdAt": "2020-05-27T14:07:08.343Z",
+        "updatedAt": "2020-05-27T14:24:47.878Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 5,
+        "publishedAt": "2020-05-27T14:24:47.878Z",
+        "firstPublishedAt": "2020-05-27T14:07:40.773Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 6,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "FAQSection"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Frequently Asked Questions"
+        },
+        "faqs": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "5RES6FS4WJA8KwZGUtCWcF"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "22KdJ7qjxOuurPvTZfvYHk"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "IqifPRimsgal2tEcXtdDm"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "2bUMvn0BKsVhwjkmuBN0ee"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "c9u7f3lehmub"
+          }
+        },
+        "id": "4TVvF30bY1NRKelAErxltV",
+        "type": "Entry",
+        "createdAt": "2020-05-27T14:33:50.566Z",
+        "updatedAt": "2020-05-27T14:34:33.510Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 5,
+        "publishedAt": "2020-05-27T14:34:33.510Z",
+        "firstPublishedAt": "2020-05-27T14:34:33.510Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 6,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "HeroSection"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "All-New Faux Card"
+        },
+        "subtitle": {
+          "en-US": "A credit card for now"
+        },
+        "accentText": {
+          "en-US": "New!"
+        },
+        "buttons": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "5RClydx4IgxCKUr3b5zmAx"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "1de6qgOyilXjWftkMC2e9g"
+              }
+            }
+          ]
+        },
+        "image": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "5QKMHcjw09w0w7CaEs5LXn"
+            }
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "c9u7f3lehmub"
+          }
+        },
+        "id": "24G0syQSJjg4OPN5RCow4v",
+        "type": "Entry",
+        "createdAt": "2020-05-27T15:27:08.978Z",
+        "updatedAt": "2020-05-27T15:28:35.912Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 5,
+        "publishedAt": "2020-05-27T15:28:35.912Z",
+        "firstPublishedAt": "2020-05-27T15:27:44.999Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 6,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "FeatureDetail"
+          }
+        }
+      },
+      "fields": {
+        "icon": {
+          "en-US": "air"
+        },
+        "title": {
+          "en-US": "Get started instantly"
+        },
+        "body": {
+          "en-US": "All you need to apply is a Faux account—no paperwork or personal guarantee required. Get up and running with a virtual card in minutes."
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "c9u7f3lehmub"
+          }
+        },
+        "id": "4CdsQOuqmmdENYcntU5W60",
+        "type": "Entry",
+        "createdAt": "2020-05-27T15:28:43.823Z",
+        "updatedAt": "2020-05-27T15:29:15.987Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "publishedAt": "2020-05-27T15:29:15.987Z",
+        "firstPublishedAt": "2020-05-27T15:29:15.987Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "FeatureDetail"
+          }
+        }
+      },
+      "fields": {
+        "icon": {
+          "en-US": "creditCard"
+        },
+        "title": {
+          "en-US": "Credit limits that grow with you"
+        },
+        "body": {
+          "en-US": "Your credit limit is determined by your payment processing and bank history. As your business grows, your credit line can too."
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "c9u7f3lehmub"
+          }
+        },
+        "id": "2bCnoRFdmONJsJOAy5SoLp",
+        "type": "Entry",
+        "createdAt": "2020-05-27T15:29:29.511Z",
+        "updatedAt": "2020-05-27T15:29:50.109Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 4,
+        "publishedAt": "2020-05-27T15:29:50.109Z",
+        "firstPublishedAt": "2020-05-27T15:29:50.109Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "FeatureDetail"
+          }
+        }
+      },
+      "fields": {
+        "icon": {
+          "en-US": "adjust"
+        },
+        "title": {
+          "en-US": "Branded with your logo"
+        },
+        "body": {
+          "en-US": "Upload your logo right from the Dashboard to make your corporate card look and feel like your brand."
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "c9u7f3lehmub"
+          }
+        },
+        "id": "6r09Yqt2R2Rin2WWYEcSWb",
+        "type": "Entry",
+        "createdAt": "2020-05-27T15:40:53.137Z",
+        "updatedAt": "2020-05-27T15:58:35.501Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 5,
+        "publishedAt": "2020-05-27T15:58:35.501Z",
+        "firstPublishedAt": "2020-05-27T15:41:07.810Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 6,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "FeatureDetailsSection"
+          }
+        }
+      },
+      "fields": {
+        "featureDetails": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "4CdsQOuqmmdENYcntU5W60"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "24G0syQSJjg4OPN5RCow4v"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "2bCnoRFdmONJsJOAy5SoLp"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "c9u7f3lehmub"
+          }
+        },
+        "id": "3UDC5ng5JSXPBBmWo2IofC",
+        "type": "Entry",
+        "createdAt": "2020-05-30T04:14:57.926Z",
+        "updatedAt": "2020-05-30T04:18:56.128Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 8,
+        "publishedAt": "2020-05-30T04:18:56.128Z",
+        "firstPublishedAt": "2020-05-30T04:18:56.128Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 9,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "SimpleFeatureSection"
+          }
+        }
+      },
+      "fields": {
+        "features": {
+          "en-US": [
+            "Get alerts about vulnerabilities in your code",
+            "Automatically update vulnerabilities",
+            "Stay on top of CVEs",
+            "Find vulnerabilities that other tools miss",
+            "Automate from code to cloud ",
+            "All your code and documentation in one place ",
+            "More ways to work with GitHub "
+          ]
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "c9u7f3lehmub"
+          }
+        },
+        "id": "2mlGv7oBBbntvQ1yjMGgGH",
+        "type": "Entry",
+        "createdAt": "2020-05-30T04:43:35.109Z",
+        "updatedAt": "2020-05-30T05:32:51.438Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 7,
+        "publishedAt": "2020-05-30T05:32:51.438Z",
+        "firstPublishedAt": "2020-05-30T04:48:25.209Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 8,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "QuickLinksSection"
+          }
+        }
+      },
+      "fields": {
+        "links": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "1aaaLqF17Xza9ulQRCDa3S"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "4r2wishCBIGx6insck5uu6"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "4rXBd6VtIETgZKhTFPVOhF"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "30wMU4LBAyxCloP2bKTbA8"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "c9u7f3lehmub"
+          }
+        },
+        "id": "1aaaLqF17Xza9ulQRCDa3S",
+        "type": "Entry",
+        "createdAt": "2020-05-30T04:43:42.368Z",
+        "updatedAt": "2020-05-30T05:34:00.066Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 8,
+        "publishedAt": "2020-05-30T05:34:00.066Z",
+        "firstPublishedAt": "2020-05-30T04:44:31.321Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 9,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "quickLink"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "How much can I borrow?"
+        },
+        "link": {
+          "en-US": "/"
+        },
+        "icon": {
+          "en-US": "backInTime"
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "c9u7f3lehmub"
+          }
+        },
+        "id": "4r2wishCBIGx6insck5uu6",
+        "type": "Entry",
+        "createdAt": "2020-05-30T04:44:34.057Z",
+        "updatedAt": "2020-05-30T05:34:19.798Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 11,
+        "publishedAt": "2020-05-30T05:34:19.798Z",
+        "firstPublishedAt": "2020-05-30T04:47:03.181Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 12,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "quickLink"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Debt consolidation"
+        },
+        "link": {
+          "en-US": "/"
+        },
+        "icon": {
+          "en-US": "creditCard"
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "c9u7f3lehmub"
+          }
+        },
+        "id": "4rXBd6VtIETgZKhTFPVOhF",
+        "type": "Entry",
+        "createdAt": "2020-05-30T04:47:07.564Z",
+        "updatedAt": "2020-05-30T04:47:28.822Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "publishedAt": "2020-05-30T04:47:28.822Z",
+        "firstPublishedAt": "2020-05-30T04:47:28.822Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "quickLink"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Flexible repayments"
+        },
+        "link": {
+          "en-US": "/"
+        },
+        "icon": {
+          "en-US": "credit"
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "c9u7f3lehmub"
+          }
+        },
+        "id": "30wMU4LBAyxCloP2bKTbA8",
+        "type": "Entry",
+        "createdAt": "2020-05-30T04:47:33.841Z",
+        "updatedAt": "2020-05-30T05:34:33.868Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 5,
+        "publishedAt": "2020-05-30T05:34:33.868Z",
+        "firstPublishedAt": "2020-05-30T04:47:51.010Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 6,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "quickLink"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "No exit fees"
+        },
+        "link": {
+          "en-US": "/"
+        },
+        "icon": {
+          "en-US": "typing"
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "c9u7f3lehmub"
+          }
+        },
+        "id": "5sUYJVd8a7Zeg13Dt2TpEw",
+        "type": "Entry",
+        "createdAt": "2020-05-30T06:12:33.444Z",
+        "updatedAt": "2020-05-30T07:34:52.099Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 6,
+        "publishedAt": "2020-05-30T07:34:52.099Z",
+        "firstPublishedAt": "2020-05-30T06:13:07.997Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 7,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "BlogCardsSection"
+          }
+        }
+      },
+      "fields": {
+        "posts": {
+          "en-US": [
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "3qc0toNTrGeHzrmhP5xRzE"
+              }
+            },
+            {
+              "sys": {
+                "type": "Link",
+                "linkType": "Entry",
+                "id": "6MfqDFWGEhNAyKZh9EBsie"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "c9u7f3lehmub"
+          }
+        },
+        "id": "6MfqDFWGEhNAyKZh9EBsie",
+        "type": "Entry",
+        "createdAt": "2020-05-30T07:27:28.674Z",
+        "updatedAt": "2020-05-30T07:34:20.002Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 13,
+        "publishedAt": "2020-05-30T07:34:20.002Z",
+        "firstPublishedAt": "2020-05-30T07:34:20.002Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 14,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "post"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Stack"
+        },
+        "slug": {
+          "en-US": "stack"
+        },
+        "publishDate": {
+          "en-US": "2020-05-30"
+        },
+        "tags": {
+          "en-US": [
+            "Engineering"
+          ]
+        },
+        "heroImage": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "OygfOxJ8NpdSo2DollqRq"
+            }
+          }
+        },
+        "description": {
+          "en-US": "It's OSS all the way down. (Well, mostly.)"
+        },
+        "body": {
+          "en-US": {
+            "data": {
+            },
+            "content": [
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "// TODO",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              }
+            ],
+            "nodeType": "document"
+          }
+        },
+        "author": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Entry",
+              "id": "3k4Z6jggdv52hNmZeaM6wb"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "assets": [
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "c9u7f3lehmub"
+          }
+        },
+        "id": "1APAL7H7fEfWNEM2rzczwH",
+        "type": "Asset",
+        "createdAt": "2020-05-24T11:30:49.731Z",
+        "updatedAt": "2020-05-24T11:31:30.517Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 4,
+        "publishedAt": "2020-05-24T11:31:30.517Z",
+        "firstPublishedAt": "2020-05-24T11:31:30.517Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "This is fine"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/c9u7f3lehmub/1APAL7H7fEfWNEM2rzczwH/aafd2731173b33ec8a2eea4800915aee/this-is-fine.jpg",
+            "details": {
+              "size": 120742,
+              "image": {
+                "width": 1280,
+                "height": 720
+              }
+            },
+            "fileName": "this-is-fine.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "c9u7f3lehmub"
+          }
+        },
+        "id": "1S53d4HCDkenzXxLeQkiZT",
+        "type": "Asset",
+        "createdAt": "2020-05-24T12:43:03.073Z",
+        "updatedAt": "2020-05-24T12:43:33.272Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 4,
+        "publishedAt": "2020-05-24T12:43:33.272Z",
+        "firstPublishedAt": "2020-05-24T12:43:33.272Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "This is fine"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/c9u7f3lehmub/1S53d4HCDkenzXxLeQkiZT/7f109854de98781f63884b9a1b55832e/this-is-fine.gif",
+            "details": {
+              "size": 4812522,
+              "image": {
+                "width": 1440,
+                "height": 812
+              }
+            },
+            "fileName": "this-is-fine.gif",
+            "contentType": "image/gif"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "c9u7f3lehmub"
+          }
+        },
+        "id": "kpcx1dpmbxX9yB06MjbRm",
+        "type": "Asset",
+        "createdAt": "2020-05-24T13:08:48.836Z",
+        "updatedAt": "2020-05-24T13:09:49.670Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 4,
+        "publishedAt": "2020-05-24T13:09:49.670Z",
+        "firstPublishedAt": "2020-05-24T13:09:49.670Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 5,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "This is fine "
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/c9u7f3lehmub/kpcx1dpmbxX9yB06MjbRm/04f5026ea4a1468a1045544305ad5994/this-is-fine-avatar.jpg",
+            "details": {
+              "size": 106593,
+              "image": {
+                "width": 595,
+                "height": 595
+              }
+            },
+            "fileName": "this-is-fine-avatar.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "c9u7f3lehmub"
+          }
+        },
+        "id": "5QKMHcjw09w0w7CaEs5LXn",
+        "type": "Asset",
+        "createdAt": "2020-05-26T12:39:06.150Z",
+        "updatedAt": "2020-05-26T12:39:50.266Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 5,
+        "publishedAt": "2020-05-26T12:39:50.266Z",
+        "firstPublishedAt": "2020-05-26T12:39:50.266Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 6,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Dancing credit cards"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/c9u7f3lehmub/5QKMHcjw09w0w7CaEs5LXn/8f97c95a86ca93213153824402df8d57/credit-card.png",
+            "details": {
+              "size": 258593,
+              "image": {
+                "width": 1628,
+                "height": 1500
+              }
+            },
+            "fileName": "credit-card.png",
+            "contentType": "image/png"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "c9u7f3lehmub"
+          }
+        },
+        "id": "OygfOxJ8NpdSo2DollqRq",
+        "type": "Asset",
+        "createdAt": "2020-05-30T07:33:27.162Z",
+        "updatedAt": "2020-05-30T07:33:54.919Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 5,
+        "publishedAt": "2020-05-30T07:33:54.919Z",
+        "firstPublishedAt": "2020-05-30T07:33:54.919Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 6,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Next JS Background Black"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/c9u7f3lehmub/OygfOxJ8NpdSo2DollqRq/9063f63095ad728784f4041a76cef153/nextjs-bg-black.png",
+            "details": {
+              "size": 2799,
+              "image": {
+                "width": 1140,
+                "height": 651
+              }
+            },
+            "fileName": "nextjs-bg-black.png",
+            "contentType": "image/png"
+          }
+        }
+      }
+    }
+  ],
+  "locales": [
+    {
+      "name": "English (United States)",
+      "code": "en-US",
+      "fallbackCode": null,
+      "default": true,
+      "contentManagementApi": true,
+      "contentDeliveryApi": true,
+      "optional": false,
+      "sys": {
+        "type": "Locale",
+        "id": "1rzsCf6v68gpuztKpEiQdz",
+        "version": 1,
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "c9u7f3lehmub"
+          }
+        },
+        "environment": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Environment",
+            "id": "master"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "createdAt": "2020-05-18T10:42:25Z",
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "updatedAt": "2020-05-18T10:42:25Z"
+      }
+    }
+  ],
+  "webhooks": [
+    {
+      "name": "Algolia - Delete unpublished entries",
+      "url": "https://LNOCG71EYZ.algolia.net/1/indexes/faux/{ /payload/sys/id }",
+      "httpBasicUsername": null,
+      "topics": [
+        "Entry.unpublish"
+      ],
+      "filters": [
+        {
+          "equals": [
+            {
+              "doc": "sys.environment.sys.id"
+            },
+            "master"
+          ]
+        }
+      ],
+      "transformation": {
+        "method": "DELETE"
+      },
+      "sys": {
+        "type": "WebhookDefinition",
+        "id": "6ERT9aU2Ad1gkvPHWNe9z0",
+        "version": 0,
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "c9u7f3lehmub"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "createdAt": "2020-05-22T23:28:24Z",
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "updatedAt": "2020-05-22T23:28:24Z"
+      },
+      "headers": [
+        {
+          "key": "X-Algolia-Application-Id",
+          "value": "LNOCG71EYZ"
+        },
+        {
+          "key": "X-Algolia-API-Key",
+          "secret": true
+        }
+      ]
+    },
+    {
+      "name": "Algolia - Index entries",
+      "url": "https://LNOCG71EYZ.algolia.net/1/indexes/faux/{ /payload/sys/id }",
+      "httpBasicUsername": null,
+      "topics": [
+        "Entry.publish",
+        "Entry.unpublish"
+      ],
+      "filters": [
+        {
+          "equals": [
+            {
+              "doc": "sys.environment.sys.id"
+            },
+            "master"
+          ]
+        }
+      ],
+      "transformation": {
+        "method": "PUT",
+        "contentType": "application/json; charset=utf-8",
+        "body": {
+          "url": "/release-notes/{ /payload/fields/version/en-US }/",
+          "category": "{ /payload/fields/category/en-US }",
+          "date": "{ /payload/fields/releaseDate/en-US }",
+          "content": "{ /payload/fields/description/en-US }",
+          "title": "{ /payload/fields/version/en-US }",
+          "objectID": "{ /payload/sys/id }"
+        }
+      },
+      "sys": {
+        "type": "WebhookDefinition",
+        "id": "6ESTaZe9VwZFAo7xQcUuY1",
+        "version": 7,
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "c9u7f3lehmub"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "createdAt": "2020-05-22T23:28:24Z",
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "updatedAt": "2020-05-24T02:23:59Z"
+      },
+      "headers": [
+        {
+          "key": "X-Algolia-Application-Id",
+          "value": "LNOCG71EYZ"
+        },
+        {
+          "key": "X-Algolia-API-Key",
+          "secret": true
+        }
+      ]
+    }
+  ],
+  "roles": [
+  ]
+}
