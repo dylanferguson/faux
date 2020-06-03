@@ -14,7 +14,8 @@
     "cypress:run": "cypress run",
     "cypress:run:customer-journeys": "cypress run --spec 'cypress/integration/customer-journeys/**/*'",
     "contentful:generate-types": "contentful-typescript-codegen --output src/types/generated/contentful.d.ts ",
-    "contentful:export-content": "exit 1",
+    "contentful:export-content": "node ./contentful/contentful-export.js",
+    "contentful:import-content": "node ./contentful/contentful-import.js",
     "generate-barrels": "barrelsby --delete --directory './src/components' --location below",
     "lchi:deploy": "git subtree push --prefix lhci-server heroku master"
   },
@@ -44,6 +45,8 @@
     "barrelsby": "^2.2.0",
     "chromatic": "^4.0.3",
     "contentful": "^7.14.4",
+    "contentful-export": "^7.9.15",
+    "contentful-import": "^7.8.0",
     "contentful-management": "^5.26.3",
     "contentful-typescript-codegen": "^3.2.1",
     "cypress": "^4.7.0",
