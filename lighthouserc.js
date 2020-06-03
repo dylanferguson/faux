@@ -1,15 +1,13 @@
+const host = "http://localhost";
+
 module.exports = {
   ci: {
     collect: {
       numberOfRuns: 5,
       staticDistDir: "./out",
-      url: [
-        "http://localhost/",
-        "http://localhost/blog",
-        "http://localhost/login",
-        "http://localhost/release-notes",
-        "http://localhost/credit-cards/new",
-      ],
+      url: ["/", "/blog", "/login", "/release-notes", "/credit-cards/new"].map(
+        (url) => host + url
+      ),
     },
     upload: {
       target: "lhci",
