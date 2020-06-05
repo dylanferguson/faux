@@ -38,12 +38,14 @@ jobs:
         uses: actions/checkout@v2
       - name: Install Node
         shell: bash -l {0}
-        run: nvm install
+        run: |
+          nvm install
+          nvm use
       - run: npm ci
       - run: npm run build:static
       - name: Run Lighthouse audit
         run: |
-          npm install -g @lhci/cli@0.4.x
+          sudo npm install -g @lhci/cli@0.4.x
           lhci autorun
         env:
           LHCI_BUILD_TOKEN: ${{ secrets.LHCI_BUILD_TOKEN }}
