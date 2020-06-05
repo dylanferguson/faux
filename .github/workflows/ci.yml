@@ -41,10 +41,7 @@ jobs:
         run: nvm install
       - run: npm install
       - run: npm run build:static
-      - name: sanity
-        run: echo ${{ github.event.pull_request.head.sha }}
       - name: Run Lighthouse audit
-        run: npx @lhci/cli@0.4.x autorun
+        run: npx @lhci/cli@0.4.x autorun --githubAppToken ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
         env:
           LHCI_BUILD_TOKEN: ${{ secrets.LHCI_BUILD_TOKEN }}
-          LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
