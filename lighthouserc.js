@@ -11,7 +11,7 @@ module.exports = {
     },
     upload: {
       target: "lhci",
-      serverBaseUrl: "https://vast-taiga-80570.herokuapp.com/",
+      serverBaseUrl: "https://vast-taiga-80570.herokuapp.com",
       token: process.env.LHCI_BUILD_TOKEN,
     },
   },
