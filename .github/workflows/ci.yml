@@ -39,9 +39,12 @@ jobs:
       - name: Install Node
         shell: bash -l {0}
         run: nvm install
-      - run: npm install
+      - run: npm ci
       - run: npm run build:static
       - name: Run Lighthouse audit
-        run: npx @lhci/cli@0.4.x autorun --githubAppToken ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
+        run: |
+          npm install -g @lhci/cli@0.4.x
+          lhci autorun
         env:
           LHCI_BUILD_TOKEN: ${{ secrets.LHCI_BUILD_TOKEN }}
+          LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
