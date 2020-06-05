@@ -46,3 +46,4 @@ jobs:
         env:
           LHCI_BUILD_TOKEN: ${{ secrets.LHCI_BUILD_TOKEN }}
           LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
+          LHCI_BUILD_CONTEXT__GITHUB_REPO_SLUG: GoogleChrome/lighthouse-ci

@@ -5,12 +5,12 @@
 - Pages:
   - /cards: Abstract content => View
 - Post business case in parts
-- Building out a component library:
-  - Contentful Models
-  - Documentation
-- Storybook + Chromatic
+- Components:
+  - Alternating content + images section
+  - Image component: receives a profile
+- Cloudflare Worker redirects
 - Containerise
 - Preview server: Container on GCP
   - [Preview Mode](https://nextjs.org/docs/advanced-features/preview-mode)
 - Fork => Phở? => pho.rodeo, implement with DatoCMS
-- [Make README good](https://www.makeareadme.com/)
+- Documentation: [Make README good](https://www.makeareadme.com/)
