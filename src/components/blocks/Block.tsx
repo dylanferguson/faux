@@ -6,6 +6,7 @@ type BlockProps = {
 
 export const Block = ({ id, ...props }: BlockProps) => {
   const blocks = {
+    /* eslint-disable-next-line @typescript-eslint/no-explicit-any */
     ...(Blocks as any),
   };
 

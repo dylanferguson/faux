@@ -3,7 +3,7 @@ import { Icon } from "components/atoms";
 import { useCallback, useState } from "react";
 import { search } from "lib/algolia";
 
-type SearchResult = {} & {
+type SearchResult = {
   _highlightResult: {
     [key: string]: highlightResultValueInterface;
   };
@@ -49,7 +49,7 @@ type SearchProps = {
 
 export const Search = ({ className }: SearchProps) => {
   const [loading, setLoading] = useState(false);
-  const [results, setResults] = useState<{}[]>([]);
+  const [results, setResults] = useState<any>([]);
   const [query, setQuery] = useState("");
 
   const updateResults = (currentQuery: string) => {
