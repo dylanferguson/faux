@@ -1,7 +1,6 @@
 FROM mhart/alpine-node AS builder
 WORKDIR /app
-COPY package.json .
-COPY package-lock.json . 
+COPY package*.json .
 RUN npm install
 COPY . .
 RUN npm run build && rm -rf node_modules && npm install next
