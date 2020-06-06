@@ -1,0 +1,10 @@
+.git
+.dependabot
+.github
+.vercel
+.vscode
+node_modules
+cypress
+contentful
+lhci-server
+workers-site
