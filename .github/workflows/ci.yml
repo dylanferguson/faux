@@ -16,6 +16,18 @@ env:
   NEXT_PUBLIC_GA_TRACKING_ID: ${{ secrets.NEXT_PUBLIC_GA_TRACKING_ID }}
   NEXT_PUBLIC_SENTRY_DSN: ${{ secrets.NEXT_PUBLIC_SENTRY_DSN }}
 jobs:
+  lint:
+    name: Lint
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Node install
+        shell: bash -l {0}
+        run: nvm install
+      - run: |
+          npm ci
+          npm run format:check
   cypress:
     name: Integration
     runs-on: ubuntu-latest
@@ -41,7 +53,7 @@ jobs:
       - name: Install Node
         shell: bash -l {0}
         run: nvm install
-      - run: npm install
+      - run: npm ci
       - run: npm run build:static
       - name: Run Lighthouse audit
         run: npx @lhci/cli@0.4.x autorun
