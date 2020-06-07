@@ -5,9 +5,9 @@
 - Pages:
   - /cards: Abstract content => View
 - Post business case in parts
-- Building out a component library:
-  - Contentful Models
-  - Documentation
+- Last components:
+  - Robust image component
+  - Alternating image 
 - Preview server:
   - Docker secrets
   - Run container on GCP

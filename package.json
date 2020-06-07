@@ -16,7 +16,7 @@
     "format:check": "prettier --check '{src,scripts,cypress}/**/*.{tsx,ts,js}'",
     "lint": "eslint --quiet 'src/**/*.{ts,tsx}'",
     "lint:fix": "eslint --fix 'src/**/*.{ts,tsx}'",
-    "predeploy": "rm -rf ./out && npm run build:static && rm -rf ./out/__next/static/development",
+    "predeploy": "rm -rf ./out && npm run build:static && rm -rf ./out/_next/static/development",
     "deploy": "wrangler publish",
     "docker:build": "docker build -t faux-site .",
     "docker:run": "docker run --env-file .env.local --rm -it -p 3000:3000 faux-site",
