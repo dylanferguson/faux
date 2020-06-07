@@ -16,6 +16,10 @@ class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
+          <meta
+            name="version"
+            content={process.env.NEXT_PUBLIC_VERSION as string}
+          />
           <link rel="icon" href="/favicon.ico" />
           <link
             rel="preconnect"
@@ -23,10 +27,14 @@ class MyDocument extends Document {
             crossOrigin=""
           />
           <link
+            rel="preconnect"
+            href="https://www.googletagmanager.com"
+            crossOrigin=""
+          />
+          <link
             href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;500;600;700;900&display=swap"
             rel="stylesheet"
           />
-          {/* Global Site Tag (gtag.js) - Google Analytics */}
           <script
             async
             src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_TRACKING_ID}`}

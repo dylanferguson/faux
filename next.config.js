@@ -15,6 +15,9 @@ const {
 
 module.exports = withBundleAnalyzer(
   withSourceMaps({
+    env: {
+      NEXT_PUBLIC_VERSION: require("./package.json").version,
+    },
     exportTrailingSlash: true,
     webpack: (config, options) => {
       // When all the Sentry configuration env variables are available/configured

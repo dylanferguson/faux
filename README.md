@@ -19,3 +19,4 @@
 - Nice-to-have:
   - Storybook + Chromatic
   - Applitools Eyes in e2e tests
+  - Cancel deployment workflow if another is run?
