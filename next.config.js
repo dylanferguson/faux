@@ -17,6 +17,16 @@ module.exports = withBundleAnalyzer(
   withSourceMaps({
     env: {
       NEXT_PUBLIC_VERSION: require("./package.json").version,
+      NEXT_PUBLIC_BUILD_TIME: new Intl.DateTimeFormat("en-AU", {
+        year: "numeric",
+        month: "numeric",
+        day: "numeric",
+        hour: "numeric",
+        minute: "numeric",
+        second: "numeric",
+        timeZone: "Australia/Melbourne",
+        timeZoneName: "short",
+      }).format(new Date()),
     },
     exportTrailingSlash: true,
     webpack: (config, options) => {

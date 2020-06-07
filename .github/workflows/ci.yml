@@ -29,7 +29,7 @@ jobs:
           npm ci
           npm run format:check
           npm run lint
-          npm run tsc --noEmit
+          npx tsc --noEmit
   cypress:
     name: Integration
     runs-on: ubuntu-latest

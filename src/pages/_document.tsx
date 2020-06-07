@@ -20,6 +20,10 @@ class MyDocument extends Document {
             name="version"
             content={process.env.NEXT_PUBLIC_VERSION as string}
           />
+          <meta
+            name="build-time"
+            content={process.env.NEXT_PUBLIC_BUILD_TIME as string}
+          />
           <link rel="icon" href="/favicon.ico" />
           <link
             rel="preconnect"

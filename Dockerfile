@@ -1,7 +1,7 @@
 FROM mhart/alpine-node AS builder
 WORKDIR /app
 COPY package*.json .
-RUN npm install
+RUN npm ci
 COPY . .
 RUN npm run build && rm -rf node_modules && npm install next
 
