@@ -50,8 +50,8 @@ export default ({ data, page, total }: ReleaseNotePageProps) => (
     </div>
     <div className="container my-16">
       <nav
-        className={`flex my-24 sm:w-2/3 sm:mx-auto justify-${
-          page === total ? "end" : "between"
+        className={`flex my-24 sm:w-2/3 sm:mx-auto ${
+          page === total ? "justify-end" : "justify-between"
         }`}
       >
         {page < total && <PageLink page={page + 1}>Older</PageLink>}

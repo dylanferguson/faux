@@ -1,5 +1,5 @@
 import { GetStaticProps, GetStaticPaths } from "next";
-import { client } from "lib/contentful";
+import { client, getPageBySlug } from "lib/contentful";
 import { IPageFields } from "types/generated/contentful";
 import { EntryCollection } from "contentful";
 import Head from "next/head";
@@ -24,17 +24,17 @@ export default ({ pageTitle, content }: IPageFields) => {
   );
 };
 
-export const getStaticProps: GetStaticProps = async ({ params }) => {
+export const getStaticProps: GetStaticProps = async ({
+  params,
+  preview = false,
+}) => {
   const slug = params?.slug as string[];
-  const entries: EntryCollection<IPageFields> = await client.getEntries({
-    content_type: "page",
-    include: 10,
-    "fields.slug[in]": "/" + slug.join("/"),
-  });
+  const entries = await getPageBySlug(`/${slug.join("/")}`, preview);
 
   return {
     props: {
-      ...entries.items[0].fields,
+      preview,
+      ...entries,
     },
   };
 };
