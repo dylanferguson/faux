@@ -1,7 +1,5 @@
-import Link from "next/link";
-import { ButtonLink as Button, MobileMenuToggle } from "components/atoms";
+import { ButtonLink as Button, MobileMenuToggle, Link } from "components/atoms";
 import { useState } from "react";
-import classNames from "classnames";
 
 type NavItemProps = {
   link: string;
@@ -10,9 +8,7 @@ type NavItemProps = {
 
 const NavItem = ({ link, label }: NavItemProps) => (
   <li className="list-none inline-block text-xl text-indigo-600 hover:text-indigo-800 transition ease-in duration-100 small-caps">
-    <Link href={link}>
-      <a>{label}</a>
-    </Link>
+    <Link href={link}>{label}</Link>
   </li>
 );
 

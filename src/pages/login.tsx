@@ -1,5 +1,5 @@
-import Link from "next/link";
 import { useRouter } from "next/router";
+import { Link } from "components/atoms";
 
 const Login = () => {
   const router = useRouter();
@@ -48,9 +48,7 @@ const Login = () => {
           >
             <span className="small-caps">Password</span>
             <span className="text-indigo-500">
-              <Link href="/">
-                <a>Forgot your password?</a>
-              </Link>
+              <Link href="/">Forgot your password?</Link>
             </span>
           </label>
           <input

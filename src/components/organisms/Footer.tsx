@@ -1,6 +1,5 @@
 import className from "classnames";
-import Link from "next/link";
-import { Icon, IconName } from "components/atoms";
+import { Icon, IconName, Link } from "components/atoms";
 
 type FooterMenuProps = {
   title: string;
@@ -13,14 +12,13 @@ const FooterMenu = ({ title, items }: FooterMenuProps) => (
     <ul>
       {items.map((item, i) => (
         <li key={item} className="my-3">
-          <Link href="/">
-            <a
-              className={className("hover:text-indigo-200", {
-                "api-status": item === "API Status",
-              })}
-            >
-              {item}
-            </a>
+          <Link
+            href="/"
+            className={className("hover:text-indigo-200", {
+              "api-status": item === "API Status",
+            })}
+          >
+            {item}
           </Link>
         </li>
       ))}

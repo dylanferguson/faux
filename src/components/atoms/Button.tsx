@@ -1,5 +1,5 @@
 import classNames from "classnames";
-import Link from "next/link";
+import { Link } from "components/atoms";
 
 type ButtonSharedProps = {
   children: React.ReactNode;
@@ -38,14 +38,13 @@ export const ButtonLink = ({
   className,
   secondary = false,
 }: ButtonLinkProps) => (
-  <Link href={href}>
-    <a
-      className={classNames(
-        secondary ? "btn-secondary" : "btn-primary",
-        className
-      )}
-    >
-      {children}
-    </a>
+  <Link
+    href={href}
+    className={classNames(
+      secondary ? "btn-secondary" : "btn-primary",
+      className
+    )}
+  >
+    {children}
   </Link>
 );
