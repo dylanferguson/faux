@@ -8,6 +8,7 @@
 - Last components:
   - Robust image component
   - Alternating image section
+- Cloudflare worker redirects
 - Preview server:
   - Docker secrets
   - Run container on GCP
