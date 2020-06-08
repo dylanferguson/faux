@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "build:static": "next build && next export",
+    "postbuild": "node ./scripts/generate-sitemap.js",
+    "build:static": "npm run build && next export",
     "build:analyse": "ANALYZE=true next build",
     "start": "next start",
     "test": "jest --coverage",
@@ -64,6 +65,7 @@
     "dotenv": "^8.2.0",
     "eslint": "^7.2.0",
     "eslint-config-prettier": "^6.11.0",
+    "globby": "^11.0.1",
     "husky": "^4.2.5",
     "lint-staged": "^10.2.9",
     "postcss-flexbugs-fixes": "^4.2.1",

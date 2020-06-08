@@ -7,7 +7,7 @@
 - Post business case in parts
 - Last components:
   - Robust image component
-  - Alternating image 
+  - Alternating image section
 - Preview server:
   - Docker secrets
   - Run container on GCP
@@ -20,3 +20,7 @@
   - Storybook + Chromatic
   - Applitools Eyes in e2e tests
   - Cancel deployment workflow if another is run?
+  - [Rewrite Workers in TypeScript](https://github.com/EverlastingBugstopper/worker-typescript-template)
+  - Automatic social image generation
+    - Either [as a service](https://github.com/vercel/og-image)
+    - Or in the build stage
