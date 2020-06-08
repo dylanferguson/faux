@@ -16,6 +16,7 @@ class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
+          <meta name="robots" content="noindex" />
           <meta
             name="version"
             content={process.env.NEXT_PUBLIC_VERSION as string}
