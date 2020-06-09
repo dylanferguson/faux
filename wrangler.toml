@@ -1,10 +1,17 @@
 name = "faux"
 type = "webpack"
-account_id = "9d8cb165350db659cf7741e5aaab1922"
+account_id = "{{CF_ACCOUNT_ID}}"
 workers_dev = true
 route = ""
 zone_id = ""
+kv-namespaces = [
+	 { binding = "REDIRECTS", id = "eed7b91c4e704897b73b649152ed39a4" }
+]
 
 [site]
 bucket = "./out"
 entry-point = "workers-site"
+
+[env.production]
+zone_id = "{{CF_ZONE_ID}}"
+route = "faux.digital/*"

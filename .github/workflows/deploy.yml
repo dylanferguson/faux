@@ -26,6 +26,9 @@ jobs:
       - run: |
           npm ci
           npm run predeploy
+          sed -i s/{{CF_ACCOUNT_ID}}/${{ secrets.CF_ACCOUNT_ID }}/g wrangler.toml
+          sed -i s/{{CF_ZONE_ID}}/${{ secrets.CF_ZONE_ID }}/g wrangler.toml
+          cat wrangler.toml
       - name: Deploy
         uses: cloudflare/wrangler-action@1.1.0
         with:
