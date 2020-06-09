@@ -1,0 +1,12 @@
+#!include:.gitignore
+
+# junk that's not required for prod build
+.git/
+.dependabot/
+.vercel/
+.vscode/
+cypress/
+dist/
+lhci-server/
+workers-site/
+wrangler.toml
