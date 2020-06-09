@@ -33,7 +33,6 @@ jobs:
           npm run format:check
           npm run lint
           npx tsc --noEmit -p ./tsconfig.json
-          npx tsc --noEmit -p ./cypress/tsconfig.json
   cypress:
     name: Integration
     runs-on: ubuntu-latest

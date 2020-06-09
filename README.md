@@ -16,6 +16,10 @@
   - [Next with Typescript GraphQL](https://github.com/vercel/next.js/tree/canary/examples/with-typescript-graphql)
 - Documentation: [Make README good](https://www.makeareadme.com/)
 
+Will:
+
+- Automatic SSL cert renewal for minisites with this pattern?
+
 - Nice-to-have:
   - Storybook + Chromatic
   - Applitools Eyes in e2e tests
