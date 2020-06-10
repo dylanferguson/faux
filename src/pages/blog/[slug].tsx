@@ -30,7 +30,7 @@ export default ({
       />
       <article
         className={classNames(
-          "container mx-auto my-24 space-y-8 text-xl text-gray-900",
+          "container mx-auto my-24 space-y-8 text-xl text-gray-800",
           postStyles.article
         )}
         data-cy="blog-post"

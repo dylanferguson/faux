@@ -5,8 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "postbuild:static": "node ./scripts/generate-sitemap.js",
     "build:static": "npm run build && next export",
+    "postbuild:static": "node ./scripts/generate-sitemap.js",
     "build:analyse": "ANALYZE=true next build",
     "start": "next start",
     "test": "jest --coverage",

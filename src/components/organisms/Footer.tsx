@@ -1,5 +1,6 @@
 import className from "classnames";
 import { Icon, IconName, Link } from "components/atoms";
+import NextLink from "next/link";
 
 type FooterMenuProps = {
   title: string;
@@ -30,14 +31,14 @@ const IconIds: IconName[] = ["instagram", "facebook", "twitter", "linkedin"];
 const Icons = () => (
   <div className="flex flex-wrap lg:justify-around w-full py-8 sm:py-0 lg:w-1/5 space-x-8 lg:space-x-0 items-start">
     {IconIds.map((id) => (
-      <Link href="/" key={id}>
+      <NextLink href="/" key={id}>
         <a aria-label={`${id}`}>
           <Icon
             id={id}
             className="w-6 h-6 fill-current text-white hover:opacity-75"
           />
         </a>
-      </Link>
+      </NextLink>
     ))}
   </div>
 );

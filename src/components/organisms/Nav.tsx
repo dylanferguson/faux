@@ -1,5 +1,6 @@
 import { ButtonLink as Button, MobileMenuToggle, Link } from "components/atoms";
 import { useState } from "react";
+import NextLink from "next/link";
 
 type NavItemProps = {
   link: string;
@@ -48,9 +49,9 @@ export const Nav = () => {
         className="container flex justify-between items-center h-20"
         data-cy="nav"
       >
-        <Link href="/">
+        <NextLink href="/">
           <a aria-label="Faux logo" className="logo"></a>
-        </Link>
+        </NextLink>
         <div className="items-center hidden md:flex">
           <MenuContent />
         </div>
