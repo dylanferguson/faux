@@ -2,6 +2,7 @@ import classNames from "classnames";
 import { Icon } from "components/atoms";
 import { useCallback, useState } from "react";
 import { search } from "lib/algolia";
+import Link from "next/link";
 
 type SearchResult = {
   _highlightResult: {
@@ -19,9 +20,32 @@ type ResultItemProps = {
   result: { [key: string]: any };
 };
 
-const ResultItem = ({ result }: ResultItemProps) => (
-  <div data-cy="search-result">{result.title}</div>
-);
+const ResultItem = ({ result }: ResultItemProps) => {
+  console.log(result);
+  return (
+    <div
+      data-cy="search-result"
+      className="text-gray-800 text-lg mb-2 text-left text-xl"
+    >
+      <Link href={result.url}>
+        <a>
+          <div>{result.title}</div>
+          <p
+            className="overflow-hidden text-lg text-gray-600"
+            style={{
+              display: "-webkit-box",
+              WebkitLineClamp: 2,
+              textOverflow: "ellipsis",
+              WebkitBoxOrient: "vertical",
+            }}
+          >
+            {result.content}
+          </p>
+        </a>
+      </Link>
+    </div>
+  );
+};
 
 type ResultsProps = {
   results: { [key: string]: any }[]; // ugh
@@ -34,7 +58,16 @@ const Results = ({ results, query }: ResultsProps) => (
     className="absolute bg-white w-full border-gray-300 rounded shadow py-8 space-y-2"
   >
     {results.length ? (
-      results.map((result) => <ResultItem key={result.title} result={result} />)
+      <div className="display flex px-6">
+        <div className="text-lg text-gray-500 small-caps border-r-2 pr-4 border-gray-200">
+          Releases
+        </div>
+        <div className="ml-4">
+          {results.map((result) => (
+            <ResultItem key={result.title} result={result} />
+          ))}
+        </div>
+      </div>
     ) : (
       <span data-cy="no-search-result">
         No results found for query <strong>{query}</strong>
