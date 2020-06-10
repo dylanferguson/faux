@@ -110,7 +110,7 @@ export const Search = ({ className }: SearchProps) => {
           <input
             type="search"
             className="shadow appearance-none border rounded w-full text-xl py-4 px-4 text-gray-700 leading-tight focus-outline"
-            placeholder="Big Friendly Search"
+            placeholder="Search"
             onChange={handleChange}
             onBlur={() => {
               setQuery("");
@@ -118,7 +118,8 @@ export const Search = ({ className }: SearchProps) => {
             data-cy="search-input"
           />
           <Icon
-            className="absolute right-0 w-10 h-10 z-10 mr-3 pointer-events-none fill-current text-gray-300 hover:opacity-75"
+            className="absolute transform -translate-y-1/2 right-0 w-10 h-10 z-10 mr-3 pointer-events-none fill-current text-gray-300 hover:opacity-75"
+            style={{ top: "50%" }}
             id="magnifyingGlass"
           />
           {query.length > 0 && <Results results={results} query={query} />}
