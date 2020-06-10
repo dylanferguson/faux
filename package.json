@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "postbuild": "node ./scripts/generate-sitemap.js",
+    "postbuild:static": "node ./scripts/generate-sitemap.js",
     "build:static": "npm run build && next export",
     "build:analyse": "ANALYZE=true next build",
     "start": "next start",

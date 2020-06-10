@@ -1,4 +1,5 @@
 const fs = require("fs");
+const path = require("path");
 
 const globby = require("globby");
 const prettier = require("prettier");
@@ -12,7 +13,7 @@ const prettier = require("prettier");
     <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     ${pages
       .map((page) => {
-        const path = page.replace("^/out", "").replace("index.html", "");
+        const path = page.replace(/^out/, "").replace("index.html", "");
 
         return `
                 <url>
@@ -29,5 +30,5 @@ const prettier = require("prettier");
     parser: "html",
   });
 
-  fs.writeFileSync("out/sitemap.xml", formatted);
+  fs.writeFileSync(path.join(__dirname, "../out/sitemap.xml"), formatted);
 })();
