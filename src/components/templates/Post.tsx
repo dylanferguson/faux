@@ -20,11 +20,11 @@ export const PostHero = ({ title, heroImage, tags, author }: PostHeroProps) => (
           {title}
         </h1>
         <Avatar author={author} className="mb-6" />
-        <div className="mt-auto">
+        <div className="mt-auto space-x-2">
           {tags?.map((tag) => (
             <span
               key={tag}
-              className="small-caps font-semibold px-3 py-1 text-white text-xl rounded-md border-2 border-white"
+              className="small-caps px-2 py-1 text-white text-lg rounded border border-white"
             >
               {tag}
             </span>

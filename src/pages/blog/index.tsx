@@ -10,27 +10,27 @@ type BlogIndexProps = {
 };
 
 export default ({ data }: BlogIndexProps) => (
-  <div className="container mx-auto" data-cy="blog-index-header">
-    <Header title="Phở! Blog">
+  <div className="container mx-auto mb-24" data-cy="blog-index-header">
+    <Header title="Faux! Blog">
       News, tips and highlights from the team at <span className="logo" />
     </Header>
     <div className="w-full md:w-3/5 mx-auto space-y-12">
       {data.map((post) => (
         <Link key={post.slug} as={`/blog/${post.slug}`} href="/blog/[slug]">
           <a className="group block my-16" data-cy="blog-post-link">
-            <div className="my-1 space-x-4">
+            <h2 className="inline-block text-4xl font-semibold text-gray-700 group-hover:text-indigo-500 hover-stripe">
+              {post.title}
+            </h2>
+            <div className="mb-1 space-x-2">
               {post.tags?.map((tag) => (
                 <span
                   key={tag}
-                  className="rounded-lg text-indigo-400 bg-white py-1 px-2 text-lg small-caps leading-snug border-2 border-indigo-400"
+                  className="rounded text-indigo-500 bg-white px-2 text-md small-caps leading-snug border border-indigo-500"
                 >
                   {tag}
                 </span>
               ))}
             </div>
-            <h2 className="inline-block text-4xl font-semibold text-gray-700 group-hover:text-indigo-500 hover-stripe">
-              {post.title}
-            </h2>
             <p className="text-gray-700 leading-relaxed text-xl">
               {post.description}
             </p>
