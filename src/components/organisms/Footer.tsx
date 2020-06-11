@@ -27,19 +27,23 @@ const FooterMenu = ({ title, items }: FooterMenuProps) => (
   </nav>
 );
 
-const IconIds: IconName[] = ["instagram", "facebook", "twitter", "linkedin"];
+const SocialIcon = ({ id }: { id: IconName }) => (
+  <NextLink href="/" key={id}>
+    <a aria-label={`${id}`}>
+      <Icon
+        id={id}
+        className="w-6 h-6 fill-current text-white hover:opacity-75"
+      />
+    </a>
+  </NextLink>
+);
+
 const Icons = () => (
   <div className="flex flex-wrap lg:justify-around w-full py-8 sm:py-0 lg:w-1/5 space-x-8 lg:space-x-0 items-start">
-    {IconIds.map((id) => (
-      <NextLink href="/" key={id}>
-        <a aria-label={`${id}`}>
-          <Icon
-            id={id}
-            className="w-6 h-6 fill-current text-white hover:opacity-75"
-          />
-        </a>
-      </NextLink>
-    ))}
+    <SocialIcon id="instagram" />
+    <SocialIcon id="facebook" />
+    <SocialIcon id="twitter" />
+    <SocialIcon id="linkedin" />
   </div>
 );
 
