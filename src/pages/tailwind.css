@@ -6,7 +6,7 @@ html {
 }
 
 body {
-  @apply font-sans text-gray-800 antialiased;
+  @apply font-sans text-gray-800 antialiased leading-normal;
 }
 
 ::selection {
