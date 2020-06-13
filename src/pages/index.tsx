@@ -1,13 +1,15 @@
 import { Header } from "components/organisms";
-import Link from "next/link";
+import { Link } from "components/atoms";
 
 export default () => (
   <Header title="Faux! A Headless CMS POC">
-    See{" "}
-    <Link href="/blog/">
-      <a>/Blog</a>
-    </Link>{" "}
-    for an overview of the architecture, the technical choices made and the
-    benefits of a Headless CMS-based stack
+    <div className="mx-auto" style={{ maxWidth: "55ch" }}>
+      See{" "}
+      <Link className="text-indigo-700 hover:text-indigo-500" href="/blog/">
+        blog
+      </Link>{" "}
+      for an overview of the architecture, the technical choices made and the
+      benefits of a Headless CMS-based stack
+    </div>
   </Header>
 );
