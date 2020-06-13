@@ -21,7 +21,6 @@ type ResultItemProps = {
 };
 
 const ResultItem = ({ result }: ResultItemProps) => {
-  console.log(result);
   return (
     <div
       data-cy="search-result"

@@ -1,6 +1,7 @@
 import { ButtonLink as Button, MobileMenuToggle, Link } from "components/atoms";
 import { useState } from "react";
 import NextLink from "next/link";
+import Router from "next/router";
 
 type NavItemProps = {
   link: string;
@@ -42,6 +43,9 @@ const MenuContent = () => (
 
 export const Nav = () => {
   const [toggle, setToggle] = useState(false);
+  Router.events.on("routeChangeStart", () => {
+    setToggle(false);
+  });
 
   return (
     <div className="sticky top-0 z-10 w-full border-b border-gray-200 bg-white z-50">
