@@ -17,22 +17,6 @@ env:
   NEXT_PUBLIC_GA_TRACKING_ID: ${{ secrets.NEXT_PUBLIC_GA_TRACKING_ID }}
   NEXT_PUBLIC_SENTRY_DSN: ${{ secrets.NEXT_PUBLIC_SENTRY_DSN }}
 jobs:
-  test:
-    name: Test
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-      - name: Node install
-        shell: bash -l {0}
-        run: |
-          nvm install
-          nvm use
-      - run: |
-          npm ci
-          npm run format:check
-          npm run lint
-          npx tsc --noEmit -p ./tsconfig.json
   cypress:
     name: Integration
     runs-on: ubuntu-latest
