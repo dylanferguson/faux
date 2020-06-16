@@ -1,6 +1,6 @@
 describe.skip("Home", () => {
   before(() => {
-    cy.visit("");
+    cy.visit("/");
   });
 
   it("should render header nav", () => {
