@@ -65,3 +65,12 @@ jobs:
         env:
           LHCI_BUILD_TOKEN: ${{ secrets.LHCI_BUILD_TOKEN }}
           LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
+  a11y:
+    name: A11y audit
+    needs: vercel_deploy
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: A11y audit via Pa11y
+        run: |
+          npx pa11y-ci --config .config/pa11yci.json --sitemap ${{ needs.vercel_deploy.outputs.preview_url }}/sitemap.xml --sitemap-find https://faux.digital --sitemap-replace ${{ needs.vercel_deploy.outputs.preview_url }}
