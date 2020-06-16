@@ -7,40 +7,34 @@ on:
   push:
     branches:
       - master
-env:
-  CONTENTFUL_SPACE_ID: ${{ secrets.CONTENTFUL_SPACE_ID }}
-  CONTENTFUL_ACCESS_TOKEN: ${{ secrets.CONTENTFUL_ACCESS_TOKEN }}
-  CONTENTFUL_PREVIEW_ACCESS_TOKEN: ${{ secrets.CONTENTFUL_PREVIEW_ACCESS_TOKEN }}
-  NEXT_PUBLIC_ALGOLIA_APP_ID: ${{ secrets.NEXT_PUBLIC_ALGOLIA_APP_ID }}
-  NEXT_PUBLIC_ALGOLIA_SEARCH_ONLY_API_KEY: ${{ secrets.NEXT_PUBLIC_ALGOLIA_SEARCH_ONLY_API_KEY }}
-  NEXT_PUBLIC_ALGOLIA_INDEX: ${{ secrets.NEXT_PUBLIC_ALGOLIA_INDEX }}
-  NEXT_PUBLIC_GA_TRACKING_ID: ${{ secrets.NEXT_PUBLIC_GA_TRACKING_ID }}
-  NEXT_PUBLIC_SENTRY_DSN: ${{ secrets.NEXT_PUBLIC_SENTRY_DSN }}
 jobs:
-  cypress:
-    name: Integration
+  vercel_deploy:
+    name: Test setup
     runs-on: ubuntu-latest
-    if: github.event == 'pull_request'
+    outputs:
+      preview_url: ${{ steps.waitForVercelPreviewDeployment.outputs.url }}
     steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-      - name: Node install
-        shell: bash -l {0}
-        run: |
-          nvm install
-          nvm use
+      - name: Wait for Vercel preview deployment to complete
+        uses: patrickedqvist/wait-for-vercel-preview@master
+        id: waitForVercelPreviewDeployment
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          max_timeout: 120
+  cypress:
+    name: End-to-end tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
       - name: Run Cypress
         uses: cypress-io/github-action@v1
         with:
-          build: npm run build
-          start: npm start
-          wait-on: http://localhost:3000
+          config: baseUrl=${{ needs.vercel_deploy.outputs.preview_url }}
+          install: false # We test against live preview URL, no need to install packages
   lighthouse:
     name: Lighthouse audit
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v2
+      - uses: actions/checkout@v2
       - name: Install Node
         shell: bash -l {0}
         run: |
