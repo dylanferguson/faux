@@ -8,6 +8,21 @@ on:
     branches:
       - master
 jobs:
+  static_analysis:
+    name: Static analysis
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Node install
+        shell: bash -l {0}
+        run: |
+          nvm install
+          nvm use
+      - run: |
+          npm ci
+          npm run format:check
+          npm run lint
+          npx tsc --noEmit -p ./tsconfig.json
   vercel_deploy:
     name: Test setup
     runs-on: ubuntu-latest
@@ -22,6 +37,7 @@ jobs:
           max_timeout: 120
   cypress:
     name: End-to-end tests
+    needs: vercel_deploy
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -29,21 +45,23 @@ jobs:
         uses: cypress-io/github-action@v1
         with:
           config: baseUrl=${{ needs.vercel_deploy.outputs.preview_url }}
-          install: false # We test against live preview URL, no need to install packages
+          install: false # We test against a live preview URL, no need to install packages
   lighthouse:
     name: Lighthouse audit
+    needs: vercel_deploy
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Install Node
-        shell: bash -l {0}
-        run: |
-          nvm install
-          nvm use
-      - run: npm ci
-      - run: npm run build:static
-      - name: Run Lighthouse audit
-        run: npx @lhci/cli@0.4.x autorun
+      - name: Audit Vercel preview URL using Lighthouse
+        uses: treosh/lighthouse-ci-action@v3
+        with:
+          urls: |
+            ${{ needs.vercel_deploy.outputs.preview_url }}
+            ${{ needs.vercel_deploy.outputs.preview_url }}/blog
+            ${{ needs.vercel_deploy.outputs.preview_url }}/login
+            ${{ needs.vercel_deploy.outputs.preview_url }}/release-notes
+            ${{ needs.vercel_deploy.outputs.preview_url }}/cards
+          configPath: "./lighthouserc.js"
         env:
           LHCI_BUILD_TOKEN: ${{ secrets.LHCI_BUILD_TOKEN }}
           LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
