@@ -73,4 +73,5 @@ jobs:
       - uses: actions/checkout@v2
       - name: A11y audit via Pa11y
         run: |
-          npx pa11y-ci --config .config/pa11yci.json --sitemap ${{ needs.vercel_deploy.outputs.preview_url }}/sitemap.xml --sitemap-find https://faux.digital --sitemap-replace ${{ needs.vercel_deploy.outputs.preview_url }}
+          sed -i 's|https://faux.digital|${{ needs.vercel_deploy.outputs.preview_url }}|g' .pa11yci.json
+          npx pa11y-ci@2.x --config .pa11yci.json

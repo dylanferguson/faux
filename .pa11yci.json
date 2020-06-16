@@ -1,0 +1,12 @@
+{
+  "defaults": {
+    "timeout": 60000
+  },
+  "urls": [
+    "https://faux.digital/",
+    "https://faux.digital/help/",
+    "https://faux.digital/login/",
+    "https://faux.digital/blog/benefits/",
+    "https://faux.digital/release-notes/"
+  ]
+}
