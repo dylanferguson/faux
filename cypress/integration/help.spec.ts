@@ -11,7 +11,7 @@ describe("Help", () => {
     cy.get("[data-cy='search-input']").scrollIntoView().should("be.visible");
   });
 
-  it.skip("should return results for a search query", () => {
+  it("should return results for a search query", () => {
     const query = "release";
     cy.get("[data-cy='search-input']").type(query).should("have.value", query);
     cy.get("[data-cy='search-result']")
