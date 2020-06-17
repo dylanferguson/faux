@@ -1,0 +1,19 @@
+name: Lighthouse Audit
+on:
+  push:
+    branches:
+      - master
+jobs:
+  lighthouse:
+    name: Lighthouse audit
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Audit Vercel preview URL using Lighthouse
+        uses: treosh/lighthouse-ci-action@v3
+        with:
+          configPath: ./lighthouserc.js
+          serverBaseUrl: ${{ secrets.LHCI_SERVER_BASE_URL }}
+          serverToken: ${{ secrets.LHCI_BUILD_TOKEN }}
+        env:
+          LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}

@@ -4,9 +4,6 @@ on:
     types: [opened, synchronize]
     branches:
       - master
-  push:
-    branches:
-      - master
 jobs:
   static_analysis:
     name: Static analysis
@@ -45,25 +42,19 @@ jobs:
         uses: cypress-io/github-action@v1
         with:
           config: baseUrl=${{ needs.vercel_deploy.outputs.preview_url }}
-          install: false # We test against a live preview URL, no need to install packages
+          install: false
   lighthouse:
     name: Lighthouse audit
     needs: vercel_deploy
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - run: sed -i 's|https://faux.digital|${{ needs.vercel_deploy.outputs.preview_url }}|g' ./lighthouserc.js
       - name: Audit Vercel preview URL using Lighthouse
         uses: treosh/lighthouse-ci-action@v3
         with:
-          urls: |
-            ${{ needs.vercel_deploy.outputs.preview_url }}
-            ${{ needs.vercel_deploy.outputs.preview_url }}/blog
-            ${{ needs.vercel_deploy.outputs.preview_url }}/login
-            ${{ needs.vercel_deploy.outputs.preview_url }}/release-notes
-            ${{ needs.vercel_deploy.outputs.preview_url }}/cards
           configPath: ./lighthouserc.js
-          serverBaseUrl: ${{ secrets.LHCI_SERVER_BASE_URL }}
-          serverToken: ${{ secrets.LHCI_BUILD_TOKEN }}
+          temporaryPublicStorage: true
         env:
           LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
   a11y:
