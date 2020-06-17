@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { Date } from "components/atoms";
 import { IReleaseNoteFields } from "types/generated/contentful";
-import marked from "marked";
+import snarkdown from "snarkdown";
 
 /**
  * Ref:
@@ -44,7 +44,7 @@ export const ReleaseNote = ({
         <div
           style={{ maxWidth: "70ch" }}
           className="release-note text-lg my-6 space-y-4"
-          dangerouslySetInnerHTML={{ __html: marked(description) }}
+          dangerouslySetInnerHTML={{ __html: snarkdown(description) }}
         />
       )}
     </div>

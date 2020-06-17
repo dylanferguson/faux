@@ -6,6 +6,8 @@
 - Last components:
   - Image component
   - Alternating image section
+- See chunk size increases on each PR
+- Polish architecture
 
 ## Architecture
 

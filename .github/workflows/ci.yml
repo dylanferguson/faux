@@ -72,7 +72,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: A11y audit via Pa11y
+      - name: Run a11y audit via Pa11y
         run: |
           sed -i 's|https://faux.digital|${{ needs.vercel_deploy.outputs.preview_url }}|g' .pa11yci.json
           npx pa11y-ci@2.x --config .pa11yci.json

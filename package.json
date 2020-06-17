@@ -36,10 +36,10 @@
     "@sentry/browser": "^5.15.5",
     "algoliasearch": "^4.2.0",
     "classnames": "^2.2.6",
-    "marked": "^1.1.0",
     "next": "^9.4.4",
     "react": "16.13.1",
-    "react-dom": "16.13.1"
+    "react-dom": "16.13.1",
+    "snarkdown": "^1.2.2"
   },
   "devDependencies": {
     "@cloudflare/wrangler": "^1.9.2",
@@ -49,7 +49,6 @@
     "@sentry/webpack-plugin": "^1.11.1",
     "@types/algoliasearch": "^3.34.10",
     "@types/classnames": "^2.2.10",
-    "@types/marked": "^0.7.4",
     "@types/node": "^13.13.5",
     "@types/react": "^16.9.35",
     "@typescript-eslint/eslint-plugin": "^3.1.0",
