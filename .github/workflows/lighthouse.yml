@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Audit Vercel preview URL using Lighthouse
+      - name: Audit prod performance using Lighthouse
         uses: treosh/lighthouse-ci-action@v3
         with:
           configPath: ./lighthouserc.js

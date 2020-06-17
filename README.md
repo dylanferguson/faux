@@ -3,11 +3,16 @@
 ## To Do
 
 - uhh, docs
+  - Polish architecture
+  - Write-up: Evaluate headless CMS options
 - Last components:
   - Image component
   - Alternating image section
-- See chunk size increases on each PR
-- Polish architecture
+- Abstract away contentful client calls
+- Performance:
+  - Variable fonts + subsetting
+  - Responsive, lazy-loaded images
+  - lighthouse-plugin-field-performance
 
 ## Architecture
 
