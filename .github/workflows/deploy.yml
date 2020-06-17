@@ -5,15 +5,6 @@ on:
       - master
   repository_dispatch:
     types: [contentful_publish]
-env:
-  CONTENTFUL_SPACE_ID: ${{ secrets.CONTENTFUL_SPACE_ID }}
-  CONTENTFUL_ACCESS_TOKEN: ${{ secrets.CONTENTFUL_ACCESS_TOKEN }}
-  CONTENTFUL_PREVIEW_ACCESS_TOKEN: ${{ secrets.CONTENTFUL_PREVIEW_ACCESS_TOKEN }}
-  NEXT_PUBLIC_ALGOLIA_APP_ID: ${{ secrets.NEXT_PUBLIC_ALGOLIA_APP_ID }}
-  NEXT_PUBLIC_ALGOLIA_SEARCH_ONLY_API_KEY: ${{ secrets.NEXT_PUBLIC_ALGOLIA_SEARCH_ONLY_API_KEY }}
-  NEXT_PUBLIC_ALGOLIA_INDEX: ${{ secrets.NEXT_PUBLIC_ALGOLIA_INDEX }}
-  NEXT_PUBLIC_GA_TRACKING_ID: ${{ secrets.NEXT_PUBLIC_GA_TRACKING_ID }}
-  NEXT_PUBLIC_SENTRY_DSN: ${{ secrets.NEXT_PUBLIC_SENTRY_DSN }}
 jobs:
   deploy:
     name: "Deploy to Cloudflare Workers"
@@ -31,7 +22,6 @@ jobs:
         env:
           cache-name: cache-node-modules
         with:
-          # npm cache files are stored in `~/.npm` on Linux/macOS
           path: ~/.npm
           key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
@@ -49,8 +39,32 @@ jobs:
           npm run predeploy
           sed -i s/{{CF_ACCOUNT_ID}}/${{ secrets.CF_ACCOUNT_ID }}/g wrangler.toml
           sed -i s/{{CF_ZONE_ID}}/${{ secrets.CF_ZONE_ID }}/g wrangler.toml
+        env:
+          CONTENTFUL_SPACE_ID: ${{ secrets.CONTENTFUL_SPACE_ID }}
+          CONTENTFUL_ACCESS_TOKEN: ${{ secrets.CONTENTFUL_ACCESS_TOKEN }}
+          CONTENTFUL_PREVIEW_ACCESS_TOKEN: ${{ secrets.CONTENTFUL_PREVIEW_ACCESS_TOKEN }}
+          NEXT_PUBLIC_ALGOLIA_APP_ID: ${{ secrets.NEXT_PUBLIC_ALGOLIA_APP_ID }}
+          NEXT_PUBLIC_ALGOLIA_SEARCH_ONLY_API_KEY: ${{ secrets.NEXT_PUBLIC_ALGOLIA_SEARCH_ONLY_API_KEY }}
+          NEXT_PUBLIC_ALGOLIA_INDEX: ${{ secrets.NEXT_PUBLIC_ALGOLIA_INDEX }}
+          NEXT_PUBLIC_GA_TRACKING_ID: ${{ secrets.NEXT_PUBLIC_GA_TRACKING_ID }}
+          NEXT_PUBLIC_SENTRY_DSN: ${{ secrets.NEXT_PUBLIC_SENTRY_DSN }}
       - name: Deploy
         uses: cloudflare/wrangler-action@1.1.0
         with:
           apiToken: ${{ secrets.CF_API_KEY }}
           environment: "production"
+  lighthouse:
+    name: Lighthouse audit
+    runs-on: ubuntu-latest
+    if: ${{ github.event_name == 'push' }}
+    needs: deploy
+    steps:
+      - uses: actions/checkout@v2
+      - name: Audit prod performance using Lighthouse
+        uses: treosh/lighthouse-ci-action@v3
+        with:
+          configPath: ./lighthouserc.js
+          serverBaseUrl: ${{ secrets.LHCI_SERVER_BASE_URL }}
+          serverToken: ${{ secrets.LHCI_BUILD_TOKEN }}
+        env:
+          LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
