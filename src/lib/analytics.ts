@@ -1,6 +1,6 @@
 // https://developers.google.com/analytics/devguides/collection/gtagjs/pages
 export const pageview = (url: string) => {
-  window.gtag("config", process.env.NEXT_PUBLIC_GA_TRACKING_ID as string, {
+  window?.gtag("config", process.env.NEXT_PUBLIC_GA_TRACKING_ID as string, {
     page_path: url,
   });
 };
@@ -21,7 +21,7 @@ export const event = ({
   value,
   nonInteraction = false,
 }: EventParams) => {
-  window.gtag("event", action, {
+  window?.gtag("event", action, {
     event_category: category,
     event_label: label,
     value: value,
