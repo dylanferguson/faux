@@ -23,4 +23,19 @@ module.exports = {
     "@typescript-eslint/explicit-module-boundary-types": "off",
     "@typescript-eslint/no-unused-vars": "off",
   },
+  overrides: [
+    {
+      files: ["cypress/integration/**/*.ts"],
+      env: {
+        "cypress/globals": true,
+      },
+      extends: ["plugin:cypress/recommended"],
+      plugins: ["cypress"],
+      rules: {
+        "cypress/assertion-before-screenshot": "error",
+        "cypress/require-data-selectors": "error",
+        "cypress/no-force": "error",
+      },
+    },
+  ],
 };
