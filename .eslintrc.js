@@ -25,6 +25,13 @@ module.exports = {
   },
   overrides: [
     {
+      files: ["src/components/**/*.{ts,tsx}"],
+      plugins: ["filenames"],
+      rules: {
+        "filenames/match-regex": [2, "^[A-Z]+[a-z]*(?:[A-Z][a-z]+)*$|^index$"],
+      },
+    },
+    {
       files: ["cypress/integration/**/*.ts"],
       env: {
         "cypress/globals": true,
