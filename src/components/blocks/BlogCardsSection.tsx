@@ -25,22 +25,22 @@ const BlogCard = ({
       )}
     >
       <div
-        className="w-1/4 flex-none bg-cover rounded-tl-lg rounded-bl-lg bg-center"
+        className="flex-none w-1/4 bg-center bg-cover rounded-tl-lg rounded-bl-lg"
         style={{
           backgroundImage: `linear-gradient(rgba(76, 81, 191, 0.7), rgba(102, 126, 234, 0.7)), url(${heroImage?.fields.file.url}?h=250&fit=scale)`,
           clipPath: "polygon(0 0, 100% 0, 85% 100%, 0 100%)",
         }}
       ></div>
       <div className="px-10 py-8">
-        <h3 className="text-indigo-500 text-2xl font-medium mb-4">
+        <h3 className="mb-4 text-2xl font-medium text-indigo-500">
           <span className="align-middle">{title}</span>
           <Icon
             id="arrowRight"
-            className="w-6 h-6 ml-3 inline-block align-middle fill-current transition ease-in-out duration-200 transform group-hover:translate-x-1"
+            className="inline-block w-6 h-6 ml-3 align-middle transition duration-200 ease-in-out transform fill-current group-hover:translate-x-1"
           />
         </h3>
         <p
-          className="text-lg leading-relaxed font-light overflow-hidden"
+          className="overflow-hidden text-lg font-light leading-relaxed"
           style={{
             display: "-webkit-box",
             WebkitLineClamp: 3,
@@ -57,7 +57,7 @@ const BlogCard = ({
 
 export const BlogCardsSection = ({ posts }: IBlogCardsSectionFields) => (
   <section
-    className="container mx-auto my-32 grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-8"
+    className="container grid grid-cols-1 gap-4 mx-auto my-32 lg:grid-cols-2 lg:gap-8"
     style={{ gridAutoRows: "1fr" }}
   >
     {posts.map((post) => (

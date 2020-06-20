@@ -9,7 +9,7 @@ type NavItemProps = {
 };
 
 const NavItem = ({ link, label }: NavItemProps) => (
-  <li className="list-none inline-block text-xl text-indigo-600 hover:text-indigo-800 transition ease-in duration-100 small-caps">
+  <li className="inline-block text-xl text-indigo-600 list-none transition duration-100 ease-in hover:text-indigo-800 small-caps">
     <Link href={link}>{label}</Link>
   </li>
 );
@@ -48,9 +48,9 @@ export const Nav = () => {
   });
 
   return (
-    <div className="sticky top-0 z-10 w-full border-b border-gray-200 bg-white z-50">
+    <div className="sticky top-0 z-10 z-50 w-full bg-white border-b border-gray-200">
       <header
-        className="container flex justify-between items-center h-20"
+        className="container flex items-center justify-between h-20"
         data-cy="nav"
       >
         <NextLink href="/">
@@ -68,10 +68,10 @@ export const Nav = () => {
           />
           {toggle && (
             <div
-              className="fixed top w-full left-0 py-8 bg-white border-b border-t border-gray-200"
+              className="fixed left-0 w-full py-8 bg-white border-t border-b border-gray-200 top"
               style={{ top: "5rem" }}
             >
-              <div className="container mx-auto mobile-menu space-y-4">
+              <div className="container mx-auto space-y-4 mobile-menu">
                 <NavMenu mobile={true} />
                 <div className="space-x-3">
                   <Button href="/login/" secondary>

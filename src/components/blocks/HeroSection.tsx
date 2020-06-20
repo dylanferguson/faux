@@ -15,10 +15,10 @@ export const HeroSection = ({
       background: "linear-gradient(to top, #667eea, #4c51bf)",
     }}
   >
-    <div className="container space-x-2 flex items-center">
-      <div className="px-4 py-6 w-full md:w-1/2 text-white my-10">
-        <div className="small-caps text-2xl">{accentText}</div>
-        <h1 className="text-5xl sm:text-6xl leading-snug font-bold">{title}</h1>
+    <div className="container flex items-center space-x-2">
+      <div className="w-full px-4 py-6 my-10 text-white md:w-1/2">
+        <div className="text-2xl small-caps">{accentText}</div>
+        <h1 className="text-5xl font-bold leading-snug sm:text-6xl">{title}</h1>
         <div className="text-2xl">{subtitle}</div>
         <div className="my-6">
           {buttons?.map(
@@ -35,7 +35,7 @@ export const HeroSection = ({
           )}
         </div>
       </div>
-      <div className="w-1/2 hidden md:block">
+      <div className="hidden w-1/2 md:block">
         <img src={image?.fields.file.url} className="mx-auto"></img>
       </div>
     </div>

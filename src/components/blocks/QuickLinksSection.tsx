@@ -19,7 +19,7 @@ const QuickLink = ({ title, link, icon, className }: QuickLinkProps) => (
   >
     <Icon
       id={icon}
-      className="block w-8 h-8 fill-current text-indigo-600 mb-4"
+      className="block w-8 h-8 mb-4 text-indigo-600 fill-current"
     />
     <p className="text-xl font-medium leading-snug ">{title}</p>
   </Link>
@@ -30,11 +30,11 @@ export const QuickLinksSection = ({
   links,
 }: IQuickLinksSectionFields) => (
   <div className="container mx-auto mb-32">
-    <h2 className="text-4xl text-center font-bold leading-relaxed mb-16">
+    <h2 className="mb-16 text-4xl font-bold leading-relaxed text-center">
       {title}
     </h2>
     <div
-      className="w-full lg:w-5/6 mx-auto grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
+      className="grid w-full grid-cols-1 gap-4 mx-auto lg:w-5/6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
       style={{ gridAutoRows: "1fr" }}
     >
       {links.map((quickLink) => (

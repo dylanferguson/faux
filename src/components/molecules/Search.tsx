@@ -24,7 +24,7 @@ const ResultItem = ({ result }: ResultItemProps) => {
   return (
     <div
       data-cy="search-result"
-      className="text-gray-800 text-lg mb-2 text-left text-xl"
+      className="mb-2 text-lg text-xl text-left text-gray-800"
     >
       <Link href={result.url}>
         <a>
@@ -54,8 +54,8 @@ type ResultsProps = {
 const Results = ({ results, query }: ResultsProps) => (
   <>
     {results.length ? (
-      <div className="display flex px-6">
-        <div className="text-lg text-gray-500 small-caps border-r-2 pr-4 border-gray-200">
+      <div className="flex px-6 display">
+        <div className="pr-4 text-lg text-gray-500 border-r-2 border-gray-200 small-caps">
           Releases
         </div>
         <div className="ml-4">
@@ -107,14 +107,14 @@ export const Search = ({ className }: SearchProps) => {
 
   return (
     <div className={classNames(className, "relative")}>
-      <div className="w-full relative  flex items-center">
+      <div className="relative flex items-center w-full">
         <label className="sr-only" htmlFor="search">
           search
         </label>
         <input
           type="search"
           id="search"
-          className="shadow appearance-none border rounded w-full text-xl py-4 px-4 text-gray-700 leading-tight focus-outline"
+          className="w-full px-4 py-4 text-xl leading-tight text-gray-700 border rounded shadow appearance-none focus-outline"
           placeholder="Search"
           onChange={handleChange}
           onBlur={() => {
@@ -123,14 +123,14 @@ export const Search = ({ className }: SearchProps) => {
           data-cy="search-input"
         />
         <Icon
-          className="absolute transform -translate-y-1/2 right-0 w-10 h-10 z-10 mr-3 pointer-events-none fill-current text-gray-300 hover:opacity-75"
+          className="absolute right-0 z-10 w-10 h-10 mr-3 text-gray-300 transform -translate-y-1/2 pointer-events-none fill-current hover:opacity-75"
           style={{ top: "50%" }}
           id="magnifyingGlass"
         />
         {query.length > 0 && (
           <div
             style={{ top: "110%", zIndex: 1 }}
-            className="absolute bg-white w-full border-gray-300 rounded shadow py-8 space-y-2"
+            className="absolute w-full py-8 space-y-2 bg-white border-gray-300 rounded shadow"
           >
             {loading ? (
               <p>Loading…</p>

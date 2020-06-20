@@ -19,7 +19,7 @@ type HeaderProps = {
 export const Header = ({ title, children }: HeaderProps) => (
   <header>
     <div className="container mb-16">
-      <div className="text-center my-40">
+      <div className="my-40 text-center">
         <HeaderTitle>{title}</HeaderTitle>
         <div className="text-2xl">{children}</div>
       </div>

@@ -17,11 +17,11 @@ export default ({ faqs }: HelpProps) => {
     >
       <HeaderTitle>Help!</HeaderTitle>
       <div className="flex items-center">
-        <Search className="w-full md:w-1/2 mx-auto mb-24" />
+        <Search className="w-full mx-auto mb-24 md:w-1/2" />
       </div>
       <div>
-        <h2 className="text-4xl font-bold my-12">Frequently Asked Questions</h2>
-        <div className="faq-answer sm:w-2/3 mx-auto mb-20">
+        <h2 className="my-12 text-4xl font-bold">Frequently Asked Questions</h2>
+        <div className="mx-auto mb-20 faq-answer sm:w-2/3">
           {faqs.map(({ answer, question }) => (
             <FAQ key={question} question={question} answer={answer} />
           ))}

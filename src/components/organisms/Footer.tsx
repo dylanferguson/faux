@@ -8,7 +8,7 @@ type FooterMenuProps = {
 };
 
 const FooterMenu = ({ title, items }: FooterMenuProps) => (
-  <nav className="text-white w-1/2 sm:w-1/4 lg:w-1/5 md:px-3 mb-8">
+  <nav className="w-1/2 mb-8 text-white sm:w-1/4 lg:w-1/5 md:px-3">
     <p className="font-bold small-caps">{title}</p>
     <ul>
       {items.map((item, i) => (
@@ -32,14 +32,14 @@ const SocialIcon = ({ id }: { id: IconName }) => (
     <a aria-label={`${id}`}>
       <Icon
         id={id}
-        className="w-6 h-6 fill-current text-white hover:opacity-75"
+        className="w-6 h-6 text-white fill-current hover:opacity-75"
       />
     </a>
   </NextLink>
 );
 
 const Icons = () => (
-  <div className="flex flex-wrap lg:justify-around w-full py-8 sm:py-0 lg:w-1/5 space-x-8 lg:space-x-0 items-start">
+  <div className="flex flex-wrap items-start w-full py-8 space-x-8 lg:justify-around sm:py-0 lg:w-1/5 lg:space-x-0">
     <SocialIcon id="instagram" />
     <SocialIcon id="facebook" />
     <SocialIcon id="twitter" />
@@ -57,7 +57,7 @@ export const Footer = () => (
       }}
       data-cy="footer"
     >
-      <div className="my-20 container pt-12 sm:pt-24">
+      <div className="container pt-12 my-20 sm:pt-24">
         <nav className="flex flex-wrap">
           <FooterMenu
             title="Company"
@@ -85,7 +85,7 @@ export const Footer = () => (
             ]}
           />
           <FooterMenu
-            title="Developers Devlopers Developers!"
+            title="Developers Developers Developers!"
             items={[
               "Documentation",
               "API Reference",
@@ -97,7 +97,7 @@ export const Footer = () => (
         </nav>
       </div>
     </footer>
-    <div className="flex justify-between my-4 container">
+    <div className="container flex justify-between my-4">
       <span>© Faux 2020</span>
       <span>A totally legit bank</span>
     </div>

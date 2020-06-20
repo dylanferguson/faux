@@ -17,17 +17,17 @@ const Login = () => {
   };
 
   return (
-    <div className="min-h-screen bg-white bg-opacity-25 flex flex-col items-center justify-center pt-10 pb-20">
+    <div className="flex flex-col items-center justify-center min-h-screen pt-10 pb-20 bg-white bg-opacity-25">
       <form
         onSubmit={handleSubmit}
-        className="bg-white sm:shadow-lg rounded px-8 pt-8 pb-8 mb-4 w-full sm:max-w-md"
+        className="w-full px-8 pt-8 pb-8 mb-4 bg-white rounded sm:shadow-lg sm:max-w-md"
         data-cy="login-form"
       >
-        <h2 className="text-gray-700 text-2xl">Sign in to your account</h2>
+        <h2 className="text-2xl text-gray-700">Sign in to your account</h2>
         <div className="mt-6 mb-10">
           <label
             htmlFor="email"
-            className="block text-gray-700 text-md small-caps mb-2"
+            className="block mb-2 text-gray-700 text-md small-caps"
           >
             Email
           </label>
@@ -37,14 +37,14 @@ const Login = () => {
             maxLength={8}
             name="userId"
             required
-            className="border border-gray-300 rounded w-full py-3 px-4 text-base focus-outline"
+            className="w-full px-4 py-3 text-base border border-gray-300 rounded focus-outline"
             data-cy="login-email-input"
           />
         </div>
         <div className="mt-6 mb-10">
           <label
             htmlFor="password"
-            className="block text-gray-700 text-md mb-2 flex justify-between"
+            className="flex justify-between block mb-2 text-gray-700 text-md"
           >
             <span className="small-caps">Password</span>
             <span className="text-indigo-500">
@@ -56,14 +56,14 @@ const Login = () => {
             name="password"
             id="password"
             required
-            className="border border-gray-300 rounded w-full py-3 px-4 text-base focus-outline"
+            className="w-full px-4 py-3 text-base border border-gray-300 rounded focus-outline"
             data-cy="login-password-input"
           />
         </div>
         <input
           type="submit"
           value="Sign In"
-          className="btn-primary w-full my-2 focus-outline"
+          className="w-full my-2 btn-primary focus-outline"
           data-cy="login-submit-button"
         />
       </form>

@@ -19,12 +19,12 @@ export const ReleaseNote = ({
 }: ReleaseProps) => (
   <article className="container my-16">
     <div className="mx-3 sm:w-2/3 sm:mx-auto">
-      <h2 className="text-4xl sm:text-5xl font-semibold leading-snug">
+      <h2 className="text-4xl font-semibold leading-snug sm:text-5xl">
         <Link href="/release-notes/[version]" as={`/release-notes/${version}`}>
           <a>{version}</a>
         </Link>
       </h2>
-      <div className="text-xl mb-2 text-gray-700">
+      <div className="mb-2 text-xl text-gray-700">
         <span>{category}</span> ·{" "}
         <span>
           <Date date={releaseDate} />
@@ -34,7 +34,7 @@ export const ReleaseNote = ({
         {scope?.map((item) => (
           <span
             key={item}
-            className="text-white bg-indigo-600 px-3 mr-2 small-caps rounded-md text-lg inline-block"
+            className="inline-block px-3 mr-2 text-lg text-white bg-indigo-600 rounded-md small-caps"
           >
             {item}
           </span>
@@ -43,7 +43,7 @@ export const ReleaseNote = ({
       {description && (
         <div
           style={{ maxWidth: "70ch" }}
-          className="release-note text-lg my-6 space-y-4"
+          className="my-6 space-y-4 text-lg release-note"
           dangerouslySetInnerHTML={{ __html: snarkdown(description) }}
         />
       )}

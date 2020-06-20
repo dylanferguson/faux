@@ -13,13 +13,13 @@ export const FAQ = ({ question, answer }: FAQProps) => {
 
   return (
     <div
-      className="text-left mb-6 cursor-pointer rounded shadow px-6 py-6 overflow-hidden"
+      className="px-6 py-6 mb-6 overflow-hidden text-left rounded shadow cursor-pointer"
       data-cy="faq"
       onClick={() => {
         setOpen(!open);
       }}
     >
-      <h3 className="text-2xl font-semibold my-2 flex items-center justify-between">
+      <h3 className="flex items-center justify-between my-2 text-2xl font-semibold">
         {question}
         <Icon
           id="chevronDown"

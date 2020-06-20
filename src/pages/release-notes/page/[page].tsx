@@ -22,7 +22,7 @@ const PageLink = ({ page, newer, children }: PageLinkProps) => (
       }`}
     >
       <Icon
-        className="w-8 h-8 flex fill-current"
+        className="flex w-8 h-8 fill-current"
         id={`chevron${newer ? "Right" : "Left"}`}
       />
       {children}
@@ -40,7 +40,7 @@ type ReleaseNotePageProps = {
 export default ({ data, page, total }: ReleaseNotePageProps) => (
   <div className="mb-24">
     <Header title="Release Notes">
-      <span className="logo inline-block pr-1" /> changelog for new features and
+      <span className="inline-block pr-1 logo" /> changelog for new features and
       general improvements
     </Header>
     <div className="space-y-20">
