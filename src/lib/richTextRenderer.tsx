@@ -35,18 +35,18 @@ const options: RichTextRenderOptions = {
     [BLOCKS.HEADING_5]: (node, children) => <h5>{children}</h5>,
     [BLOCKS.HEADING_6]: (node, children) => <h6>{children}</h6>,
     [BLOCKS.OL_LIST]: (node, children) => (
-      <ol className="list-decimal ml-6">{children}</ol>
+      <ol className="ml-6 list-decimal">{children}</ol>
     ),
     [BLOCKS.UL_LIST]: (node, children) => (
-      <ul className="list-disc ml-6">{children}</ul>
+      <ul className="ml-6 list-disc">{children}</ul>
     ),
     [BLOCKS.QUOTE]: (node, children) => (
-      <blockquote className="text-gray-700 border-gray-200 border-l-8 pl-6">
+      <blockquote className="pl-6 text-gray-700 border-l-8 border-gray-200">
         {children}
       </blockquote>
     ),
     [BLOCKS.EMBEDDED_ASSET]: (node, children) => (
-      <img className="my-8" src={node.data.target.fields.file.url} />
+      <img className="my-8 rounded-lg" src={node.data.target.fields.file.url} />
     ),
     [INLINES.HYPERLINK]: (node, children) => (
       <a href={node.data.uri} className="text-indigo-600 hover:text-indigo-400">
