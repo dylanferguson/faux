@@ -20,6 +20,7 @@ module.exports = {
     "prettier/@typescript-eslint",
   ],
   rules: {
+    complexity: ["error", 10],
     "@typescript-eslint/explicit-module-boundary-types": "off",
     "@typescript-eslint/no-unused-vars": "off",
   },
