@@ -8,6 +8,8 @@
 - Last components:
   - Image component
   - Alternating image section
+- Features:
+  - Component catalog
 - Abstract away contentful client calls
 - Performance:
   - Variable fonts + subsetting

@@ -36,7 +36,7 @@ export const HeroSection = ({
         </div>
       </div>
       <div className="hidden w-1/2 md:block">
-        <img src={image?.fields.file.url} className="mx-auto"></img>
+        <img alt="" src={image?.fields.file.url} className="mx-auto"></img>
       </div>
     </div>
   </section>

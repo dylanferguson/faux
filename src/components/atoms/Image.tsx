@@ -1,1 +1,1 @@
-export const Image = () => <img loading="lazy" />;
+export const Image = () => <img loading="lazy" alt="" />;

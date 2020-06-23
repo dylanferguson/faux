@@ -12,8 +12,8 @@ export const FAQ = ({ question, answer }: FAQProps) => {
   const [open, setOpen] = useState(false);
 
   return (
-    <div
-      className="px-6 py-6 mb-6 overflow-hidden text-left rounded shadow cursor-pointer"
+    <button
+      className="block px-6 py-6 mb-6 overflow-hidden text-left rounded shadow cursor-pointer"
       data-cy="faq"
       onClick={() => {
         setOpen(!open);
@@ -40,6 +40,6 @@ export const FAQ = ({ question, answer }: FAQProps) => {
       >
         {answer}
       </p>
-    </div>
+    </button>
   );
 };

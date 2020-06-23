@@ -54,7 +54,9 @@ export const Nav = () => {
         data-cy="nav"
       >
         <NextLink href="/">
-          <a aria-label="Faux logo" className="logo"></a>
+          <a aria-label="Faux logo" className="logo">
+            <span className="sr-only">Faux logo</span>
+          </a>
         </NextLink>
         <div className="items-center hidden md:flex">
           <MenuContent />

@@ -13,16 +13,19 @@ module.exports = {
     node: true,
     browser: true,
   },
-  plugins: ["@typescript-eslint"],
+  plugins: ["@typescript-eslint", "jsx-a11y"],
   extends: [
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
     "prettier/@typescript-eslint",
+    "plugin:jsx-a11y/recommended",
   ],
   rules: {
     complexity: ["error", 10],
     "@typescript-eslint/explicit-module-boundary-types": "off",
     "@typescript-eslint/no-unused-vars": "off",
+    // Next.js' <Link/> holds the child anchor's href value
+    "jsx-a11y/anchor-is-valid": "off",
   },
   overrides: [
     {

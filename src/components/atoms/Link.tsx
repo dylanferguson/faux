@@ -4,14 +4,13 @@ type LinkProps = {
   href: string;
   as?: string;
   className?: string;
-  onClick?: () => void;
   children: React.ReactNode;
 };
 
-export const Link = ({ href, as, className, onClick, children }: LinkProps) => {
+export const Link = ({ href, as, className, children }: LinkProps) => {
   if (href.match("^(https?|tel:|mailto:)")) {
     return (
-      <a href={href} className={className} onClick={onClick}>
+      <a href={href} className={className}>
         children
       </a>
     );
@@ -19,9 +18,7 @@ export const Link = ({ href, as, className, onClick, children }: LinkProps) => {
 
   return (
     <NextLink href={href}>
-      <a className={className} onClick={onClick}>
-        {children}
-      </a>
+      <a className={className}>{children}</a>
     </NextLink>
   );
 };
