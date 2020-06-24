@@ -25,7 +25,7 @@ const NavMenu = ({ mobile }: NavMenuProps) => (
   <nav>
     <ol className={mobile ? "space-y-2" : "space-x-6"}>
       <NavItem link="/release-notes/" label="Release Notes" />
-      <NavItem link="/[...slug]" as="/cards" label="Cards" />
+      <NavItem link="/cards/" label="Cards" />
       <NavItem link="/blog/" label="Blog" />
       <NavItem link="/help/" label="Help!" />
     </ol>

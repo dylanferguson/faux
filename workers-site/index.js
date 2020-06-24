@@ -44,7 +44,9 @@ async function handleEvent(event) {
         bypassCache: true,
       };
     }
-    return await getAssetFromKV(event, options);
+
+    let response = await getAssetFromKV(event, options);
+    return setSecurityHeaders(new Response(response.body, response));
   } catch (e) {
     // if an error is thrown try to serve the asset at 404.html
     if (!DEBUG) {
@@ -54,10 +56,12 @@ async function handleEvent(event) {
             new Request(`${new URL(req.url).origin}/404/index.html`, req),
         });
 
-        return new Response(notFoundResponse.body, {
-          ...notFoundResponse,
-          status: 404,
-        });
+        return setSecurityHeaders(
+          new Response(notFoundResponse.body, {
+            ...notFoundResponse,
+            status: 404,
+          })
+        );
       } catch (e) {}
     }
 
@@ -65,6 +69,21 @@ async function handleEvent(event) {
   }
 }
 
+function setSecurityHeaders(response) {
+  const securityHeaders = {
+    "Content-Security-Policy": "upgrade-insecure-requests",
+    "X-Xss-Protection": "1; mode=block",
+    "X-Frame-Options": "DENY",
+    "Referrer-Policy": "no-referrer",
+    "Feature-Policy":
+      "accelerometer 'none'; ambient-light-sensor 'none'; camera 'none'; encrypted-media 'none'; fullscreen 'self'; geolocation 'none'; gyroscope 'none'; magnetometer 'none'; microphone 'none'; midi 'none'; payment 'none'; usb 'none'; vr 'none';",
+  };
+
+  for (const [key, value] of Object.entries(securityHeaders)) {
+    response.headers.set(key, value);
+  }
+  return response;
+}
 /**
  * Here's one example of how to modify a request to
  * remove a specific prefix, in this case `/docs` from
