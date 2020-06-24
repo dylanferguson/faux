@@ -1,0 +1,4 @@
+https://fonts.gstatic.com/?
+https://www.googletagmanager.com/?
+# Connection fails for some reason?
+https://www.akamai.com/us/en/products/performance/cloudlets/edge-redirector.jsp
