@@ -67,3 +67,14 @@ jobs:
         run: |
           sed -i 's|https://faux.digital|${{ needs.vercel_deploy.outputs.preview_url }}|g' .pa11yci.json
           npx pa11y-ci@2.x --config .pa11yci.json
+  linkcheck:
+    name: Link check
+    needs: vercel_deploy
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: "`linkcheck` deployment"
+        run: |
+          curl -s https://api.github.com/repos/filiph/linkcheck/releases/latest | jq '.assets[] | select(.name|test("linux")) | .browser_download_url' | xargs curl -sL -o linkcheck
+          chmod +x linkcheck
+          ./linkcheck --external ${{ needs.vercel_deploy.outputs.preview_url }} --skip-file .github/workflows/linkcheck-skipfile.txt

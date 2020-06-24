@@ -68,3 +68,14 @@ jobs:
           serverToken: ${{ secrets.LHCI_BUILD_TOKEN }}
         env:
           LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
+  linkcheck:
+    name: Link check
+    needs: deploy
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: "`linkcheck` deployment"
+        run: |
+          curl -s https://api.github.com/repos/filiph/linkcheck/releases/latest | jq '.assets[] | select(.name|test("linux")) | .browser_download_url' | xargs curl -sL -o linkcheck
+          chmod +x linkcheck
+          ./linkcheck --external https://faux.digital --skip-file .github/workflows/linkcheck-skipfile.txt
