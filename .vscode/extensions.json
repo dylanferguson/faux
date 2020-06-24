@@ -1,1 +1,7 @@
-{ "recommendations": ["heybourn.headwind", "wix.vscode-import-cost"] }
+{
+  "recommendations": [
+    "bradlc.vscode-tailwindcss",
+    "heybourn.headwind",
+    "wix.vscode-import-cost"
+  ]
+}
