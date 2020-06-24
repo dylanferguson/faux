@@ -6,11 +6,14 @@ import Router from "next/router";
 type NavItemProps = {
   link: string;
   label: string;
+  as?: string;
 };
 
-const NavItem = ({ link, label }: NavItemProps) => (
+const NavItem = ({ link, label, as }: NavItemProps) => (
   <li className="inline-block text-xl text-indigo-600 list-none transition duration-100 ease-in hover:text-indigo-800 small-caps">
-    <Link href={link}>{label}</Link>
+    <Link href={link} as={as}>
+      {label}
+    </Link>
   </li>
 );
 
@@ -22,7 +25,7 @@ const NavMenu = ({ mobile }: NavMenuProps) => (
   <nav>
     <ol className={mobile ? "space-y-2" : "space-x-6"}>
       <NavItem link="/release-notes/" label="Release Notes" />
-      <NavItem link="/cards/" label="Cards" />
+      <NavItem link="/[...slug]" as="/cards" label="Cards" />
       <NavItem link="/blog/" label="Blog" />
       <NavItem link="/help/" label="Help!" />
     </ol>

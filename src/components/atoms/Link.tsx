@@ -1,4 +1,4 @@
-import NextLink from "next/link";
+import { default as NextLink } from "next/link";
 
 type LinkProps = {
   href: string;
