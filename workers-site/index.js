@@ -46,9 +46,16 @@ async function handleEvent(event) {
     }
 
     let response = await getAssetFromKV(event, options);
+    if (response.headers.get("content-type") === "text/html") {
+      response.headers.set(
+        "cache-control",
+        "no-cache, max-age=0, stale-while-revalidate=300"
+      );
+    }
+
     return setSecurityHeaders(new Response(response.body, response));
   } catch (e) {
-    // if an error is thrown try to serve the asset at 404.html
+    // if an error is thrown try to serve the 404 page
     if (!DEBUG) {
       try {
         let notFoundResponse = await getAssetFromKV(event, {
@@ -56,6 +63,10 @@ async function handleEvent(event) {
             new Request(`${new URL(req.url).origin}/404/index.html`, req),
         });
 
+        notFoundResponse.headers.set(
+          "cache-control",
+          "no-cache, max-age=0, stale-while-revalidate=300"
+        );
         return setSecurityHeaders(
           new Response(notFoundResponse.body, {
             ...notFoundResponse,

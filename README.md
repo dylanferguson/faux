@@ -19,6 +19,7 @@
   - Add fonts as static assets
   - Inline font-face declaration
   - <link rel="preload" as="font" href="" crossorigin>
+- Add Lighthouse performance budgets
 
 ## Architecture
 
