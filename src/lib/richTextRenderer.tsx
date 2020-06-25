@@ -8,6 +8,7 @@ import {
   Inline,
   Text,
 } from "@contentful/rich-text-types";
+import { Image } from "components/atoms";
 
 type RichTextRenderOptions = {
   renderMark: {
@@ -46,11 +47,7 @@ const options: RichTextRenderOptions = {
       </blockquote>
     ),
     [BLOCKS.EMBEDDED_ASSET]: (node, children) => (
-      <img
-        className="my-8 rounded-lg"
-        alt=""
-        src={node.data.target.fields.file.url}
-      />
+      <Image src={node.data.target.fields.file.url} />
     ),
     [INLINES.HYPERLINK]: (node, children) => (
       <a href={node.data.uri} className="text-indigo-600 hover:text-indigo-400">

@@ -51,7 +51,7 @@ export const Nav = () => {
   });
 
   return (
-    <div className="sticky top-0 z-10 z-50 w-full bg-white border-b border-gray-200">
+    <div className="sticky top-0 z-10 w-full bg-white border-b border-gray-200">
       <header
         className="container flex items-center justify-between h-20"
         data-cy="nav"
