@@ -12,7 +12,7 @@ export const Image = ({ src, alt = "" }: ImageProps) => {
   return (
     <div
       className={classNames({
-        "fixed flex items-center justify-center top-0 left-0 z-20 w-screen h-screen bg-opacity-50 bg-black": modal,
+        "fixed flex items-center justify-center top-0 left-0 z-30 w-screen h-screen bg-opacity-50 bg-black": modal,
       })}
     >
       <img

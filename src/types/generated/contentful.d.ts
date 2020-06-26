@@ -422,6 +422,28 @@ export interface IQuickLinksSection extends Entry<IQuickLinksSectionFields> {
   };
 }
 
+export interface IRedirectsFields {
+  /** redirects */
+  redirects: Record<string, any>;
+}
+
+export interface IRedirects extends Entry<IRedirectsFields> {
+  sys: {
+    id: string;
+    type: string;
+    createdAt: string;
+    updatedAt: string;
+    locale: string;
+    contentType: {
+      sys: {
+        id: "redirects";
+        linkType: "ContentType";
+        type: "Link";
+      };
+    };
+  };
+}
+
 export interface IReleaseNoteFields {
   /** Version */
   version: string;
@@ -528,6 +550,7 @@ export type CONTENT_TYPE =
   | "post"
   | "quickLink"
   | "QuickLinksSection"
+  | "redirects"
   | "releaseNote"
   | "SimpleFeatureSection"
   | "specialOffer";
