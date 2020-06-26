@@ -5936,7 +5936,7 @@
         "id": "6MfqDFWGEhNAyKZh9EBsie",
         "type": "Entry",
         "createdAt": "2020-05-30T07:27:28.674Z",
-        "updatedAt": "2020-06-11T01:19:58.100Z",
+        "updatedAt": "2020-06-23T23:18:52.961Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -5944,8 +5944,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 1249,
-        "publishedAt": "2020-06-11T01:19:58.100Z",
+        "publishedVersion": 1398,
+        "publishedAt": "2020-06-23T23:18:52.961Z",
         "firstPublishedAt": "2020-05-30T07:34:20.002Z",
         "createdBy": {
           "sys": {
@@ -5961,8 +5961,8 @@
             "id": "2ObTCD6vrU24nLlodS3mdK"
           }
         },
-        "publishedCounter": 19,
-        "version": 1250,
+        "publishedCounter": 33,
+        "version": 1399,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -6289,7 +6289,31 @@
                             },
                             "marks": [
                             ],
-                            "value": "Universal rendering — Prerender views ahead of time for near-instant user page load, adding interactivity when the bundle rehydrates on the client.",
+                            "value": "Universal rendering — Prerender views ahead of time for near-instant user page load, adding interactivity when the bundle rehydrates on the client, significantly improving ",
+                            "nodeType": "text"
+                          },
+                          {
+                            "data": {
+                              "uri": "https://www.smashingmagazine.com/2015/09/why-performance-matters-the-perception-of-time/"
+                            },
+                            "content": [
+                              {
+                                "data": {
+                                },
+                                "marks": [
+                                ],
+                                "value": "perceived performance",
+                                "nodeType": "text"
+                              }
+                            ],
+                            "nodeType": "hyperlink"
+                          },
+                          {
+                            "data": {
+                            },
+                            "marks": [
+                            ],
+                            "value": ".",
                             "nodeType": "text"
                           },
                           {
@@ -6744,7 +6768,7 @@
                             },
                             "marks": [
                             ],
-                            "value": ", but the ecosystem is still nascent. If there was a goal of having the smallest bundle size and no runtime overhead, I'd opt for Sapper and Svelte hands down.",
+                            "value": ", but the ecosystem and community is still nascent. If there was a goal of having the smallest bundle size and no runtime overhead, I'd opt for Sapper and Svelte hands down.",
                             "nodeType": "text"
                           }
                         ],
@@ -7028,7 +7052,7 @@
                     },
                     "marks": [
                     ],
-                    "value": "Also, project-wide React upgrades would be infrequent enough that the long cache life of libs would negate working around the compromises of  Preact to save one hit of ~30kb.",
+                    "value": "Also, project-wide React upgrades would be infrequent enough that the long cache life of libs would negate working around the compromises of Preact to save one hit of ~30kb.",
                     "nodeType": "text"
                   }
                 ],
@@ -7119,7 +7143,83 @@
                     },
                     "marks": [
                     ],
-                    "value": "With Tailwind, you essentially get a customizable design system for free. Tailwind makes it easy to do the right thing, enforcing good design practices by default:",
+                    "value": "With Tailwind, you essentially get a design system generator: ",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "content": [
+                      {
+                        "data": {
+                        },
+                        "marks": [
+                        ],
+                        "value": "Tailwind is really an engine for generating functional CSS based on a set of plugins and a theme. — ",
+                        "nodeType": "text"
+                      },
+                      {
+                        "data": {
+                          "uri": "https://twitter.com/adamwathan/status/1184535385441030146"
+                        },
+                        "content": [
+                          {
+                            "data": {
+                            },
+                            "marks": [
+                            ],
+                            "value": "Adam Wathan",
+                            "nodeType": "text"
+                          }
+                        ],
+                        "nodeType": "hyperlink"
+                      },
+                      {
+                        "data": {
+                        },
+                        "marks": [
+                        ],
+                        "value": ", Tailwind Creator",
+                        "nodeType": "text"
+                      }
+                    ],
+                    "nodeType": "paragraph"
+                  }
+                ],
+                "nodeType": "blockquote"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "This is an essential part of being able to create multiple sites and ensure a consistent design language for each one, since developers only apply the generated functional CSS of that project.",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "Tailwind also makes it easy to do the right thing, enforcing good design practices by default:",
                     "nodeType": "text"
                   }
                 ],
@@ -7335,7 +7435,7 @@
                             },
                             "marks": [
                             ],
-                            "value": "Smaller CSS bundle as you're reusing atomic classes across your project.",
+                            "value": "Smaller CSS bundles as you're reusing atomic classes across your project.",
                             "nodeType": "text"
                           }
                         ],
@@ -7625,7 +7725,7 @@
                     },
                     "marks": [
                     ],
-                    "value": "Working with key stakeholders and authors, we can build a suite of business critical end-to-end tests that are kicked off asynchronously in CI on each content rebuild triggered from the CMS. ",
+                    "value": "Working with key stakeholders and authors, we can build a suite of business critical end-to-end tests that are kicked off asynchronously in CI on each content rebuild triggered from the CMS.",
                     "nodeType": "text"
                   }
                 ],
@@ -7821,6 +7921,178 @@
                     },
                     "marks": [
                     ],
+                    "value": "From Thoughtwork's Radar on ",
+                    "nodeType": "text"
+                  },
+                  {
+                    "data": {
+                      "uri": "https://www.thoughtworks.com/radar/techniques?blipid=202005089"
+                    },
+                    "content": [
+                      {
+                        "data": {
+                        },
+                        "marks": [
+                        ],
+                        "value": "Snapshot testing only",
+                        "nodeType": "text"
+                      }
+                    ],
+                    "nodeType": "hyperlink"
+                  },
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": ":",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "content": [
+                      {
+                        "data": {
+                        },
+                        "marks": [
+                        ],
+                        "value": "Snapshot tests validate the exact result generated in the DOM by a component, not the component's behavior; therefore, it can be weak and unreliable, fostering the \"only delete the snapshot and regenerate it\" bad practice. Instead, you should test the logic and behavior of the components emulating what users would do. This mindset is encouraged by tools in the ",
+                        "nodeType": "text"
+                      },
+                      {
+                        "data": {
+                          "uri": "https://testing-library.com/docs/guiding-principles"
+                        },
+                        "content": [
+                          {
+                            "data": {
+                            },
+                            "marks": [
+                            ],
+                            "value": "Testing Library",
+                            "nodeType": "text"
+                          }
+                        ],
+                        "nodeType": "hyperlink"
+                      },
+                      {
+                        "data": {
+                        },
+                        "marks": [
+                        ],
+                        "value": " family.",
+                        "nodeType": "text"
+                      }
+                    ],
+                    "nodeType": "paragraph"
+                  }
+                ],
+                "nodeType": "blockquote"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "For visual regression testing, ",
+                    "nodeType": "text"
+                  },
+                  {
+                    "data": {
+                      "uri": "https://www.thoughtworks.com/radar/tools/backstopjs"
+                    },
+                    "content": [
+                      {
+                        "data": {
+                        },
+                        "marks": [
+                        ],
+                        "value": "BackstopJS",
+                        "nodeType": "text"
+                      }
+                    ],
+                    "nodeType": "hyperlink"
+                  },
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": " is adequate (and ",
+                    "nodeType": "text"
+                  },
+                  {
+                    "data": {
+                      "uri": "https://github.com/oblador/loki"
+                    },
+                    "content": [
+                      {
+                        "data": {
+                        },
+                        "marks": [
+                        ],
+                        "value": "Loki",
+                        "nodeType": "text"
+                      }
+                    ],
+                    "nodeType": "hyperlink"
+                  },
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": " for Storybook looks intersting), though it would be good to know the point at which a SaaS solution like Chromatic or ",
+                    "nodeType": "text"
+                  },
+                  {
+                    "data": {
+                      "uri": "https://percy.io/"
+                    },
+                    "content": [
+                      {
+                        "data": {
+                        },
+                        "marks": [
+                        ],
+                        "value": "Percy",
+                        "nodeType": "text"
+                      }
+                    ],
+                    "nodeType": "hyperlink"
+                  },
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": " is worth it.",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
                     "value": "(It's worth adding that ",
                     "nodeType": "text"
                   },
@@ -7845,7 +8117,85 @@
                     },
                     "marks": [
                     ],
-                    "value": " seems like an intersting component-management service in this space.)",
+                    "value": " seems like an interesting component-management service in this space.)",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "React Testing Framework",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "heading-3"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "For components that aren't pure UI: ",
+                    "nodeType": "text"
+                  },
+                  {
+                    "data": {
+                      "uri": "https://reactjs.org/docs/test-renderer.html"
+                    },
+                    "content": [
+                      {
+                        "data": {
+                        },
+                        "marks": [
+                        ],
+                        "value": "React Test Renderer",
+                        "nodeType": "text"
+                      }
+                    ],
+                    "nodeType": "hyperlink"
+                  },
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": " and ",
+                    "nodeType": "text"
+                  },
+                  {
+                    "data": {
+                      "uri": "https://www.thoughtworks.com/radar/languages-and-frameworks/react-testing-library"
+                    },
+                    "content": [
+                      {
+                        "data": {
+                        },
+                        "marks": [
+                        ],
+                        "value": "React Testing Library",
+                        "nodeType": "text"
+                      }
+                    ],
+                    "nodeType": "hyperlink"
+                  },
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": ".",
                     "nodeType": "text"
                   }
                 ],
@@ -7938,7 +8288,7 @@
                     },
                     "marks": [
                     ],
-                    "value": " of headless CMS platforms available, each with it's own set of features and trade-offs, and I'm still in the process of assessing the solution space, but for this POC I decided to use Contentful, mainly as it's perceived as the eminent enterprise solution, often used for replacing monolothic CMS platforms. ",
+                    "value": " of headless CMS platforms available, each with it's own set of features and trade-offs, and I'm still in the process of assessing the solution space. But for this POC I decided to use Contentful, mainly as it's perceived as the leading enterprise solution, often used for replacing monolothic CMS platforms. ",
                     "nodeType": "text"
                   }
                 ],
@@ -8245,6 +8595,117 @@
                     },
                     "marks": [
                     ],
+                    "value": "Note: ",
+                    "nodeType": "text"
+                  },
+                  {
+                    "data": {
+                      "uri": "https://github.com/meilisearch/MeiliSearch"
+                    },
+                    "content": [
+                      {
+                        "data": {
+                        },
+                        "marks": [
+                        ],
+                        "value": "MeiliSearch",
+                        "nodeType": "text"
+                      }
+                    ],
+                    "nodeType": "hyperlink"
+                  },
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": " (and ",
+                    "nodeType": "text"
+                  },
+                  {
+                    "data": {
+                      "uri": "https://github.com/typesense/typesense"
+                    },
+                    "content": [
+                      {
+                        "data": {
+                        },
+                        "marks": [
+                        ],
+                        "value": "typesense",
+                        "nodeType": "text"
+                      }
+                    ],
+                    "nodeType": "hyperlink"
+                  },
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": " to a lesser extent) seems like a really interesting open source solution in the search space, and much simpler than running a complete ",
+                    "nodeType": "text"
+                  },
+                  {
+                    "data": {
+                      "uri": "https://www.elastic.co/"
+                    },
+                    "content": [
+                      {
+                        "data": {
+                        },
+                        "marks": [
+                        ],
+                        "value": "Elastic",
+                        "nodeType": "text"
+                      }
+                    ],
+                    "nodeType": "hyperlink"
+                  },
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": " stack. ",
+                    "nodeType": "text"
+                  },
+                  {
+                    "data": {
+                      "uri": "https://docs.meilisearch.com/resources/comparison_to_alternatives.html"
+                    },
+                    "content": [
+                      {
+                        "data": {
+                        },
+                        "marks": [
+                        ],
+                        "value": "This",
+                        "nodeType": "text"
+                      }
+                    ],
+                    "nodeType": "hyperlink"
+                  },
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": " documents some of the trade-offs and benefits of various search solutions.",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
                     "value": "Other Services",
                     "nodeType": "text"
                   }
@@ -8423,6 +8884,116 @@
                           }
                         ],
                         "nodeType": "paragraph"
+                      },
+                      {
+                        "data": {
+                        },
+                        "content": [
+                          {
+                            "data": {
+                            },
+                            "content": [
+                              {
+                                "data": {
+                                },
+                                "content": [
+                                  {
+                                    "data": {
+                                    },
+                                    "marks": [
+                                      {
+                                        "type": "italic"
+                                      }
+                                    ],
+                                    "value": "Note: ",
+                                    "nodeType": "text"
+                                  },
+                                  {
+                                    "data": {
+                                    },
+                                    "marks": [
+                                    ],
+                                    "value": "It would be great to work with an analytics provider that provides an API so we could generate regular summaries and reports for the business. Otherwise the information generally remains unsued and unactioned.",
+                                    "nodeType": "text"
+                                  }
+                                ],
+                                "nodeType": "paragraph"
+                              }
+                            ],
+                            "nodeType": "list-item"
+                          },
+                          {
+                            "data": {
+                            },
+                            "content": [
+                              {
+                                "data": {
+                                },
+                                "content": [
+                                  {
+                                    "data": {
+                                    },
+                                    "marks": [
+                                    ],
+                                    "value": "",
+                                    "nodeType": "text"
+                                  },
+                                  {
+                                    "data": {
+                                      "uri": "https://matomo.org/pricing/"
+                                    },
+                                    "content": [
+                                      {
+                                        "data": {
+                                        },
+                                        "marks": [
+                                        ],
+                                        "value": "Matomo On-Premise",
+                                        "nodeType": "text"
+                                      }
+                                    ],
+                                    "nodeType": "hyperlink"
+                                  },
+                                  {
+                                    "data": {
+                                    },
+                                    "marks": [
+                                    ],
+                                    "value": " (and ",
+                                    "nodeType": "text"
+                                  },
+                                  {
+                                    "data": {
+                                      "uri": "https://github.com/plausible/analytics"
+                                    },
+                                    "content": [
+                                      {
+                                        "data": {
+                                        },
+                                        "marks": [
+                                        ],
+                                        "value": "Plausible",
+                                        "nodeType": "text"
+                                      }
+                                    ],
+                                    "nodeType": "hyperlink"
+                                  },
+                                  {
+                                    "data": {
+                                    },
+                                    "marks": [
+                                    ],
+                                    "value": " to a lesser-extent) seem like interesting open source analytics platforms worth considering",
+                                    "nodeType": "text"
+                                  }
+                                ],
+                                "nodeType": "paragraph"
+                              }
+                            ],
+                            "nodeType": "list-item"
+                          }
+                        ],
+                        "nodeType": "unordered-list"
                       }
                     ],
                     "nodeType": "list-item"
@@ -8986,7 +9557,7 @@
                 "data": {
                   "target": {
                     "sys": {
-                      "id": "hbwFSvCq05kQMQqmySkBr",
+                      "id": "47aToF0Ewf5Rs8RHnqbZV6",
                       "type": "Link",
                       "linkType": "Asset"
                     }
@@ -8995,6 +9566,21 @@
                 "content": [
                 ],
                 "nodeType": "embedded-asset-block"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
               },
               {
                 "data": {
@@ -9040,6 +9626,166 @@
                   }
                 ],
                 "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "This fits into a larger philosophy of \"tools, not rules\", to make doing the right thing the default.",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "Automated Accessibility Audits",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "heading-3"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "Open source tools like ",
+                    "nodeType": "text"
+                  },
+                  {
+                    "data": {
+                      "uri": "https://pa11y.org/"
+                    },
+                    "content": [
+                      {
+                        "data": {
+                        },
+                        "marks": [
+                        ],
+                        "value": "pa11y CI",
+                        "nodeType": "text"
+                      }
+                    ],
+                    "nodeType": "hyperlink"
+                  },
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": " and Lighthouse enables us to perform automated a11y tests directly in CI and catch accessibility defects before they go to prod. Note: this isn't a replacement for real-user accessibility testing; just because a site passes an automated a11y test suite doesn't there aren't any accessibility issues:",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "content": [
+                      {
+                        "data": {
+                        },
+                        "marks": [
+                        ],
+                        "value": "Automated tools can be a useful and cheap way of helping you make a service more accessible. They are quick to run and provide immediate feedback. They can be run across lots of pages. Some can be integrated into the build process, so they can identify issues almost as soon as they are created.",
+                        "nodeType": "text"
+                      }
+                    ],
+                    "nodeType": "paragraph"
+                  },
+                  {
+                    "data": {
+                    },
+                    "content": [
+                      {
+                        "data": {
+                        },
+                        "marks": [
+                        ],
+                        "value": "But while it can certainly be helpful to run an automated testing tool on a service, it’s important that teams don’t rely on them too heavily. No tool will be able to pick up every accessibility barrier on a website. So just because a tool hasn’t picked up any accessibility issues on a website, doesn’t mean those issues don’t exist.",
+                        "nodeType": "text"
+                      }
+                    ],
+                    "nodeType": "paragraph"
+                  },
+                  {
+                    "data": {
+                    },
+                    "content": [
+                      {
+                        "data": {
+                        },
+                        "marks": [
+                        ],
+                        "value": "A good analogy is to think of a testing tool as like using a spellchecker. It can certainly help you pick up issues, but it should never be used in isolation. To be most useful, automated tools should be combined with manual inspection and user research.",
+                        "nodeType": "text"
+                      }
+                    ],
+                    "nodeType": "paragraph"
+                  },
+                  {
+                    "data": {
+                    },
+                    "content": [
+                      {
+                        "data": {
+                        },
+                        "marks": [
+                        ],
+                        "value": "— ",
+                        "nodeType": "text"
+                      },
+                      {
+                        "data": {
+                          "uri": "https://accessibility.blog.gov.uk/2017/02/24/what-we-found-when-we-tested-tools-on-the-worlds-least-accessible-webpage/"
+                        },
+                        "content": [
+                          {
+                            "data": {
+                            },
+                            "marks": [
+                            ],
+                            "value": "Accessibility in government",
+                            "nodeType": "text"
+                          }
+                        ],
+                        "nodeType": "hyperlink"
+                      },
+                      {
+                        "data": {
+                        },
+                        "marks": [
+                        ],
+                        "value": ", UK Government Digital Services",
+                        "nodeType": "text"
+                      }
+                    ],
+                    "nodeType": "paragraph"
+                  }
+                ],
+                "nodeType": "blockquote"
               },
               {
                 "data": {
@@ -9280,7 +10026,7 @@
         "id": "3zcOeQGwMyZFzHMWeHc3RD",
         "type": "Entry",
         "createdAt": "2020-06-09T12:46:54.490Z",
-        "updatedAt": "2020-06-16T04:16:20.778Z",
+        "updatedAt": "2020-06-26T01:08:48.524Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -9288,8 +10034,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 857,
-        "publishedAt": "2020-06-16T04:16:20.778Z",
+        "publishedVersion": 1342,
+        "publishedAt": "2020-06-26T01:08:48.524Z",
         "firstPublishedAt": "2020-06-09T12:53:27.867Z",
         "createdBy": {
           "sys": {
@@ -9305,8 +10051,8 @@
             "id": "2ObTCD6vrU24nLlodS3mdK"
           }
         },
-        "publishedCounter": 13,
-        "version": 858,
+        "publishedCounter": 32,
+        "version": 1343,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -9337,6 +10083,15 @@
             "Marketing",
             "Engineering"
           ]
+        },
+        "heroImage": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "6Yb7ai4EXGGmfRlqiPvK9C"
+            }
+          }
         },
         "description": {
           "en-US": "An overview of the benefits that a headless CMS-based stack provides"
@@ -9412,7 +10167,7 @@
                                     },
                                     "marks": [
                                     ],
-                                    "value": "There are limitations to how much AEM can optimize the customer experience — All code for all components must be loaded when visiting  any single page, regardless if that page is pure text, as we add more  components that experience gets more and more sluggish.",
+                                    "value": "There are limits to how much traditional CMSs can optimise the customer experience — All code for all components must be loaded when visiting any single page, regardless if that page is pure text, and as we add more and more components that experience gets more and more sluggish.",
                                     "nodeType": "text"
                                   }
                                 ],
@@ -9476,7 +10231,7 @@
                                         },
                                         "marks": [
                                         ],
-                                        "value": "Google's move",
+                                        "value": "Chrome's move",
                                         "nodeType": "text"
                                       }
                                     ],
@@ -9581,7 +10336,7 @@
                             },
                             "marks": [
                             ],
-                            "value": "— The abstraction authors work with moves up from the low-level 'atoms' they have to wrangle in AEM to configurable sections / ",
+                            "value": "— The abstraction authors work with moves up from the low-level atoms they have to wrangle in AEM to configurable sections / ",
                             "nodeType": "text"
                           },
                           {
@@ -9681,6 +10436,50 @@
                                     "marks": [
                                     ],
                                     "value": ": Those patterns become the configurable content sections available to the authors.",
+                                    "nodeType": "text"
+                                  }
+                                ],
+                                "nodeType": "paragraph"
+                              },
+                              {
+                                "data": {
+                                  "target": {
+                                    "sys": {
+                                      "id": "2JzYYF9ealnj9Wqm93nyux",
+                                      "type": "Link",
+                                      "linkType": "Asset"
+                                    }
+                                  }
+                                },
+                                "content": [
+                                ],
+                                "nodeType": "embedded-asset-block"
+                              },
+                              {
+                                "data": {
+                                },
+                                "content": [
+                                  {
+                                    "data": {
+                                    },
+                                    "marks": [
+                                    ],
+                                    "value": "",
+                                    "nodeType": "text"
+                                  }
+                                ],
+                                "nodeType": "paragraph"
+                              },
+                              {
+                                "data": {
+                                },
+                                "content": [
+                                  {
+                                    "data": {
+                                    },
+                                    "marks": [
+                                    ],
+                                    "value": "",
                                     "nodeType": "text"
                                   }
                                 ],
@@ -9825,7 +10624,7 @@
                                     },
                                     "marks": [
                                     ],
-                                    "value": " — Authors just pick a single master image to use, not a rendition, developers ensure the optimum version of the image is served across all viewports.",
+                                    "value": " — Authors just pick a single master image to use, not a rendition, developers ensure the optimum version of the image is served across all viewports and pixel densities.",
                                     "nodeType": "text"
                                   }
                                 ],
@@ -9879,7 +10678,7 @@
                             },
                             "marks": [
                             ],
-                            "value": "— No more duplicating content across the site with well-structured, resuable content models",
+                            "value": "— No more duplicating content across the site with well-structured, reusable content models",
                             "nodeType": "text"
                           }
                         ],
@@ -9935,7 +10734,7 @@
                                     },
                                     "marks": [
                                     ],
-                                    "value": "Headless CMS providers can provide a better SLA / more uptime than we currently provide to authors: Assuming a very modest 14 days of NAB stack content moratoriums a year, we provide author access for 96% of the year.",
+                                    "value": "Headless CMS providers can provide a better SLA / more uptime than we currently provide to authors: Assuming a very modest 14 days of content moratoriums per stack a year, we provide author access for 96% of the year.",
                                     "nodeType": "text"
                                   }
                                 ],
@@ -9997,7 +10796,7 @@
                                     },
                                     "marks": [
                                     ],
-                                    "value": "Since the purpose of most marketing sites, is conversions of prospective customers, it's important that with each change to the site that we identify any errors on the client that prevents completion of sign-up flows. ",
+                                    "value": "Since the purpose of most marketing sites is conversions of prospective customers, it's important that with each change to the site that we identify any errors on the client that prevents completion of sign-up flows. ",
                                     "nodeType": "text"
                                   }
                                 ],
@@ -10041,7 +10840,7 @@
                                     },
                                     "marks": [
                                     ],
-                                    "value": "For example, you could have a credit card application suite, testing a predefined flow through to the application form, at which point we hand over responsibility to Forms (we've maintained our contract that users can successfully reach this responsibility 'boundary').",
+                                    "value": "For example, you could have a credit card application suite, testing a predefined flow through to the application form, at which point we hand over responsibility to Forms (we've maintained our contract that users can successfully reach this responsibility boundary).",
                                     "nodeType": "text"
                                   }
                                 ],
@@ -10064,6 +10863,28 @@
                                     "marks": [
                                     ],
                                     "value": "Working with key stakeholders and authors, we can build a suite of business critical end-to-end tests that are kicked off asynchronously in CI on each content rebuild triggered from the CMS. ",
+                                    "nodeType": "text"
+                                  }
+                                ],
+                                "nodeType": "paragraph"
+                              }
+                            ],
+                            "nodeType": "list-item"
+                          },
+                          {
+                            "data": {
+                            },
+                            "content": [
+                              {
+                                "data": {
+                                },
+                                "content": [
+                                  {
+                                    "data": {
+                                    },
+                                    "marks": [
+                                    ],
+                                    "value": "This also enables us to pick-up issues much earlier in the development cycle",
                                     "nodeType": "text"
                                   }
                                 ],
@@ -10146,7 +10967,7 @@
                             },
                             "marks": [
                             ],
-                            "value": " — The current model of manual DOM manipulations to build out our components hamstrings our ability to deliver fast and easily make component updates in the future. Adopting a declarative framework would improve developer velocity and ability to deliver change.",
+                            "value": " — The current model of imperative DOM manipulations to build out our reactive components hamstrings our ability to deliver fast and easily make component updates in the future. Adopting a declarative framework would improve developer velocity and ability to deliver change.",
                             "nodeType": "text"
                           }
                         ],
@@ -10225,6 +11046,28 @@
                                     "marks": [
                                     ],
                                     "value": "Faster turnarounds that enables more experimentation with one-off designs / layouts    and analytics to see how well it's received",
+                                    "nodeType": "text"
+                                  }
+                                ],
+                                "nodeType": "paragraph"
+                              }
+                            ],
+                            "nodeType": "list-item"
+                          },
+                          {
+                            "data": {
+                            },
+                            "content": [
+                              {
+                                "data": {
+                                },
+                                "content": [
+                                  {
+                                    "data": {
+                                    },
+                                    "marks": [
+                                    ],
+                                    "value": "Even more important as we're tasked to build more interactive experiences for the business",
                                     "nodeType": "text"
                                   }
                                 ],
@@ -10464,7 +11307,7 @@
                                     },
                                     "marks": [
                                     ],
-                                    "value": "My experience whilst developing the POC: Whenever I felt a content model was a tad awkward or missing something, or the type wasn't right, I could update the model within seconds in the Contentful dashboard, export my type definitions and continue on with development.",
+                                    "value": "My experience whilst developing the POC: Whenever I felt a content model was a tad awkward or missing something, or the type wasn't right, I could update the model within seconds in the Contentful dashboard, regenerate my type definitions and continue on with development.",
                                     "nodeType": "text"
                                   }
                                 ],
@@ -10540,7 +11383,7 @@
                                     },
                                     "marks": [
                                     ],
-                                    "value": "Operationally inexpensive, significantly lower cloud costs — This stack essentially eliminates our current cloud bill. All you're paying for is a preview container for SSR running on minimal resources and amazingly cheap object storage for build archives.",
+                                    "value": "An operationally inexpensive stack with significantly lower cloud costs — This stack essentially eliminates our current cloud bill. All you're paying for is a preview container for SSR running on minimal resources and amazingly cheap object storage for build archives.",
                                     "nodeType": "text"
                                   }
                                 ],
@@ -10562,7 +11405,7 @@
                                     },
                                     "marks": [
                                     ],
-                                    "value": "No need for complex and expensive infrastructure: A whole VPC -> An S3 bucket and container. ",
+                                    "value": "No need for complex and expensive infrastructure: A whole VPC -> An S3 bucket and container.",
                                     "nodeType": "text"
                                   }
                                 ],
@@ -10695,6 +11538,393 @@
                                 "type": "bold"
                               }
                             ],
+                            "value": "Alignment with the broader technology strategy and principles ",
+                            "nodeType": "text"
+                          },
+                          {
+                            "data": {
+                            },
+                            "marks": [
+                            ],
+                            "value": "— As outlined in The Book:",
+                            "nodeType": "text"
+                          }
+                        ],
+                        "nodeType": "paragraph"
+                      },
+                      {
+                        "data": {
+                        },
+                        "content": [
+                          {
+                            "data": {
+                            },
+                            "content": [
+                              {
+                                "data": {
+                                },
+                                "content": [
+                                  {
+                                    "data": {
+                                    },
+                                    "marks": [
+                                      {
+                                        "type": "italic"
+                                      }
+                                    ],
+                                    "value": "Infrastructure as a utility",
+                                    "nodeType": "text"
+                                  },
+                                  {
+                                    "data": {
+                                    },
+                                    "marks": [
+                                    ],
+                                    "value": " — An expansive VPC to run a multi-instance CMS is expensive to build, run, monitor, support and upgrade. In comparison, object storage, build servers and CDN bandwidth are incredibly cheap, shifting the focus to from compute to storage.",
+                                    "nodeType": "text"
+                                  }
+                                ],
+                                "nodeType": "paragraph"
+                              }
+                            ],
+                            "nodeType": "list-item"
+                          },
+                          {
+                            "data": {
+                            },
+                            "content": [
+                              {
+                                "data": {
+                                },
+                                "content": [
+                                  {
+                                    "data": {
+                                    },
+                                    "marks": [
+                                      {
+                                        "type": "italic"
+                                      }
+                                    ],
+                                    "value": "Modularity and standardisation — ",
+                                    "nodeType": "text"
+                                  },
+                                  {
+                                    "data": {
+                                    },
+                                    "marks": [
+                                    ],
+                                    "value": "By decoupling our front-end from our data layer with a headless CMS, we're able to upgrade and change out either with minimal impact to the rest of the system. This stack also offers a repeatable pattern we can easily standardise.",
+                                    "nodeType": "text"
+                                  }
+                                ],
+                                "nodeType": "paragraph"
+                              }
+                            ],
+                            "nodeType": "list-item"
+                          },
+                          {
+                            "data": {
+                            },
+                            "content": [
+                              {
+                                "data": {
+                                },
+                                "content": [
+                                  {
+                                    "data": {
+                                    },
+                                    "marks": [
+                                      {
+                                        "type": "italic"
+                                      }
+                                    ],
+                                    "value": "Resilience",
+                                    "nodeType": "text"
+                                  },
+                                  {
+                                    "data": {
+                                    },
+                                    "marks": [
+                                    ],
+                                    "value": " — Production point of failure reduced solely to our CDN. (If there is an Akamai outage, we can be consoled by the fact that a significant chunk of the internet is also down.)",
+                                    "nodeType": "text"
+                                  }
+                                ],
+                                "nodeType": "paragraph"
+                              }
+                            ],
+                            "nodeType": "list-item"
+                          }
+                        ],
+                        "nodeType": "unordered-list"
+                      },
+                      {
+                        "data": {
+                        },
+                        "content": [
+                          {
+                            "data": {
+                            },
+                            "content": [
+                              {
+                                "data": {
+                                },
+                                "content": [
+                                  {
+                                    "data": {
+                                    },
+                                    "marks": [
+                                      {
+                                        "type": "italic"
+                                      }
+                                    ],
+                                    "value": "Security and compliance — ",
+                                    "nodeType": "text"
+                                  },
+                                  {
+                                    "data": {
+                                    },
+                                    "marks": [
+                                    ],
+                                    "value": "As detailed later, static sites offer a number of security benefits, as well as enable us to easily fulfill our main compliance requirement",
+                                    "nodeType": "text"
+                                  }
+                                ],
+                                "nodeType": "paragraph"
+                              }
+                            ],
+                            "nodeType": "list-item"
+                          },
+                          {
+                            "data": {
+                            },
+                            "content": [
+                              {
+                                "data": {
+                                },
+                                "content": [
+                                  {
+                                    "data": {
+                                    },
+                                    "marks": [
+                                      {
+                                        "type": "italic"
+                                      }
+                                    ],
+                                    "value": "Design for continuous delivery",
+                                    "nodeType": "text"
+                                  }
+                                ],
+                                "nodeType": "paragraph"
+                              }
+                            ],
+                            "nodeType": "list-item"
+                          },
+                          {
+                            "data": {
+                            },
+                            "content": [
+                              {
+                                "data": {
+                                },
+                                "content": [
+                                  {
+                                    "data": {
+                                    },
+                                    "marks": [
+                                      {
+                                        "type": "italic"
+                                      }
+                                    ],
+                                    "value": "Build differentiators",
+                                    "nodeType": "text"
+                                  },
+                                  {
+                                    "data": {
+                                    },
+                                    "marks": [
+                                    ],
+                                    "value": " — By engaging a headless CMS provider to manage our content infrastructure, we can focus on building great front-end experiences, which is what differentiates our customer experiences",
+                                    "nodeType": "text"
+                                  }
+                                ],
+                                "nodeType": "paragraph"
+                              }
+                            ],
+                            "nodeType": "list-item"
+                          },
+                          {
+                            "data": {
+                            },
+                            "content": [
+                              {
+                                "data": {
+                                },
+                                "content": [
+                                  {
+                                    "data": {
+                                    },
+                                    "marks": [
+                                      {
+                                        "type": "italic"
+                                      }
+                                    ],
+                                    "value": "Avoid vendor entanglement",
+                                    "nodeType": "text"
+                                  },
+                                  {
+                                    "data": {
+                                    },
+                                    "marks": [
+                                    ],
+                                    "value": " — By opting for an open-source, data source-agnostic front-end framework, we fit the bank's criteria for vendor selection to a tee:",
+                                    "nodeType": "text"
+                                  }
+                                ],
+                                "nodeType": "paragraph"
+                              },
+                              {
+                                "data": {
+                                },
+                                "content": [
+                                  {
+                                    "data": {
+                                    },
+                                    "content": [
+                                      {
+                                        "data": {
+                                        },
+                                        "content": [
+                                          {
+                                            "data": {
+                                            },
+                                            "marks": [
+                                            ],
+                                            "value": "Maintains vendor flexibility",
+                                            "nodeType": "text"
+                                          }
+                                        ],
+                                        "nodeType": "paragraph"
+                                      }
+                                    ],
+                                    "nodeType": "list-item"
+                                  },
+                                  {
+                                    "data": {
+                                    },
+                                    "content": [
+                                      {
+                                        "data": {
+                                        },
+                                        "content": [
+                                          {
+                                            "data": {
+                                            },
+                                            "marks": [
+                                            ],
+                                            "value": "Is an open and portable solution",
+                                            "nodeType": "text"
+                                          }
+                                        ],
+                                        "nodeType": "paragraph"
+                                      }
+                                    ],
+                                    "nodeType": "list-item"
+                                  },
+                                  {
+                                    "data": {
+                                    },
+                                    "content": [
+                                      {
+                                        "data": {
+                                        },
+                                        "content": [
+                                          {
+                                            "data": {
+                                            },
+                                            "marks": [
+                                            ],
+                                            "value": "Maintains commercial tension between vendors, with a strategy for changing vendors if required",
+                                            "nodeType": "text"
+                                          }
+                                        ],
+                                        "nodeType": "paragraph"
+                                      }
+                                    ],
+                                    "nodeType": "list-item"
+                                  },
+                                  {
+                                    "data": {
+                                    },
+                                    "content": [
+                                      {
+                                        "data": {
+                                        },
+                                        "content": [
+                                          {
+                                            "data": {
+                                            },
+                                            "marks": [
+                                            ],
+                                            "value": "Avoid reliance on a single vendor for highly critical workloads",
+                                            "nodeType": "text"
+                                          }
+                                        ],
+                                        "nodeType": "paragraph"
+                                      }
+                                    ],
+                                    "nodeType": "list-item"
+                                  },
+                                  {
+                                    "data": {
+                                    },
+                                    "content": [
+                                      {
+                                        "data": {
+                                        },
+                                        "content": [
+                                          {
+                                            "data": {
+                                            },
+                                            "marks": [
+                                            ],
+                                            "value": "Avoid buying products that require proprietary protocols, skills or data formats",
+                                            "nodeType": "text"
+                                          }
+                                        ],
+                                        "nodeType": "paragraph"
+                                      }
+                                    ],
+                                    "nodeType": "list-item"
+                                  }
+                                ],
+                                "nodeType": "unordered-list"
+                              }
+                            ],
+                            "nodeType": "list-item"
+                          }
+                        ],
+                        "nodeType": "unordered-list"
+                      }
+                    ],
+                    "nodeType": "list-item"
+                  },
+                  {
+                    "data": {
+                    },
+                    "content": [
+                      {
+                        "data": {
+                        },
+                        "content": [
+                          {
+                            "data": {
+                            },
+                            "marks": [
+                              {
+                                "type": "bold"
+                              }
+                            ],
                             "value": "Increased redundancy",
                             "nodeType": "text"
                           },
@@ -10728,7 +11958,7 @@
                                 "type": "bold"
                               }
                             ],
-                            "value": "Reduce complexity",
+                            "value": "Reduced complexity",
                             "nodeType": "text"
                           }
                         ],
@@ -10751,7 +11981,7 @@
                                     },
                                     "marks": [
                                     ],
-                                    "value": "AEM is complicated product, requiring specialist knowledge to do anything beyond basic tasks.",
+                                    "value": "AEM is complex product, requiring hard to source specialist knowledge.",
                                     "nodeType": "text"
                                   }
                                 ],
@@ -10780,7 +12010,7 @@
                                     },
                                     "marks": [
                                     ],
-                                    "value": "Eliminates the 'moving parts' of our current stack.",
+                                    "value": "Eliminates the moving parts of our current stack.",
                                     "nodeType": "text"
                                   }
                                 ],
@@ -10849,7 +12079,7 @@
                                     },
                                     "marks": [
                                     ],
-                                    "value": "Allocate the money and resources otherwise sunk into these processes to a product backed by a company that manages content infrastructure at scale, you'll get a better ROI",
+                                    "value": "Allocate the money and resources otherwise sunk into these processes to a product backed by a company that manages content infrastructure at scale",
                                     "nodeType": "text"
                                   }
                                 ],
@@ -10880,7 +12110,7 @@
                                 "type": "bold"
                               }
                             ],
-                            "value": "Continuous Delivery, shorter release cycles",
+                            "value": "Continuous Delivery",
                             "nodeType": "text"
                           },
                           {
@@ -10888,11 +12118,40 @@
                             },
                             "marks": [
                             ],
-                            "value": " — This model enables smaller, more focused releases and the ability to ship changes to production fast. No more large, high-risk releases.",
+                            "value": " — This model can enable smaller, more focused releases and the ability to ship changes to production fast. No more large, high-risk releases. Even better, we can embrace continuous delivery and ship individual features. ",
                             "nodeType": "text"
                           }
                         ],
                         "nodeType": "paragraph"
+                      },
+                      {
+                        "data": {
+                        },
+                        "content": [
+                          {
+                            "data": {
+                            },
+                            "content": [
+                              {
+                                "data": {
+                                },
+                                "content": [
+                                  {
+                                    "data": {
+                                    },
+                                    "marks": [
+                                    ],
+                                    "value": "A really important metric I consider is the time it takes to take an idea from inception through to production. In our working context, this is critical for short-term, short-notice marketing campaigns, as well as the ability to experiment with one-off layouts / designs for e.g. product launches (which is one of the reasons to have in-house developers — delivering quicker than if you were to engage external agencies). This model enables us to do more in this area, as our delivery times are essentially reduced to dev and test with no release overhead.",
+                                    "nodeType": "text"
+                                  }
+                                ],
+                                "nodeType": "paragraph"
+                              }
+                            ],
+                            "nodeType": "list-item"
+                          }
+                        ],
+                        "nodeType": "unordered-list"
                       }
                     ],
                     "nodeType": "list-item"
@@ -10951,7 +12210,7 @@
                                     },
                                     "marks": [
                                     ],
-                                    "value": "No server required for us to serve requests means no server to exploit or patch. And as the application is containerised, maintaining patch compliance is straightforward.",
+                                    "value": "No server required for us to serve requests means no server to exploit or patch. And as the preview application is containerised, maintaining patch compliance is straightforward.",
                                     "nodeType": "text"
                                   }
                                 ],
@@ -10974,6 +12233,52 @@
                                     "marks": [
                                     ],
                                     "value": "Attack surface significantly reduced with a serverless architecture, eliminates the entire queue of current security work",
+                                    "nodeType": "text"
+                                  }
+                                ],
+                                "nodeType": "paragraph"
+                              }
+                            ],
+                            "nodeType": "list-item"
+                          },
+                          {
+                            "data": {
+                            },
+                            "content": [
+                              {
+                                "data": {
+                                },
+                                "content": [
+                                  {
+                                    "data": {
+                                    },
+                                    "marks": [
+                                    ],
+                                    "value": "Security focus reduced to a ",
+                                    "nodeType": "text"
+                                  },
+                                  {
+                                    "data": {
+                                      "uri": "https://security.stackexchange.com/a/142505"
+                                    },
+                                    "content": [
+                                      {
+                                        "data": {
+                                        },
+                                        "marks": [
+                                        ],
+                                        "value": "small-subset",
+                                        "nodeType": "text"
+                                      }
+                                    ],
+                                    "nodeType": "hyperlink"
+                                  },
+                                  {
+                                    "data": {
+                                    },
+                                    "marks": [
+                                    ],
+                                    "value": " of potential vulnerabilities that are easily addressable, ",
                                     "nodeType": "text"
                                   }
                                 ],
@@ -11042,7 +12347,7 @@
                                     },
                                     "marks": [
                                     ],
-                                    "value": "More fail-safe — With an origin like a traditional CMS server you can have load issues with the server (an actual incident that happened), inability of CDN to connect to the origin. Those problems are now eliminated.",
+                                    "value": "More fail-safe — With an origin like a traditional CMS server you may face into issues with the server load (an actual incident that happened), or inability of CDN to connect to the origin. Those problems are now eliminated.",
                                     "nodeType": "text"
                                   }
                                 ],
@@ -11364,7 +12669,7 @@
                             },
                             "marks": [
                             ],
-                            "value": " — Since the only required infrastructure for this stack is essentially object storage, edge functions and a docker container for the preview server, you can easily move between cloud providers. Fits with in with the org move to Azure with a stack built on ",
+                            "value": " — Since the only required infrastructure for this stack is essentially object storage, edge functions and a docker container for the preview server, you can easily move between cloud providers — No extensive lift-and-shift required for existing pipelines. Fits with in with the org move to Azure with a stack built on ",
                             "nodeType": "text"
                           },
                           {
@@ -11412,7 +12717,7 @@
                             },
                             "marks": [
                             ],
-                            "value": " and ",
+                            "value": " and (possibly) ",
                             "nodeType": "text"
                           },
                           {
@@ -11436,7 +12741,7 @@
                             },
                             "marks": [
                             ],
-                            "value": ".",
+                            "value": " for preview / prod deployments.",
                             "nodeType": "text"
                           }
                         ],
@@ -11469,7 +12774,7 @@
                             },
                             "marks": [
                             ],
-                            "value": " — Move away from your monolothic CMS doing everything. Instead, choose the most  powerful, most advanced tool for the job. e.g. Optimizely for A/B testing, Segment for Analytics, Contentful to manage your data. Since you're not stuck using what will integrate with your CMS, use whatever the best tool there is.",
+                            "value": " — Move away from a monolithic CMS doing everything. Instead, choose the most powerful, most advanced tool for the job. e.g. Optimizely for A/B testing, Segment for Analytics, DatoCMS to manage your data. Since you're not stuck using what will integrate with your CMS, use whatever the best tool there is.",
                             "nodeType": "text"
                           }
                         ],
@@ -11525,7 +12830,7 @@
                                     },
                                     "marks": [
                                     ],
-                                    "value": "Queryable via GraphQL — Consumers can query content APIs for exactly what they require",
+                                    "value": "Queryable via GraphQL and REST APIs — Consumers can query content APIs for exactly what they require",
                                     "nodeType": "text"
                                   }
                                 ],
@@ -11579,6 +12884,28 @@
                               }
                             ],
                             "nodeType": "list-item"
+                          },
+                          {
+                            "data": {
+                            },
+                            "content": [
+                              {
+                                "data": {
+                                },
+                                "content": [
+                                  {
+                                    "data": {
+                                    },
+                                    "marks": [
+                                    ],
+                                    "value": "",
+                                    "nodeType": "text"
+                                  }
+                                ],
+                                "nodeType": "paragraph"
+                              }
+                            ],
+                            "nodeType": "list-item"
                           }
                         ],
                         "nodeType": "unordered-list"
@@ -11610,7 +12937,7 @@
                             },
                             "marks": [
                             ],
-                            "value": "— The hiring pool of AEM developers is relatively small. With the move to an OSS-based fronted, your hiring pool opens up significantly as Melbourne already has a large ",
+                            "value": "— The hiring pool of AEM developers is relatively small. With the move to an OSS-based front-end, your hiring pool opens up significantly as Melbourne already has a large ",
                             "nodeType": "text"
                           },
                           {
@@ -11634,7 +12961,7 @@
                             },
                             "marks": [
                             ],
-                            "value": " of talented, passionate front-end developers. There's no longer a need to undertake a global search for hiring when there's already exceptional talent close to home.",
+                            "value": " of talented, passionate front-end developers. There's no longer a need to undertake a global search for hiring when there's already exceptional talent close to home. This is also means focusing on hiring that directly impacts the user experience, not on managing the CMS that serves that experience.",
                             "nodeType": "text"
                           }
                         ],
@@ -11667,7 +12994,7 @@
                             },
                             "marks": [
                             ],
-                            "value": "— With a headless CMS all of your content is already structured and \norganised. We can leverage this with our search provider by creating  more intelligent search results that index the pure content according our predefined schema, rather than scraping content from rendered pages and trying to make sense of the structure (See ",
+                            "value": "— With a headless CMS all of your content is already structured and \norganised. We can leverage this with our search provider by creating  more intelligent search results that index the pure content according our predefined schema, rather than scraping content from rendered pages and trying to make sense of the structure. (See ",
                             "nodeType": "text"
                           },
                           {
@@ -11691,7 +13018,7 @@
                             },
                             "marks": [
                             ],
-                            "value": " for the drawbacks of content organised in 'blobs'). Also, since we can respond to publish/unpublish events via webhooks in our headless CMS, we can trigger a rebuild of the search index to run asynchronously, ensuring our search results are always up to date.",
+                            "value": " for the drawbacks of content organised in 'blobs'.) Also, since we can respond to publish/unpublish events via webhooks in our headless CMS, we can trigger a rebuild of the search index to run asynchronously, ensuring our search results are always up to date.",
                             "nodeType": "text"
                           }
                         ],
@@ -11724,7 +13051,7 @@
                             },
                             "marks": [
                             ],
-                            "value": "— With each publish and subsequent build of the site, you get a snapshot of the site at that point in time that you can then archive since the output is just static files. This makes servicing requests for past versions of the site painless; all a developer has to do is find the required build in S3 and forward it to legal. You could even standup a Wayback Machine-like service that proxies date-time requests to the appropriate archive.",
+                            "value": "— With each publish and subsequent build of the site, you get a snapshot of the site at that point in time that you can then archive since the output is just static files. This makes servicing requests for past versions of the site painless; all a developer has to do is find the required build in S3 and forward it to legal. If there's enough demand, you could even standup a Wayback Machine-like service that proxies date-time requests to the appropriate archive.",
                             "nodeType": "text"
                           }
                         ],
@@ -11749,7 +13076,15 @@
                                 "type": "bold"
                               }
                             ],
-                            "value": "A repeatable pattern of creating and developing new sites",
+                            "value": "A repeatable pattern of creating and developing new sites ",
+                            "nodeType": "text"
+                          },
+                          {
+                            "data": {
+                            },
+                            "marks": [
+                            ],
+                            "value": "— This approach to developing sites could be patternised with a project generator to scaffold the front-end and infrastructure as code to provision resources for testing, building and deploying sites.",
                             "nodeType": "text"
                           }
                         ],
@@ -11770,19 +13105,11 @@
                             "data": {
                             },
                             "marks": [
-                            ],
-                            "value": "I",
-                            "nodeType": "text"
-                          },
-                          {
-                            "data": {
-                            },
-                            "marks": [
                               {
                                 "type": "bold"
                               }
                             ],
-                            "value": "mproved design consistency, better accessibility ",
+                            "value": "Improved design consistency, better accessibility ",
                             "nodeType": "text"
                           },
                           {
@@ -11790,7 +13117,7 @@
                             },
                             "marks": [
                             ],
-                            "value": "— As mentioned in the author experience, above.",
+                            "value": "— Detailed in the Author Experience, above.",
                             "nodeType": "text"
                           }
                         ],
@@ -11823,7 +13150,7 @@
                             },
                             "marks": [
                             ],
-                            "value": " — Images are by far the largest asset type on our sites, and it's not uncommon to come across 3MB+ images being used as thumbnails (noticied via the AppD performance dashboard). With this solution and section-based components, we know the image context (i.e. dimensions through all breakpoints) ahead of time. We can then leverage headless CMS image APIs (for example, DatoCMS uses ",
+                            "value": " — Images are by far the largest asset type on our sites, and it's not uncommon to come across 3MB+ images being used as thumbnails (noticed via the AppD performance dashboard). (FWIW, the record stands at 18.6MB on a HICAPs page.) With this solution and section-based components, we know the image context (i.e. dimensions through all breakpoints) ahead of time. We can then leverage headless CMS image APIs (for example, DatoCMS uses ",
                             "nodeType": "text"
                           },
                           {
@@ -11985,7 +13312,291 @@
                             },
                             "marks": [
                             ],
-                            "value": "— Automated performance testing via Lighthouse helps you start with a high performance baseline, and ensures you don't slip below predefined performance budgets. If someone wants to add something to the site that'll hurt performance the build fails and developers can discuss is it justifiable or are there alternatives that don't impact the user experience? It makes performance hits opt-in, rather than something that suffers over time. Lighthouse also provides accessibility, SEO, PWA and best practices auditing.",
+                            "value": "— Automated performance testing via ",
+                            "nodeType": "text"
+                          },
+                          {
+                            "data": {
+                              "uri": "https://developers.google.com/web/tools/lighthouse"
+                            },
+                            "content": [
+                              {
+                                "data": {
+                                },
+                                "marks": [
+                                ],
+                                "value": "Lighthouse",
+                                "nodeType": "text"
+                              }
+                            ],
+                            "nodeType": "hyperlink"
+                          },
+                          {
+                            "data": {
+                            },
+                            "marks": [
+                            ],
+                            "value": " helps you start with a high performance baseline, and ensures you don't slip below predefined performance budgets. If someone wants to add something to the site that'll hurt performance, the build fails and developers can discuss is it justifiable or are there alternatives that don't impact the user experience? (For example, a lightweight library with only the required feature set vs a heavy, full-featured library. A real example whilst building out this POC was replacing ",
+                            "nodeType": "text"
+                          },
+                          {
+                            "data": {
+                              "uri": "https://github.com/markdown-it/markdown-it"
+                            },
+                            "content": [
+                              {
+                                "data": {
+                                },
+                                "marks": [
+                                ],
+                                "value": "markdown-it",
+                                "nodeType": "text"
+                              }
+                            ],
+                            "nodeType": "hyperlink"
+                          },
+                          {
+                            "data": {
+                            },
+                            "marks": [
+                            ],
+                            "value": " with ",
+                            "nodeType": "text"
+                          },
+                          {
+                            "data": {
+                              "uri": "https://github.com/developit/snarkdown"
+                            },
+                            "content": [
+                              {
+                                "data": {
+                                },
+                                "marks": [
+                                ],
+                                "value": "snarkdown",
+                                "nodeType": "text"
+                              }
+                            ],
+                            "nodeType": "hyperlink"
+                          },
+                          {
+                            "data": {
+                            },
+                            "marks": [
+                            ],
+                            "value": ") It makes performance hits opt-in, rather than something that suffers over time. Lighthouse also provides accessibility, SEO, PWA and best practices auditing.",
+                            "nodeType": "text"
+                          }
+                        ],
+                        "nodeType": "paragraph"
+                      }
+                    ],
+                    "nodeType": "list-item"
+                  },
+                  {
+                    "data": {
+                    },
+                    "content": [
+                      {
+                        "data": {
+                        },
+                        "content": [
+                          {
+                            "data": {
+                            },
+                            "marks": [
+                              {
+                                "type": "bold"
+                              }
+                            ],
+                            "value": "Automated A11y auditing ",
+                            "nodeType": "text"
+                          },
+                          {
+                            "data": {
+                            },
+                            "marks": [
+                            ],
+                            "value": "— Open source tools like ",
+                            "nodeType": "text"
+                          },
+                          {
+                            "data": {
+                              "uri": "https://pa11y.org/"
+                            },
+                            "content": [
+                              {
+                                "data": {
+                                },
+                                "marks": [
+                                ],
+                                "value": "pa11y CI",
+                                "nodeType": "text"
+                              }
+                            ],
+                            "nodeType": "hyperlink"
+                          },
+                          {
+                            "data": {
+                            },
+                            "marks": [
+                            ],
+                            "value": " and Lighthouse enables us to perform automated a11y tests directly in CI and catch accessibility defects before they go to prod. Note: this isn't a replacement for real-user accessibility testing; just because a site passes an automated a11y test suite doesn't there aren't any accessibility issues:",
+                            "nodeType": "text"
+                          }
+                        ],
+                        "nodeType": "paragraph"
+                      }
+                    ],
+                    "nodeType": "list-item"
+                  }
+                ],
+                "nodeType": "unordered-list"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "content": [
+                      {
+                        "data": {
+                        },
+                        "marks": [
+                        ],
+                        "value": "Automated tools can be a useful and cheap way of helping you make a service more accessible. They are quick to run and provide immediate feedback. They can be run across lots of pages. Some can be integrated into the build process, so they can identify issues almost as soon as they are created.",
+                        "nodeType": "text"
+                      }
+                    ],
+                    "nodeType": "paragraph"
+                  },
+                  {
+                    "data": {
+                    },
+                    "content": [
+                      {
+                        "data": {
+                        },
+                        "marks": [
+                        ],
+                        "value": "But while it can certainly be helpful to run an automated testing tool on a service, it’s important that teams don’t rely on them too heavily. No tool will be able to pick up every accessibility barrier on a website. So just because a tool hasn’t picked up any accessibility issues on a website, doesn’t mean those issues don’t exist.",
+                        "nodeType": "text"
+                      }
+                    ],
+                    "nodeType": "paragraph"
+                  },
+                  {
+                    "data": {
+                    },
+                    "content": [
+                      {
+                        "data": {
+                        },
+                        "marks": [
+                        ],
+                        "value": "A good analogy is to think of a testing tool as like using a spellchecker. It can certainly help you pick up issues, but it should never be used in isolation. To be most useful, automated tools should be combined with manual inspection and user research.",
+                        "nodeType": "text"
+                      }
+                    ],
+                    "nodeType": "paragraph"
+                  },
+                  {
+                    "data": {
+                    },
+                    "content": [
+                      {
+                        "data": {
+                        },
+                        "marks": [
+                        ],
+                        "value": "— ",
+                        "nodeType": "text"
+                      },
+                      {
+                        "data": {
+                          "uri": "https://accessibility.blog.gov.uk/2017/02/24/what-we-found-when-we-tested-tools-on-the-worlds-least-accessible-webpage/"
+                        },
+                        "content": [
+                          {
+                            "data": {
+                            },
+                            "marks": [
+                            ],
+                            "value": "Accessibility in government",
+                            "nodeType": "text"
+                          }
+                        ],
+                        "nodeType": "hyperlink"
+                      },
+                      {
+                        "data": {
+                        },
+                        "marks": [
+                        ],
+                        "value": ", UK Government Digital Services",
+                        "nodeType": "text"
+                      }
+                    ],
+                    "nodeType": "paragraph"
+                  }
+                ],
+                "nodeType": "blockquote"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "content": [
+                      {
+                        "data": {
+                        },
+                        "content": [
+                          {
+                            "data": {
+                            },
+                            "marks": [
+                              {
+                                "type": "bold"
+                              }
+                            ],
+                            "value": "Automated link checking",
+                            "nodeType": "text"
+                          },
+                          {
+                            "data": {
+                            },
+                            "marks": [
+                            ],
+                            "value": " — A small, but important feature; we can ",
+                            "nodeType": "text"
+                          },
+                          {
+                            "data": {
+                              "uri": "https://github.com/filiph/linkcheck"
+                            },
+                            "content": [
+                              {
+                                "data": {
+                                },
+                                "marks": [
+                                ],
+                                "value": "linkcheck",
+                                "nodeType": "text"
+                              }
+                            ],
+                            "nodeType": "hyperlink"
+                          },
+                          {
+                            "data": {
+                            },
+                            "marks": [
+                            ],
+                            "value": " each publish and deployment. No more deadlinks lurking on customer-facing sites.",
                             "nodeType": "text"
                           }
                         ],
@@ -12043,6 +13654,111 @@
                             "marks": [
                             ],
                             "value": " or edge function to generate the images at request time (and cache the result).",
+                            "nodeType": "text"
+                          }
+                        ],
+                        "nodeType": "paragraph"
+                      }
+                    ],
+                    "nodeType": "list-item"
+                  },
+                  {
+                    "data": {
+                    },
+                    "content": [
+                      {
+                        "data": {
+                        },
+                        "content": [
+                          {
+                            "data": {
+                            },
+                            "marks": [
+                              {
+                                "type": "bold"
+                              }
+                            ],
+                            "value": "Improved SEO ",
+                            "nodeType": "text"
+                          },
+                          {
+                            "data": {
+                            },
+                            "marks": [
+                            ],
+                            "value": "— Using ",
+                            "nodeType": "text"
+                          },
+                          {
+                            "data": {
+                              "uri": "https://developers.google.com/search/docs/data-types/article"
+                            },
+                            "content": [
+                              {
+                                "data": {
+                                },
+                                "marks": [
+                                ],
+                                "value": "structured data",
+                                "nodeType": "text"
+                              }
+                            ],
+                            "nodeType": "hyperlink"
+                          },
+                          {
+                            "data": {
+                            },
+                            "marks": [
+                            ],
+                            "value": " enables search engines to make sense of our content, giving us special ",
+                            "nodeType": "text"
+                          },
+                          {
+                            "data": {
+                              "uri": "https://developers.google.com/search/docs/guides/search-gallery"
+                            },
+                            "content": [
+                              {
+                                "data": {
+                                },
+                                "marks": [
+                                ],
+                                "value": "search result features",
+                                "nodeType": "text"
+                              }
+                            ],
+                            "nodeType": "hyperlink"
+                          },
+                          {
+                            "data": {
+                            },
+                            "marks": [
+                            ],
+                            "value": " for our pages. With a headless CMS this is relatively straightforward as we simply map our content to the required schema fields. (For developers, there's also JSON-LD ",
+                            "nodeType": "text"
+                          },
+                          {
+                            "data": {
+                              "uri": "https://github.com/google/schema-dts"
+                            },
+                            "content": [
+                              {
+                                "data": {
+                                },
+                                "marks": [
+                                ],
+                                "value": "TypeScript types",
+                                "nodeType": "text"
+                              }
+                            ],
+                            "nodeType": "hyperlink"
+                          },
+                          {
+                            "data": {
+                            },
+                            "marks": [
+                            ],
+                            "value": " for Schema.org vocabulary.)",
                             "nodeType": "text"
                           }
                         ],
@@ -12591,7 +14307,7 @@
         "id": "1UxOW6aN7Nd4u1TrxtiGwK",
         "type": "Entry",
         "createdAt": "2020-06-09T13:51:39.971Z",
-        "updatedAt": "2020-06-11T05:46:54.615Z",
+        "updatedAt": "2020-06-26T01:02:32.468Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -12599,8 +14315,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 68,
-        "publishedAt": "2020-06-11T05:46:54.615Z",
+        "publishedVersion": 162,
+        "publishedAt": "2020-06-26T01:02:32.468Z",
         "firstPublishedAt": "2020-06-10T06:04:35.616Z",
         "createdBy": {
           "sys": {
@@ -12616,8 +14332,8 @@
             "id": "2ObTCD6vrU24nLlodS3mdK"
           }
         },
-        "publishedCounter": 5,
-        "version": 69,
+        "publishedCounter": 14,
+        "version": 163,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -12653,7 +14369,7 @@
             "sys": {
               "type": "Link",
               "linkType": "Asset",
-              "id": "2IvW14zN2p6MrOKpLDrAQl"
+              "id": "70eR8tvX3YJLvrfqwtfdTj"
             }
           }
         },
@@ -12723,6 +14439,67 @@
                         },
                         "marks": [
                         ],
+                        "value": "A headless content management system, or headless CMS, is a back-end only content management system (CMS) built from the ground up as a content repository that makes content accessible via a RESTful API for display on any device.",
+                        "nodeType": "text"
+                      }
+                    ],
+                    "nodeType": "paragraph"
+                  },
+                  {
+                    "data": {
+                    },
+                    "content": [
+                      {
+                        "data": {
+                        },
+                        "marks": [
+                        ],
+                        "value": "The term “headless” comes from the concept of chopping the “head” (the front end, i.e. the website) off the “body” (the back end, i.e. the content repository). — ",
+                        "nodeType": "text"
+                      },
+                      {
+                        "data": {
+                          "uri": "https://en.wikipedia.org/wiki/Headless_content_management_system"
+                        },
+                        "content": [
+                          {
+                            "data": {
+                            },
+                            "marks": [
+                            ],
+                            "value": "Wikipedia",
+                            "nodeType": "text"
+                          }
+                        ],
+                        "nodeType": "hyperlink"
+                      },
+                      {
+                        "data": {
+                        },
+                        "marks": [
+                        ],
+                        "value": "",
+                        "nodeType": "text"
+                      }
+                    ],
+                    "nodeType": "paragraph"
+                  }
+                ],
+                "nodeType": "blockquote"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "content": [
+                      {
+                        "data": {
+                        },
+                        "marks": [
+                        ],
                         "value": "A headless CMS is content management software that enables writers to produce and organize content, while providing developers with structured data that can be displayed using a separate system on the frontend of a website or app. A traditional, monolithic CMS is responsible for both the backend management of content, and serving that content to end users. In contrast, a headless CMS is decoupled from frontend concerns, which frees developers to build rich experiences for end users, using the best technology available. — ",
                         "nodeType": "text"
                       },
@@ -12763,13 +14540,127 @@
                   {
                     "data": {
                     },
+                    "marks": [
+                    ],
+                    "value": "Contentful",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "heading-4"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
                     "content": [
                       {
                         "data": {
                         },
                         "marks": [
                         ],
-                        "value": "Monolithic CMS platforms commonly used today don't work well for teams that\nemploy agile development practices such as Infrastructure as Code and\nContinuous Delivery. Provisioning, migrating and testing those platforms is\ninherently difficult to automate",
+                        "value": "Headless content management systems (CMSes) are becoming a common component of digital platforms. ",
+                        "nodeType": "text"
+                      },
+                      {
+                        "data": {
+                          "uri": "http://www.contentful.com/"
+                        },
+                        "content": [
+                          {
+                            "data": {
+                            },
+                            "marks": [
+                              {
+                                "type": "bold"
+                              }
+                            ],
+                            "value": "Contentful",
+                            "nodeType": "text"
+                          }
+                        ],
+                        "nodeType": "hyperlink"
+                      },
+                      {
+                        "data": {
+                        },
+                        "marks": [
+                        ],
+                        "value": " is a modern headless CMS that our teams have successfully integrated into their development workflows. We particularly like its API-first approach and implementation of ",
+                        "nodeType": "text"
+                      },
+                      {
+                        "data": {
+                          "uri": "http://www.contentful.com/r/knowledgebase/cms-as-code/"
+                        },
+                        "content": [
+                          {
+                            "data": {
+                            },
+                            "marks": [
+                            ],
+                            "value": "CMS as code",
+                            "nodeType": "text"
+                          }
+                        ],
+                        "nodeType": "hyperlink"
+                      },
+                      {
+                        "data": {
+                        },
+                        "marks": [
+                        ],
+                        "value": ". It supports powerful content modeling primitives as code and content model evolution scripts, which allow it to be treated like other data store schemas and enable ",
+                        "nodeType": "text"
+                      },
+                      {
+                        "data": {
+                          "uri": "http://martinfowler.com/articles/evodb.html"
+                        },
+                        "content": [
+                          {
+                            "data": {
+                            },
+                            "marks": [
+                            ],
+                            "value": "evolutionary database design",
+                            "nodeType": "text"
+                          }
+                        ],
+                        "nodeType": "hyperlink"
+                      },
+                      {
+                        "data": {
+                        },
+                        "marks": [
+                        ],
+                        "value": " practices to be applied to CMS development. Its robustness and a stream of new features, including a sandbox environment, have impressed our teams further and made Contentful our default choice in this space. — Adopt: Contentful, ",
+                        "nodeType": "text"
+                      },
+                      {
+                        "data": {
+                          "uri": "https://www.thoughtworks.com/radar/platforms/contentful"
+                        },
+                        "content": [
+                          {
+                            "data": {
+                            },
+                            "marks": [
+                            ],
+                            "value": "ThoughtWorks Technology Radar",
+                            "nodeType": "text"
+                          }
+                        ],
+                        "nodeType": "hyperlink"
+                      },
+                      {
+                        "data": {
+                        },
+                        "marks": [
+                        ],
+                        "value": "",
                         "nodeType": "text"
                       }
                     ],
@@ -12777,6 +14668,244 @@
                   }
                 ],
                 "nodeType": "blockquote"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "JAMStack",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "heading-3"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "content": [
+                      {
+                        "data": {
+                        },
+                        "marks": [
+                        ],
+                        "value": "Fast and secure sites and apps delivered by pre-rendering files and serving them directly from a CDN, removing the requirement to manage or run web servers.",
+                        "nodeType": "text"
+                      }
+                    ],
+                    "nodeType": "paragraph"
+                  },
+                  {
+                    "data": {
+                    },
+                    "content": [
+                      {
+                        "data": {
+                        },
+                        "marks": [
+                        ],
+                        "value": "The Jamstack is not about specific technologies. It’s a new way of building websites and apps that delivers better performance, higher security, lower cost of scaling, and a better developer experience.\n\nPre-rendered sites can be enhanced with JavaScript and the growing capabilities of browsers and services available via APIs. — ",
+                        "nodeType": "text"
+                      },
+                      {
+                        "data": {
+                          "uri": "https://jamstack.org"
+                        },
+                        "content": [
+                          {
+                            "data": {
+                            },
+                            "marks": [
+                            ],
+                            "value": "jamstack.org",
+                            "nodeType": "text"
+                          }
+                        ],
+                        "nodeType": "hyperlink"
+                      },
+                      {
+                        "data": {
+                        },
+                        "marks": [
+                        ],
+                        "value": "",
+                        "nodeType": "text"
+                      }
+                    ],
+                    "nodeType": "paragraph"
+                  }
+                ],
+                "nodeType": "blockquote"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "Why JAMStack?",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "heading-4"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "content": [
+                      {
+                        "data": {
+                        },
+                        "content": [
+                          {
+                            "data": {
+                            },
+                            "marks": [
+                            ],
+                            "value": " ",
+                            "nodeType": "text"
+                          },
+                          {
+                            "data": {
+                            },
+                            "marks": [
+                              {
+                                "type": "bold"
+                              }
+                            ],
+                            "value": "Better Performance",
+                            "nodeType": "text"
+                          },
+                          {
+                            "data": {
+                            },
+                            "marks": [
+                            ],
+                            "value": " — Why wait for pages to build on the fly when you can generate them at deploy time? When it comes to minimizing the time to first byte, nothing beats pre-built files served over a CDN.",
+                            "nodeType": "text"
+                          }
+                        ],
+                        "nodeType": "paragraph"
+                      }
+                    ],
+                    "nodeType": "list-item"
+                  },
+                  {
+                    "data": {
+                    },
+                    "content": [
+                      {
+                        "data": {
+                        },
+                        "content": [
+                          {
+                            "data": {
+                            },
+                            "marks": [
+                              {
+                                "type": "bold"
+                              }
+                            ],
+                            "value": "Higher Security",
+                            "nodeType": "text"
+                          },
+                          {
+                            "data": {
+                            },
+                            "marks": [
+                            ],
+                            "value": " — With server-side processes abstracted into microservice APIs, surface areas for attacks are reduced. You can also leverage the domain expertise of specialist third-party services.",
+                            "nodeType": "text"
+                          }
+                        ],
+                        "nodeType": "paragraph"
+                      }
+                    ],
+                    "nodeType": "list-item"
+                  },
+                  {
+                    "data": {
+                    },
+                    "content": [
+                      {
+                        "data": {
+                        },
+                        "content": [
+                          {
+                            "data": {
+                            },
+                            "marks": [
+                              {
+                                "type": "bold"
+                              }
+                            ],
+                            "value": "Cheaper, Easier Scaling",
+                            "nodeType": "text"
+                          },
+                          {
+                            "data": {
+                            },
+                            "marks": [
+                            ],
+                            "value": " — When your deployment amounts to a stack of files that can be served anywhere, scaling is a matter of serving those files in more places. CDNs are perfect for this, and often include scaling in all of their plans.",
+                            "nodeType": "text"
+                          }
+                        ],
+                        "nodeType": "paragraph"
+                      }
+                    ],
+                    "nodeType": "list-item"
+                  },
+                  {
+                    "data": {
+                    },
+                    "content": [
+                      {
+                        "data": {
+                        },
+                        "content": [
+                          {
+                            "data": {
+                            },
+                            "marks": [
+                              {
+                                "type": "bold"
+                              }
+                            ],
+                            "value": "Better Developer Experience",
+                            "nodeType": "text"
+                          },
+                          {
+                            "data": {
+                            },
+                            "marks": [
+                            ],
+                            "value": " — Loose coupling and separation of controls allow for more targeted development and debugging, and the expanding selection of CMS options for site generators remove the need to maintain a separate stack for content and marketing.",
+                            "nodeType": "text"
+                          }
+                        ],
+                        "nodeType": "paragraph"
+                      }
+                    ],
+                    "nodeType": "list-item"
+                  }
+                ],
+                "nodeType": "unordered-list"
               },
               {
                 "data": {
@@ -12870,7 +14999,7 @@
                     },
                     "marks": [
                     ],
-                    "value": "Architecture",
+                    "value": "Architecture / Processes",
                     "nodeType": "text"
                   }
                 ],
@@ -12878,9 +15007,24 @@
               },
               {
                 "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "Content Publishing",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "heading-3"
+              },
+              {
+                "data": {
                   "target": {
                     "sys": {
-                      "id": "49y0LuaBbktfqq57pGvgmI",
+                      "id": "70eR8tvX3YJLvrfqwtfdTj",
                       "type": "Link",
                       "linkType": "Asset"
                     }
@@ -12889,6 +15033,197 @@
                 "content": [
                 ],
                 "nodeType": "embedded-asset-block"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "Release Process",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "heading-3"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "Pre-release CI processes in this POC:",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "content": [
+                      {
+                        "data": {
+                        },
+                        "content": [
+                          {
+                            "data": {
+                            },
+                            "marks": [
+                            ],
+                            "value": "Static analysis: Linting and typechecking",
+                            "nodeType": "text"
+                          }
+                        ],
+                        "nodeType": "paragraph"
+                      }
+                    ],
+                    "nodeType": "list-item"
+                  },
+                  {
+                    "data": {
+                    },
+                    "content": [
+                      {
+                        "data": {
+                        },
+                        "content": [
+                          {
+                            "data": {
+                            },
+                            "marks": [
+                            ],
+                            "value": "End-to-end test suite",
+                            "nodeType": "text"
+                          }
+                        ],
+                        "nodeType": "paragraph"
+                      }
+                    ],
+                    "nodeType": "list-item"
+                  },
+                  {
+                    "data": {
+                    },
+                    "content": [
+                      {
+                        "data": {
+                        },
+                        "content": [
+                          {
+                            "data": {
+                            },
+                            "marks": [
+                            ],
+                            "value": "Automated performance audits",
+                            "nodeType": "text"
+                          }
+                        ],
+                        "nodeType": "paragraph"
+                      }
+                    ],
+                    "nodeType": "list-item"
+                  },
+                  {
+                    "data": {
+                    },
+                    "content": [
+                      {
+                        "data": {
+                        },
+                        "content": [
+                          {
+                            "data": {
+                            },
+                            "marks": [
+                            ],
+                            "value": "Automated accessibility testing",
+                            "nodeType": "text"
+                          }
+                        ],
+                        "nodeType": "paragraph"
+                      }
+                    ],
+                    "nodeType": "list-item"
+                  },
+                  {
+                    "data": {
+                    },
+                    "content": [
+                      {
+                        "data": {
+                        },
+                        "content": [
+                          {
+                            "data": {
+                            },
+                            "marks": [
+                            ],
+                            "value": "Automated link checking",
+                            "nodeType": "text"
+                          }
+                        ],
+                        "nodeType": "paragraph"
+                      }
+                    ],
+                    "nodeType": "list-item"
+                  }
+                ],
+                "nodeType": "unordered-list"
+              },
+              {
+                "data": {
+                  "target": {
+                    "sys": {
+                      "id": "2eZGDHhvlr5hkd45yzhNpb",
+                      "type": "Link",
+                      "linkType": "Asset"
+                    }
+                  }
+                },
+                "content": [
+                ],
+                "nodeType": "embedded-asset-block"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
               },
               {
                 "data": {
@@ -13520,6 +15855,408 @@
               }
             },
             "fileName": "headless-architecture-2.png",
+            "contentType": "image/png"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "c9u7f3lehmub"
+          }
+        },
+        "id": "2JzYYF9ealnj9Wqm93nyux",
+        "type": "Asset",
+        "createdAt": "2020-06-21T03:35:18.138Z",
+        "updatedAt": "2020-06-21T03:35:39.486Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "publishedAt": "2020-06-21T03:35:39.486Z",
+        "firstPublishedAt": "2020-06-21T03:35:39.486Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Screen Shot 2020-05-27 at 10.42.23 pm"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/c9u7f3lehmub/2JzYYF9ealnj9Wqm93nyux/c22df7f5f0881fc11d1f4477ca69760b/Screen_Shot_2020-05-27_at_10.42.23_pm.png",
+            "details": {
+              "size": 89423,
+              "image": {
+                "width": 745,
+                "height": 633
+              }
+            },
+            "fileName": "Screen Shot 2020-05-27 at 10.42.23 pm.png",
+            "contentType": "image/png"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "c9u7f3lehmub"
+          }
+        },
+        "id": "47aToF0Ewf5Rs8RHnqbZV6",
+        "type": "Asset",
+        "createdAt": "2020-06-21T06:39:42.771Z",
+        "updatedAt": "2020-06-21T06:40:22.171Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "publishedAt": "2020-06-21T06:40:22.171Z",
+        "firstPublishedAt": "2020-06-21T06:40:22.171Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Screen Shot 2020-06-21 at 4.38.55 pm"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/c9u7f3lehmub/47aToF0Ewf5Rs8RHnqbZV6/564768ac9061c3ea48661fcd2fbb879e/Screen_Shot_2020-06-21_at_4.38.55_pm.png",
+            "details": {
+              "size": 466465,
+              "image": {
+                "width": 796,
+                "height": 664
+              }
+            },
+            "fileName": "Screen Shot 2020-06-21 at 4.38.55 pm.png",
+            "contentType": "image/png"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "c9u7f3lehmub"
+          }
+        },
+        "id": "70eR8tvX3YJLvrfqwtfdTj",
+        "type": "Asset",
+        "createdAt": "2020-06-25T12:54:11.657Z",
+        "updatedAt": "2020-06-25T15:54:24.925Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 15,
+        "publishedAt": "2020-06-25T15:54:24.925Z",
+        "firstPublishedAt": "2020-06-25T12:54:47.442Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "publishedCounter": 4,
+        "version": 16,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Publish Flow"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/c9u7f3lehmub/70eR8tvX3YJLvrfqwtfdTj/e9dd0ce0dc5a7f1f05965bf6acdeed25/Publish_Flow.svg",
+            "details": {
+              "size": 100305,
+              "image": {
+                "width": 2316,
+                "height": 1360
+              }
+            },
+            "fileName": "Publish Flow.svg",
+            "contentType": "image/svg+xml"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "c9u7f3lehmub"
+          }
+        },
+        "id": "2eZGDHhvlr5hkd45yzhNpb",
+        "type": "Asset",
+        "createdAt": "2020-06-25T13:52:36.289Z",
+        "updatedAt": "2020-06-25T15:49:35.312Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 8,
+        "publishedAt": "2020-06-25T15:49:35.312Z",
+        "firstPublishedAt": "2020-06-25T13:53:02.323Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "publishedCounter": 2,
+        "version": 9,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Release Process"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/c9u7f3lehmub/2eZGDHhvlr5hkd45yzhNpb/9ac5775606819cea4579cb64e09df3cf/Release_Workflow.svg",
+            "details": {
+              "size": 75039,
+              "image": {
+                "width": 2316,
+                "height": 1360
+              }
+            },
+            "fileName": "Release Workflow.svg",
+            "contentType": "image/svg+xml"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "c9u7f3lehmub"
+          }
+        },
+        "id": "6Yb7ai4EXGGmfRlqiPvK9C",
+        "type": "Asset",
+        "createdAt": "2020-06-25T16:52:36.125Z",
+        "updatedAt": "2020-06-25T16:53:12.053Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "publishedAt": "2020-06-25T16:53:12.053Z",
+        "firstPublishedAt": "2020-06-25T16:53:12.053Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "501237ldsdl"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/c9u7f3lehmub/6Yb7ai4EXGGmfRlqiPvK9C/d5e9188f7993c24e544deb0694529db6/501237ldsdl.jpg",
+            "details": {
+              "size": 3983488,
+              "image": {
+                "width": 2400,
+                "height": 1526
+              }
+            },
+            "fileName": "501237ldsdl.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "c9u7f3lehmub"
+          }
+        },
+        "id": "7GHrDpATZzPwxooMrzZ1KY",
+        "type": "Asset",
+        "createdAt": "2020-06-25T17:00:06.491Z",
+        "updatedAt": "2020-06-25T17:00:58.068Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 3,
+        "publishedAt": "2020-06-25T17:00:58.068Z",
+        "firstPublishedAt": "2020-06-25T17:00:58.068Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 4,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "2ObTCD6vrU24nLlodS3mdK"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "maturity-model"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/c9u7f3lehmub/7GHrDpATZzPwxooMrzZ1KY/5cd9b7bfc0a7b42fbce46be4413812bd/maturity-model.png",
+            "details": {
+              "size": 43827,
+              "image": {
+                "width": 660,
+                "height": 398
+              }
+            },
+            "fileName": "maturity-model.png",
             "contentType": "image/png"
           }
         }
