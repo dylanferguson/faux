@@ -42,7 +42,7 @@
     "snarkdown": "^1.2.2"
   },
   "devDependencies": {
-    "@cloudflare/wrangler": "^1.9.2",
+    "@cloudflare/wrangler": "^1.10.3",
     "@contentful/rich-text-react-renderer": "^13.4.0",
     "@fullhuman/postcss-purgecss": "^2.2.0",
     "@next/bundle-analyzer": "^9.4.4",
