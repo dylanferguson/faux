@@ -32,7 +32,7 @@
     "lchi:deploy": "git subtree push --prefix lhci-server heroku master"
   },
   "dependencies": {
-    "@contentful/rich-text-html-renderer": "^13.4.0",
+    "@contentful/rich-text-html-renderer": "^14.1.1",
     "@sentry/browser": "^5.19.1",
     "algoliasearch": "^4.3.0",
     "classnames": "^2.2.6",
