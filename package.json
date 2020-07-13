@@ -33,7 +33,7 @@
   },
   "dependencies": {
     "@contentful/rich-text-html-renderer": "^13.4.0",
-    "@sentry/browser": "^5.15.5",
+    "@sentry/browser": "^5.19.1",
     "algoliasearch": "^4.3.0",
     "classnames": "^2.2.6",
     "next": "^9.4.4",
