@@ -35,17 +35,9 @@ const options: RichTextRenderOptions = {
     [BLOCKS.HEADING_4]: (node, children) => <h4>{children}</h4>,
     [BLOCKS.HEADING_5]: (node, children) => <h5>{children}</h5>,
     [BLOCKS.HEADING_6]: (node, children) => <h6>{children}</h6>,
-    [BLOCKS.OL_LIST]: (node, children) => (
-      <ol className="ml-6 list-decimal">{children}</ol>
-    ),
-    [BLOCKS.UL_LIST]: (node, children) => (
-      <ul className="ml-6 list-disc">{children}</ul>
-    ),
-    [BLOCKS.QUOTE]: (node, children) => (
-      <blockquote className="pl-6 text-gray-700 border-l-8 border-gray-200">
-        {children}
-      </blockquote>
-    ),
+    [BLOCKS.OL_LIST]: (node, children) => <ol>{children}</ol>,
+    [BLOCKS.UL_LIST]: (node, children) => <ul>{children}</ul>,
+    [BLOCKS.QUOTE]: (node, children) => <blockquote>{children}</blockquote>,
     [BLOCKS.EMBEDDED_ASSET]: (node, children) => (
       <Image src={node.data.target.fields.file.url} />
     ),

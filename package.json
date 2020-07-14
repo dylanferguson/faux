@@ -47,6 +47,7 @@
     "@fullhuman/postcss-purgecss": "^2.2.0",
     "@next/bundle-analyzer": "^9.4.4",
     "@sentry/webpack-plugin": "^1.11.1",
+    "@tailwindcss/typography": "^0.1.2",
     "@types/algoliasearch": "^3.34.10",
     "@types/classnames": "^2.2.10",
     "@types/node": "^13.13.5",

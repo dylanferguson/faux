@@ -2,6 +2,7 @@ const defaultTheme = require("tailwindcss/defaultTheme");
 
 module.exports = {
   purge: false,
+  plugins: [require("@tailwindcss/typography")],
   theme: {
     colors: {
       primary: "#635bfc",

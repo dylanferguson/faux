@@ -5,7 +5,6 @@ import { richTextRenderer } from "lib/richTextRenderer";
 import { IPostFields } from "types/generated/contentful";
 import { EntryCollection } from "contentful";
 import { PostHero } from "components/templates";
-import postStyles from "components/templates/Post.module.css";
 import classNames from "classnames";
 
 export default ({
@@ -29,13 +28,10 @@ export default ({
         author={author}
       />
       <article
-        className={classNames(
-          "container mx-auto my-24 space-y-8 text-xl text-gray-800",
-          postStyles.article
-        )}
+        className="container mx-auto my-24 space-y-8"
         data-cy="blog-post"
       >
-        <div className="mx-auto" style={{ maxWidth: "65ch" }}>
+        <div className="mx-auto prose lg:prose-lg" style={{ maxWidth: "70ch" }}>
           {richTextRenderer(body)}
         </div>
       </article>
