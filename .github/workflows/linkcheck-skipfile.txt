@@ -4,3 +4,6 @@ https://www.googletagmanager.com/?
 
 # Akamai blocks linkchecker's UA
 https://www.akamai.com/us/en/products/performance/cloudlets/edge-redirector.jsp
+
+# HTTP 200 but missing anchor (?)
+https://tailwindcss.com/#designed-to-be-customized
