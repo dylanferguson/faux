@@ -1830,6 +1830,8 @@
       ]
     }
   ],
+  "tags": [
+  ],
   "editorInterfaces": [
     {
       "sys": {
@@ -4806,7 +4808,7 @@
         "id": "Jvp7aqaIHIqIHCvUStN7q",
         "type": "Entry",
         "createdAt": "2020-05-26T12:43:28.959Z",
-        "updatedAt": "2020-06-11T06:24:24.815Z",
+        "updatedAt": "2020-06-26T04:35:38.957Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -4814,8 +4816,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 61,
-        "publishedAt": "2020-06-11T06:24:24.815Z",
+        "publishedVersion": 64,
+        "publishedAt": "2020-06-26T04:35:38.957Z",
         "firstPublishedAt": "2020-05-26T12:44:11.782Z",
         "createdBy": {
           "sys": {
@@ -4831,8 +4833,8 @@
             "id": "2ObTCD6vrU24nLlodS3mdK"
           }
         },
-        "publishedCounter": 23,
-        "version": 62,
+        "publishedCounter": 24,
+        "version": 65,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -5067,7 +5069,7 @@
         "id": "4TVvF30bY1NRKelAErxltV",
         "type": "Entry",
         "createdAt": "2020-05-27T14:33:50.566Z",
-        "updatedAt": "2020-06-11T06:07:02.085Z",
+        "updatedAt": "2020-06-26T04:34:56.357Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -5093,7 +5095,7 @@
           }
         },
         "publishedCounter": 1,
-        "version": 12,
+        "version": 14,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -5111,7 +5113,7 @@
       },
       "fields": {
         "title": {
-          "en-US": "All-New Faux Card!!!!"
+          "en-US": "All-New Faux Card!!"
         },
         "subtitle": {
           "en-US": "A credit card for now"
@@ -5936,7 +5938,7 @@
         "id": "6MfqDFWGEhNAyKZh9EBsie",
         "type": "Entry",
         "createdAt": "2020-05-30T07:27:28.674Z",
-        "updatedAt": "2020-06-23T23:18:52.961Z",
+        "updatedAt": "2020-07-05T09:00:26.358Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -5944,8 +5946,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 1398,
-        "publishedAt": "2020-06-23T23:18:52.961Z",
+        "publishedVersion": 1534,
+        "publishedAt": "2020-07-05T09:00:26.358Z",
         "firstPublishedAt": "2020-05-30T07:34:20.002Z",
         "createdBy": {
           "sys": {
@@ -5961,8 +5963,8 @@
             "id": "2ObTCD6vrU24nLlodS3mdK"
           }
         },
-        "publishedCounter": 33,
-        "version": 1399,
+        "publishedCounter": 40,
+        "version": 1535,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -6974,6 +6976,60 @@
                     },
                     "marks": [
                     ],
+                    "value": "The idea with starting with a declarative UI library like React, is that even though most sites start completely static, they tend towards more dynamic elements over time as the business wants more features and a more interactive UX. This approach makes the upgrade path seamless, as you can start with treating React as a basic templating library, before utlising more features to build out richer, interactive experiences.",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "However, it might be ill-advised for sites (such as the minisites), that it is understood will remain predominantly static throughout their life, as a framework-based approach can add unnecessary JavaScript weight. In those cases, it would be better to stick to simpler, pure templating libraries (such as ",
+                    "nodeType": "text"
+                  },
+                  {
+                    "data": {
+                      "uri": "https://www.11ty.dev/"
+                    },
+                    "content": [
+                      {
+                        "data": {
+                        },
+                        "marks": [
+                        ],
+                        "value": "Eleventy",
+                        "nodeType": "text"
+                      }
+                    ],
+                    "nodeType": "hyperlink"
+                  },
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
+                    "value": "), as React has the potential to be a footgun if not used with restraint.",
+                    "nodeType": "text"
+                  }
+                ],
+                "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "marks": [
+                    ],
                     "value": "Next.js is a React-based framework, though it ",
                     "nodeType": "text"
                   },
@@ -7022,7 +7078,7 @@
                     },
                     "marks": [
                     ],
-                    "value": ". I considered using Preact for this project just to try it out, but to keep things simple and avoid dealing with compatability issues, I opted for React since it has broader support, better tooling, a massive ecosystem and, synthetic events but at the cost of a larger library.",
+                    "value": ". I considered using Preact for this project just to try it out, but to keep things simple and avoid dealing with compatibility issues, I opted for React since it has broader support, better tooling, a massive ecosystem and, synthetic events but at the cost of a larger library.",
                     "nodeType": "text"
                   }
                 ],
@@ -7037,7 +7093,7 @@
                     },
                     "marks": [
                     ],
-                    "value": "However, in this case application code will dwarf library code and the value of the compromises of Preact vs the smaller bundle size aren't worth it. Preact seems to be targeted at small applications where every kb counts. If the problem was to aggressively minimise bundle size I would opt for a compiled framework like Svelte and Sapper.",
+                    "value": "However, in this case, application code will dwarf library code and the value of the compromises of Preact vs the smaller bundle size aren't worth it. Preact seems to be targeted at small applications where every kb counts, or web apps that only require a subset of React features. If the problem was to aggressively minimise bundle size I would opt for a compiled framework like Svelte and Sapper.",
                     "nodeType": "text"
                   }
                 ],
@@ -7052,7 +7108,7 @@
                     },
                     "marks": [
                     ],
-                    "value": "Also, project-wide React upgrades would be infrequent enough that the long cache life of libs would negate working around the compromises of Preact to save one hit of ~30kb.",
+                    "value": "Also, project-wide React upgrades would be infrequent enough that the long cache life of library code would negate working around the compromises of Preact to save one hit of ~30kb.",
                     "nodeType": "text"
                   }
                 ],
@@ -7148,6 +7204,86 @@
                   }
                 ],
                 "nodeType": "paragraph"
+              },
+              {
+                "data": {
+                },
+                "content": [
+                  {
+                    "data": {
+                    },
+                    "content": [
+                      {
+                        "data": {
+                        },
+                        "marks": [
+                        ],
+                        "value": "If it makes sense to be customizable, Tailwind lets you customize it.This includes colors, border sizes, font weights, spacing utilities, breakpoints, shadows, and tons more.",
+                        "nodeType": "text"
+                      }
+                    ],
+                    "nodeType": "paragraph"
+                  },
+                  {
+                    "data": {
+                    },
+                    "content": [
+                      {
+                        "data": {
+                        },
+                        "marks": [
+                        ],
+                        "value": "Tailwind is more than a CSS framework, ",
+                        "nodeType": "text"
+                      },
+                      {
+                        "data": {
+                        },
+                        "marks": [
+                          {
+                            "type": "italic"
+                          }
+                        ],
+                        "value": "it's an engine for creating design systems. ",
+                        "nodeType": "text"
+                      },
+                      {
+                        "data": {
+                        },
+                        "marks": [
+                        ],
+                        "value": "— ",
+                        "nodeType": "text"
+                      },
+                      {
+                        "data": {
+                          "uri": "https://tailwindcss.com/#designed-to-be-customized"
+                        },
+                        "content": [
+                          {
+                            "data": {
+                            },
+                            "marks": [
+                            ],
+                            "value": "Tailwind Docs",
+                            "nodeType": "text"
+                          }
+                        ],
+                        "nodeType": "hyperlink"
+                      },
+                      {
+                        "data": {
+                        },
+                        "marks": [
+                        ],
+                        "value": "",
+                        "nodeType": "text"
+                      }
+                    ],
+                    "nodeType": "paragraph"
+                  }
+                ],
+                "nodeType": "blockquote"
               },
               {
                 "data": {
@@ -7456,7 +7592,7 @@
                     },
                     "marks": [
                     ],
-                    "value": "Worth noting, the markup it produces is kinda ugly at first (long class lists applied to elements), but it's fine once you get used to it. Also, FWIW, it's ",
+                    "value": "Worth noting, the markup it produces is kind of off-putting at first (long class lists applied to elements), but it's fine once you get used to it. Also, FWIW, Tailwind is ",
                     "nodeType": "text"
                   },
                   {
@@ -7779,7 +7915,7 @@
                     },
                     "marks": [
                     ],
-                    "value": "Cypress is a useful end-to-end test framework with an expressive API that almost reads like natural language. In this project since most the pages / components are static, the specs are mostly just sanity checks, but for the few interactive routes and components (/search, /help), it provides high quality guarantees that the user experience is as intended.",
+                    "value": "Cypress is a useful end-to-end test framework with an expressive API that reads almost like natural language, but without the ambiguity you somtimes encounter in Cucumber suites. In this project since most the pages / components are static, the specs are mostly just sanity checks, but for the few interactive routes and components (/search, /help), it provides high quality guarantees that the user experience is as intended.",
                     "nodeType": "text"
                   }
                 ],
@@ -7906,7 +8042,7 @@
                     },
                     "marks": [
                     ],
-                    "value": "Sidenote: For component-based testing, I think snapshot tests are next-to-useless. At best snapshots alert you to the extent of updates to one component, though the mostly only serve to produce noise in PR diffs, and not much else. Changes to component rendering can be seen in a living style guide / component library and in the visual diffs ran in CI.",
+                    "value": "Sidenote: For component-based testing, I think snapshot tests are next-to-useless. At best snapshots alert you to the extent of updates to one component, though they mostly only serve to produce noise in PR diffs, and not much else. Changes to component rendering can be seen in a living style guide / component library and in the visual diffs ran in CI.",
                     "nodeType": "text"
                   }
                 ],
@@ -8054,7 +8190,7 @@
                     },
                     "marks": [
                     ],
-                    "value": " for Storybook looks intersting), though it would be good to know the point at which a SaaS solution like Chromatic or ",
+                    "value": " for Storybook looks interesting), though it would be good to know the point at which a SaaS solution like Chromatic or ",
                     "nodeType": "text"
                   },
                   {
@@ -8288,7 +8424,7 @@
                     },
                     "marks": [
                     ],
-                    "value": " of headless CMS platforms available, each with it's own set of features and trade-offs, and I'm still in the process of assessing the solution space. But for this POC I decided to use Contentful, mainly as it's perceived as the leading enterprise solution, often used for replacing monolothic CMS platforms. ",
+                    "value": " of headless CMS platforms available, each with it's own set of features and trade-offs, and I'm still in the process of assessing the solution space. But for this POC I decided to use Contentful, mainly as it's perceived as the leading enterprise solution, often used for replacing traditional CMS platforms. ",
                     "nodeType": "text"
                   }
                 ],
@@ -8374,11 +8510,64 @@
                             },
                             "marks": [
                             ],
-                            "value": " lays out a good comparison between the two providers, but in short here are some relevant features they offer: Granular roles and permissions, audit logs, GraphQL-first content API, Imgix-backed image API, whitelabelling admin dashboard, modular content blocks.",
+                            "value": " lays out a good comparison between the two providers, but in short here are some relevant features they offer: Granular roles and permissions, audit logs, GraphQL-first content API, Imgix-backed image API, whitelabelling admin dashboard, modular content blocks. ",
                             "nodeType": "text"
                           }
                         ],
                         "nodeType": "paragraph"
+                      },
+                      {
+                        "data": {
+                        },
+                        "content": [
+                          {
+                            "data": {
+                            },
+                            "content": [
+                              {
+                                "data": {
+                                },
+                                "content": [
+                                  {
+                                    "data": {
+                                    },
+                                    "marks": [
+                                    ],
+                                    "value": "",
+                                    "nodeType": "text"
+                                  },
+                                  {
+                                    "data": {
+                                      "uri": "https://www.hashicorp.com/products/nomad"
+                                    },
+                                    "content": [
+                                      {
+                                        "data": {
+                                        },
+                                        "marks": [
+                                        ],
+                                        "value": "HasiCorp's marketing site",
+                                        "nodeType": "text"
+                                      }
+                                    ],
+                                    "nodeType": "hyperlink"
+                                  },
+                                  {
+                                    "data": {
+                                    },
+                                    "marks": [
+                                    ],
+                                    "value": " is an excellent example of a Next.js site backed by DatoCMS, showing you the level of rich experiences you can potentially build with this stack.",
+                                    "nodeType": "text"
+                                  }
+                                ],
+                                "nodeType": "paragraph"
+                              }
+                            ],
+                            "nodeType": "list-item"
+                          }
+                        ],
+                        "nodeType": "unordered-list"
                       }
                     ],
                     "nodeType": "list-item"
@@ -8427,7 +8616,31 @@
                             },
                             "marks": [
                             ],
-                            "value": ": Open source solution with a new enterprise offering",
+                            "value": ": Open source solution with a new enterprise offering. Whilst the feature set isn't quite there with Strapi, they do have a promising ",
+                            "nodeType": "text"
+                          },
+                          {
+                            "data": {
+                              "uri": "https://portal.productboard.com/strapi/1-public-roadmap/tabs/3-planned"
+                            },
+                            "content": [
+                              {
+                                "data": {
+                                },
+                                "marks": [
+                                ],
+                                "value": "roadmap",
+                                "nodeType": "text"
+                              }
+                            ],
+                            "nodeType": "hyperlink"
+                          },
+                          {
+                            "data": {
+                            },
+                            "marks": [
+                            ],
+                            "value": ", as well as offering the possibility that once the platform does reach a level of maturity we could potentially run a completely open source core stack with minimal vendor dependencies.",
                             "nodeType": "text"
                           }
                         ],
@@ -9442,7 +9655,7 @@
                     },
                     "marks": [
                     ],
-                    "value": "Simple test and deployment pipeline setup, covering the entire development lifecycle for the project, along with straightforward GitHub event integration. The two main workflows setup:",
+                    "value": "Simple test and deployment pipeline setup, covering the entire development life cycle for the project, along with straightforward GitHub event integration. The two main workflows setup:",
                     "nodeType": "text"
                   }
                 ],
@@ -9547,7 +9760,7 @@
                     },
                     "marks": [
                     ],
-                    "value": "Green fields projects can be performant from the beginning, but unless you're actively monitoring the impact of project changes on the end user experience over time, things begin slide. Marketing wants to add a massive third-party analytics script here, a developers adds a time-date formatting library there, someone adds an expensive op on the main thread, and before you know it your once snappy site has slowed to a crawl. ",
+                    "value": "Green fields projects can be performant from the beginning, but unless you're actively monitoring the impact of project changes on the end user experience over time, things can begin to slide. Marketing wants to add a massive third-party analytics script here, a developers adds a time-date formatting library there, someone adds an expensive op that runs on the main thread, and before you know it your once snappy site has slowed to a crawl. ",
                     "nodeType": "text"
                   }
                 ],
@@ -10026,7 +10239,7 @@
         "id": "3zcOeQGwMyZFzHMWeHc3RD",
         "type": "Entry",
         "createdAt": "2020-06-09T12:46:54.490Z",
-        "updatedAt": "2020-06-26T01:08:48.524Z",
+        "updatedAt": "2020-07-14T09:02:15.029Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -10034,8 +10247,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 1342,
-        "publishedAt": "2020-06-26T01:08:48.524Z",
+        "publishedVersion": 1411,
+        "publishedAt": "2020-07-14T09:02:15.029Z",
         "firstPublishedAt": "2020-06-09T12:53:27.867Z",
         "createdBy": {
           "sys": {
@@ -10051,8 +10264,8 @@
             "id": "2ObTCD6vrU24nLlodS3mdK"
           }
         },
-        "publishedCounter": 32,
-        "version": 1343,
+        "publishedCounter": 43,
+        "version": 1412,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -10242,7 +10455,55 @@
                                     },
                                     "marks": [
                                     ],
-                                    "value": " to begin to badge slow sites",
+                                    "value": " to begin to badge slow sites, and have user experience metrics, like ",
+                                    "nodeType": "text"
+                                  },
+                                  {
+                                    "data": {
+                                      "uri": "https://web.dev/vitals/"
+                                    },
+                                    "content": [
+                                      {
+                                        "data": {
+                                        },
+                                        "marks": [
+                                        ],
+                                        "value": "Core Web Vitals",
+                                        "nodeType": "text"
+                                      }
+                                    ],
+                                    "nodeType": "hyperlink"
+                                  },
+                                  {
+                                    "data": {
+                                    },
+                                    "marks": [
+                                    ],
+                                    "value": ", ",
+                                    "nodeType": "text"
+                                  },
+                                  {
+                                    "data": {
+                                      "uri": "https://webmasters.googleblog.com/2020/05/evaluating-page-experience.html"
+                                    },
+                                    "content": [
+                                      {
+                                        "data": {
+                                        },
+                                        "marks": [
+                                        ],
+                                        "value": "factor into page ranking",
+                                        "nodeType": "text"
+                                      }
+                                    ],
+                                    "nodeType": "hyperlink"
+                                  },
+                                  {
+                                    "data": {
+                                    },
+                                    "marks": [
+                                    ],
+                                    "value": "",
                                     "nodeType": "text"
                                   }
                                 ],
@@ -11219,7 +11480,7 @@
                                 "type": "bold"
                               }
                             ],
-                            "value": "Shorter release cycles, deliver faster",
+                            "value": "Shorter release cycles, faster delivery",
                             "nodeType": "text"
                           },
                           {
@@ -11251,7 +11512,7 @@
                             },
                             "marks": [
                             ],
-                            "value": " and this model's release process, there's no longer the pain of managing and juggling long-lived release branches. Deploy individual features straight to prod.",
+                            "value": " and continuous delivery, there's no longer the pain of managing and juggling long-lived release branches. Deploy individual features straight to prod.",
                             "nodeType": "text"
                           }
                         ],
@@ -11580,7 +11841,7 @@
                                     },
                                     "marks": [
                                     ],
-                                    "value": " — An expansive VPC to run a multi-instance CMS is expensive to build, run, monitor, support and upgrade. In comparison, object storage, build servers and CDN bandwidth are incredibly cheap, shifting the focus to from compute to storage.",
+                                    "value": " — An expansive VPC to run a multi-instance CMS is expensive to build, run, monitor, support and upgrade. In comparison, object storage, build servers and CDN bandwidth are incredibly cheap.",
                                     "nodeType": "text"
                                   }
                                 ],
@@ -11686,7 +11947,7 @@
                                     },
                                     "marks": [
                                     ],
-                                    "value": "As detailed later, static sites offer a number of security benefits, as well as enable us to easily fulfill our main compliance requirement",
+                                    "value": "As detailed later, static sites offer a number of security benefits, as well as enable us to easily fulfill our main compliance requirement of maintaining site versions",
                                     "nodeType": "text"
                                   }
                                 ],
@@ -12278,7 +12539,7 @@
                                     },
                                     "marks": [
                                     ],
-                                    "value": " of potential vulnerabilities that are easily addressable, ",
+                                    "value": " of potential vulnerabilities that are easily addressable",
                                     "nodeType": "text"
                                   }
                                 ],
@@ -12830,7 +13091,7 @@
                                     },
                                     "marks": [
                                     ],
-                                    "value": "Queryable via GraphQL and REST APIs — Consumers can query content APIs for exactly what they require",
+                                    "value": "Queryable via GraphQL and REST APIs — Consumers can query content APIs for exactly the content they require",
                                     "nodeType": "text"
                                   }
                                 ],
@@ -12852,7 +13113,7 @@
                                     },
                                     "marks": [
                                     ],
-                                    "value": "Clients and SDKs provided for multiple languages, frameworks and platforms (e.g. ",
+                                    "value": "Clients and SDKs provided for multiple languages, frameworks and platforms (e.g. see ",
                                     "nodeType": "text"
                                   },
                                   {
@@ -12865,7 +13126,7 @@
                                         },
                                         "marks": [
                                         ],
-                                        "value": "Contentful",
+                                        "value": "Contentful's supported platforms",
                                         "nodeType": "text"
                                       }
                                     ],
@@ -12876,7 +13137,7 @@
                                     },
                                     "marks": [
                                     ],
-                                    "value": ")",
+                                    "value": " )",
                                     "nodeType": "text"
                                   }
                                 ],
@@ -12898,7 +13159,95 @@
                                     },
                                     "marks": [
                                     ],
-                                    "value": "",
+                                    "value": "Well-suited to relational content models",
+                                    "nodeType": "text"
+                                  }
+                                ],
+                                "nodeType": "paragraph"
+                              }
+                            ],
+                            "nodeType": "list-item"
+                          },
+                          {
+                            "data": {
+                            },
+                            "content": [
+                              {
+                                "data": {
+                                },
+                                "content": [
+                                  {
+                                    "data": {
+                                    },
+                                    "marks": [
+                                    ],
+                                    "value": "Current CF implementation exemplifies the N+1 query problem: the client makes additional requests for each child CF reference",
+                                    "nodeType": "text"
+                                  }
+                                ],
+                                "nodeType": "paragraph"
+                              }
+                            ],
+                            "nodeType": "list-item"
+                          },
+                          {
+                            "data": {
+                            },
+                            "content": [
+                              {
+                                "data": {
+                                },
+                                "content": [
+                                  {
+                                    "data": {
+                                    },
+                                    "marks": [
+                                    ],
+                                    "value": "Preview APIs provide access to draft content before it's live",
+                                    "nodeType": "text"
+                                  }
+                                ],
+                                "nodeType": "paragraph"
+                              }
+                            ],
+                            "nodeType": "list-item"
+                          },
+                          {
+                            "data": {
+                            },
+                            "content": [
+                              {
+                                "data": {
+                                },
+                                "content": [
+                                  {
+                                    "data": {
+                                    },
+                                    "marks": [
+                                    ],
+                                    "value": "Content Management APIs that allow mass updates and migrations of content models and content",
+                                    "nodeType": "text"
+                                  }
+                                ],
+                                "nodeType": "paragraph"
+                              }
+                            ],
+                            "nodeType": "list-item"
+                          },
+                          {
+                            "data": {
+                            },
+                            "content": [
+                              {
+                                "data": {
+                                },
+                                "content": [
+                                  {
+                                    "data": {
+                                    },
+                                    "marks": [
+                                    ],
+                                    "value": "Image / Asset APIs",
                                     "nodeType": "text"
                                   }
                                 ],
@@ -12912,7 +13261,14 @@
                       }
                     ],
                     "nodeType": "list-item"
-                  },
+                  }
+                ],
+                "nodeType": "unordered-list"
+              },
+              {
+                "data": {
+                },
+                "content": [
                   {
                     "data": {
                     },
@@ -13897,6 +14253,52 @@
                                 "marks": [
                                 ],
                                 "value": "7 Principles of Rich Web Applications",
+                                "nodeType": "text"
+                              }
+                            ],
+                            "nodeType": "hyperlink"
+                          },
+                          {
+                            "data": {
+                            },
+                            "marks": [
+                            ],
+                            "value": "",
+                            "nodeType": "text"
+                          }
+                        ],
+                        "nodeType": "paragraph"
+                      }
+                    ],
+                    "nodeType": "list-item"
+                  },
+                  {
+                    "data": {
+                    },
+                    "content": [
+                      {
+                        "data": {
+                        },
+                        "content": [
+                          {
+                            "data": {
+                            },
+                            "marks": [
+                            ],
+                            "value": "",
+                            "nodeType": "text"
+                          },
+                          {
+                            "data": {
+                              "uri": "https://increment.com/frontend/how-to-reevaluate-your-frontend-architecture/"
+                            },
+                            "content": [
+                              {
+                                "data": {
+                                },
+                                "marks": [
+                                ],
+                                "value": "How to reevaluate your frontend architecture | Stripe Increment",
                                 "nodeType": "text"
                               }
                             ],
