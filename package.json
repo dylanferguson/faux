@@ -29,7 +29,7 @@
     "contentful:export-content": "node ./scripts/contentful-export.js",
     "contentful:import-content": "node ./scripts/contentful-import.js",
     "generate-barrels": "barrelsby --delete --directory './src/components' --location below",
-    "lchi:deploy": "git subtree push --prefix lhci-server heroku master"
+    "lhci:deploy": "git subtree push --prefix lhci-server heroku master"
   },
   "dependencies": {
     "@contentful/rich-text-html-renderer": "^14.1.1",
