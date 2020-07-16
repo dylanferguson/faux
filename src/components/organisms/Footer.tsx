@@ -44,6 +44,7 @@ const Icons = () => (
     <SocialIcon id="facebook" />
     <SocialIcon id="twitter" />
     <SocialIcon id="linkedin" />
+    <SocialIcon id="whatsapp" />
   </div>
 );
 
