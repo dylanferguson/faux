@@ -3,33 +3,42 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
     "build": "next build",
+    "build:analyse": "ANALYZE=true next build",
     "build:static": "npm run build && next export",
     "postbuild:static": "node ./scripts/generate-sitemap.js",
-    "build:analyse": "ANALYZE=true next build",
-    "start": "next start",
-    "test": "jest --coverage",
-    "test:ci": "jest --coverage --max-workers=2 --ci",
-    "test:watch": "jest --coverage --watch",
-    "test:prod": "npm run format:check && npm run eslint && npx tsc --noEmit",
-    "format": "prettier --write '{src,scripts,cypress}/**/*.{tsx,ts,js}'",
-    "format:check": "prettier --check '{src,scripts,cypress}/**/*.{tsx,ts,js}'",
-    "lint": "eslint --quiet '{src,cypress}/**/*.{ts,tsx}'",
-    "lint:fix": "eslint --fix '{src,cypress}/**/*.{ts,tsx}'",
-    "predeploy": "rm -rf ./out && npm run build:static && rm -rf ./out/_next/static/development",
-    "deploy": "wrangler publish",
-    "docker:build": "docker build -t faux-site .",
-    "docker:run": "docker run --env-file .env.local --rm -it -p 3000:3000 faux-site",
-    "gcp:build-image": "gcloud builds submit --tag gcr.io/faux-279810/marketing-site",
+    "contentful:export-content": "node ./scripts/contentful-export.js",
+    "contentful:generate-types": "contentful-typescript-codegen --output src/types/generated/contentful.d.ts ",
+    "contentful:import-content": "node ./scripts/contentful-import.js",
     "cypress:open": "cypress open",
     "cypress:run": "cypress run",
     "cypress:run:customer-journeys": "cypress run --spec 'cypress/integration/customer-journeys/**/*'",
-    "contentful:generate-types": "contentful-typescript-codegen --output src/types/generated/contentful.d.ts ",
-    "contentful:export-content": "node ./scripts/contentful-export.js",
-    "contentful:import-content": "node ./scripts/contentful-import.js",
+    "predeploy": "rm -rf ./out && npm run build:static && rm -rf ./out/_next/static/development",
+    "deploy": "wrangler publish",
+    "dev": "next dev",
+    "docker:build": "docker build -t faux-site .",
+    "docker:run": "docker run --env-file .env.local --rm -it -p 3000:3000 faux-site",
+    "format": "prettier --write '{src,scripts,cypress}/**/*.{tsx,ts,js}'",
+    "format:check": "prettier --check '{src,scripts,cypress}/**/*.{tsx,ts,js}'",
+    "gcp:build-image": "gcloud builds submit --tag gcr.io/faux-279810/marketing-site",
     "generate-barrels": "barrelsby --delete --directory './src/components' --location below",
-    "lhci:deploy": "git subtree push --prefix lhci-server heroku master"
+    "lhci:deploy": "git subtree push --prefix lhci-server heroku master",
+    "lint": "eslint --quiet '{src,cypress}/**/*.{ts,tsx}'",
+    "lint:fix": "eslint --fix '{src,cypress}/**/*.{ts,tsx}'",
+    "start": "next start",
+    "test": "jest --coverage",
+    "test:ci": "jest --coverage --max-workers=2 --ci",
+    "test:prod": "npm run format:check && npm run eslint && npx tsc --noEmit",
+    "test:watch": "jest --coverage --watch"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "{src,scripts,cypress}/**/*.{tsx,ts,js}": "prettier --write",
+    "{src}/**/*.{tsx,ts,js}": "eslint --fix"
   },
   "dependencies": {
     "@contentful/rich-text-html-renderer": "^14.1.1",
@@ -79,14 +88,5 @@
     "schema-dts": "^0.6.0",
     "tailwindcss": "^1.5.1",
     "typescript": "^3.9.5"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "{src,scripts,cypress}/**/*.{tsx,ts,js}": "prettier --write",
-    "{src}/**/*.{tsx,ts,js}": "eslint --fix"
   }
 }
