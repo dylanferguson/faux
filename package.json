@@ -40,12 +40,15 @@
     "{src,scripts,cypress}/**/*.{tsx,ts,js}": "prettier --write",
     "{src}/**/*.{tsx,ts,js}": "eslint --fix"
   },
+  "resolutions": {
+    "webpack": "^5.0.0-beta.22"
+  },
   "dependencies": {
     "@contentful/rich-text-html-renderer": "^14.1.1",
     "@sentry/browser": "^5.19.1",
     "algoliasearch": "^4.3.0",
     "classnames": "^2.2.6",
-    "next": "^9.4.4",
+    "next": "^9.5.0",
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "snarkdown": "^1.2.2"

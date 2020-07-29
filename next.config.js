@@ -29,6 +29,7 @@ module.exports = withBundleAnalyzer(
       }).format(new Date()),
     },
     exportTrailingSlash: true,
+    trailingSlash: true,
     webpack: (config, options) => {
       // When all the Sentry configuration env variables are available/configured
       // The Sentry webpack plugin gets pushed to the webpack plugins to build
