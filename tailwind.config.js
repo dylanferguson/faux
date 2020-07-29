@@ -3,6 +3,14 @@ const defaultTheme = require("tailwindcss/defaultTheme");
 module.exports = {
   purge: false,
   plugins: [require("@tailwindcss/typography")],
+  purge: {
+    content: [
+      "./src/components/**/*.tsx",
+      "./src/lib/**/*.tsx",
+      "./src/pages/**/*.tsx",
+    ],
+    defaultExtractor: (content) => content.match(/[\w-/:]+(?<!:)/g) || [],
+  },
   theme: {
     colors: {
       primary: "#635bfc",

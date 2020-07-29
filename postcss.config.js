@@ -5,18 +5,6 @@ module.exports = {
     ? [
         "tailwindcss",
         "autoprefixer",
-        [
-          "@fullhuman/postcss-purgecss",
-          {
-            content: [
-              "./src/components/**/*.tsx",
-              "./src/lib/**/*.tsx",
-              "./src/pages/**/*.tsx",
-            ],
-            defaultExtractor: (content) =>
-              content.match(/[\w-/:]+(?<!:)/g) || [],
-          },
-        ],
         "postcss-import",
         "postcss-flexbugs-fixes",
         [

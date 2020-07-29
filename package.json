@@ -56,7 +56,6 @@
   "devDependencies": {
     "@cloudflare/wrangler": "^1.10.3",
     "@contentful/rich-text-react-renderer": "^13.4.0",
-    "@fullhuman/postcss-purgecss": "^2.2.0",
     "@next/bundle-analyzer": "^9.4.4",
     "@sentry/webpack-plugin": "^1.11.1",
     "@tailwindcss/typography": "^0.2.0",
