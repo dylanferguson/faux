@@ -7,6 +7,7 @@ module.exports = {
         "autoprefixer",
         "postcss-import",
         "postcss-flexbugs-fixes",
+        "postcss-100vh-fix",
         [
           "postcss-preset-env",
           {
