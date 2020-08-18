@@ -10,9 +10,13 @@
   - Component catalog
   - Abstract away contentful client calls
 - Performance:
-  - Variable fonts
+  - Variable fonts + subsetting
   - Responsive, lazy-loaded images
-  - lighthouse-plugin-field-performance
+  - lighthouse-plugin-field-performance: to access the Chrome UX report, the page must be crawlable and indexable
+  - Font Perf:
+    - Add fonts as static assets
+    - Inline font-face declaration
+    - <link rel="preload" as="font" href="" crossorigin>
 
 ## Architecture
 
