@@ -20,6 +20,10 @@ jobs:
           npm run format:check
           npm run lint
           npx tsc --noEmit -p ./tsconfig.json
+      - name: Lint Dockerfile
+        uses: brpaz/hadolint-action@master
+        with:
+          dockerfile: "Dockerfile"
   vercel_deploy:
     name: Test setup
     runs-on: ubuntu-latest
