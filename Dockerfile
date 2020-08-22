@@ -1,9 +1,9 @@
-FROM mhart/alpine-node AS builder
+FROM mhart/alpine-node:12.18 AS builder
 WORKDIR /app
 COPY package*.json ./
 RUN npm ci
 COPY . .
-RUN npm run build && rm -rf node_modules && npm install next
+RUN npm run build && rm -rf node_modules && npm install next@9.5
 
 FROM mhart/alpine-node:base
 WORKDIR /app
