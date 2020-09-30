@@ -70,7 +70,7 @@
     "barrelsby": "^2.2.0",
     "contentful": "^7.14.6",
     "contentful-export": "^7.10.7",
-    "contentful-import": "^7.9.6",
+    "contentful-import": "^7.9.11",
     "contentful-management": "^6.1.2",
     "contentful-typescript-codegen": "^3.2.1",
     "cypress": "^5.0.0",
