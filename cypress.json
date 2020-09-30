@@ -4,5 +4,7 @@
   "defaultCommandTimeout": 5000,
   "video": false,
   "screenshotOnRunFailure": false,
-  "blacklistHosts": ["*.google-analytics.com"]
+  "blockHosts": [
+    "*.google-analytics.com"
+  ]
 }
