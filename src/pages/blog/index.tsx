@@ -9,7 +9,7 @@ type BlogIndexProps = {
   data: IPostFields[];
 };
 
-export default ({ data }: BlogIndexProps) => (
+const BlogIndex = ({ data }: BlogIndexProps) => (
   <div className="container mx-auto mb-24" data-cy="blog-index-header">
     <Header title="Faux! Blog">
       News, tips and highlights from the team at <span className="logo" />
@@ -40,6 +40,8 @@ export default ({ data }: BlogIndexProps) => (
     </div>
   </div>
 );
+
+export default BlogIndex;
 
 export const getStaticProps: GetStaticProps = async () => {
   const entries: EntryCollection<IPost> = await client.getEntries({

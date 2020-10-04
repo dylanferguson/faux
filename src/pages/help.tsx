@@ -9,7 +9,7 @@ type HelpProps = {
   faqs: IFaqFields[];
 };
 
-export default ({ faqs }: HelpProps) => {
+const Help = ({ faqs }: HelpProps) => {
   return (
     <div
       className="container flex flex-col justify-center text-center"
@@ -30,6 +30,8 @@ export default ({ faqs }: HelpProps) => {
     </div>
   );
 };
+
+export default Help;
 
 export const getStaticProps: GetStaticProps = async () => {
   const entries: EntryCollection<IFaqFields> = await client.getEntries({
