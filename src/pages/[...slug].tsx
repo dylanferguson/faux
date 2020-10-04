@@ -29,7 +29,10 @@ export const getStaticProps: GetStaticProps = async ({
   preview = false,
 }) => {
   const slug = params?.slug as string[];
-  const entries = await getPageBySlug(`/${slug.join("/")}`, preview);
+  const entries = await getPageBySlug(
+    `/${slug.join("/").replace(/\/$/, "")}`,
+    preview
+  );
 
   return {
     props: {
