@@ -1,7 +1,7 @@
 import { Header } from "components/organisms";
 import { Link } from "components/atoms";
 
-export default () => (
+const Index = () => (
   <Header title="Faux! A Headless CMS POC">
     <div className="mx-auto" style={{ maxWidth: "55ch" }}>
       See{" "}
@@ -13,3 +13,5 @@ export default () => (
     </div>
   </Header>
 );
+
+export default Index;
