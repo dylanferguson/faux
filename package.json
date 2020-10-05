@@ -45,7 +45,7 @@
     "@sentry/browser": "^5.24.2",
     "algoliasearch": "^4.5.1",
     "classnames": "^2.2.6",
-    "next": "^9.4.4",
+    "next": "^9.5.3",
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "snarkdown": "^2.0.0"
