@@ -42,12 +42,16 @@
   },
   "dependencies": {
     "@contentful/rich-text-html-renderer": "^14.1.1",
+    "@prefresh/next": "^1.3.0",
     "@sentry/browser": "^5.24.2",
     "algoliasearch": "^4.5.1",
     "classnames": "^2.2.6",
     "next": "^9.4.4",
-    "react": "16.13.1",
-    "react-dom": "16.13.1",
+    "preact": "^10.5.4",
+    "preact-render-to-string": "^5.1.10",
+    "react": "github:preact-compat/react#1.0.0",
+    "react-dom": "github:preact-compat/react-dom#1.0.0",
+    "react-ssr-prepass": "npm:preact-ssr-prepass@^1.0.1",
     "snarkdown": "^2.0.0"
   },
   "devDependencies": {
@@ -85,6 +89,7 @@
     "postcss-import": "^12.0.1",
     "postcss-preset-env": "^6.7.0",
     "prettier": "^2.1.2",
+    "react-refresh": "^0.8.3",
     "schema-dts": "^0.7.1",
     "tailwindcss": "^1.8.10",
     "typescript": "^4.0.3"
