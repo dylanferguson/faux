@@ -73,7 +73,7 @@ async function handleEvent(event) {
             status: 404,
           })
         );
-      } catch (e) {}
+      } catch (e) { }
     }
 
     return new Response(e.message || e.toString(), { status: 500 });
@@ -87,7 +87,7 @@ function setSecurityHeaders(response) {
     "X-Frame-Options": "DENY",
     "Referrer-Policy": "no-referrer",
     "Feature-Policy":
-      "accelerometer 'none'; ambient-light-sensor 'none'; camera 'none'; encrypted-media 'none'; fullscreen 'self'; geolocation 'none'; gyroscope 'none'; magnetometer 'none'; microphone 'none'; midi 'none'; payment 'none'; usb 'none'; vr 'none';",
+      "accelerometer 'none'; ambient-light-sensor 'none'; camera 'none'; encrypted-media 'none'; fullscreen 'self'; geolocation 'none'; gyroscope 'none'; magnetometer 'none'; microphone 'none'; midi 'none'; payment 'none'; usb 'none';",
   };
 
   for (const [key, value] of Object.entries(securityHeaders)) {
