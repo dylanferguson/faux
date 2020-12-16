@@ -61,7 +61,7 @@ jobs:
           nvm use
       - run: npm ci
       - name: Run Cypress
-        uses: cypress-io/github-action@v1
+        uses: cypress-io/github-action@v2
         with:
           config: baseUrl=${{ needs.vercel_deploy.outputs.preview_url }}
           install: false
