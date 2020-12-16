@@ -80,6 +80,11 @@ class MyDocument extends Document {
             href="https://www.googletagmanager.com"
             crossOrigin=""
           />
+          <link
+            rel="preconnect"
+            href="https://www.google-analytics.com"
+            crossOrigin=""
+          />
           {process.env.NODE_ENV === "production" && (
             <>
               <script
