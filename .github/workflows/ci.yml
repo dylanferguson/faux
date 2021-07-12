@@ -97,6 +97,6 @@ jobs:
       - uses: actions/checkout@v2
       - name: "`linkcheck` deployment"
         run: |
-          curl -s https://api.github.com/repos/filiph/linkcheck/releases/latest | jq '.assets[] | select(.name|test("linux")) | .browser_download_url' | xargs curl -sL -o linkcheck
+          curl -s https://api.github.com/repos/filiph/linkcheck/releases/latest | jq '.assets[] | select(.name|test("linux-x64")) | .browser_download_url' | xargs curl -sL | tar -xz --strip-components 1
           chmod +x linkcheck
           ./linkcheck --external ${{ needs.vercel_deploy.outputs.preview_url }} --skip-file .github/workflows/linkcheck-skipfile.txt
