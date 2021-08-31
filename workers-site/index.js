@@ -86,7 +86,7 @@ function setSecurityHeaders(response) {
     "X-Xss-Protection": "1; mode=block",
     "X-Frame-Options": "DENY",
     "Referrer-Policy": "no-referrer",
-    "Feature-Policy":
+    "Permissions-Policy":
       "accelerometer 'none'; ambient-light-sensor 'none'; camera 'none'; encrypted-media 'none'; fullscreen 'self'; geolocation 'none'; gyroscope 'none'; magnetometer 'none'; microphone 'none'; midi 'none'; payment 'none'; usb 'none';",
   };
 
