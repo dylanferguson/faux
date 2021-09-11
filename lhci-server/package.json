@@ -4,11 +4,11 @@
   "private": true,
   "main": "server.js",
   "engines": {
-    "node": "12.17.x"
+    "node": "14.x"
   },
   "dependencies": {
-    "@lhci/server": "0.4.x",
-    "pg": "^7.12.1",
-    "pg-hstore": "^2.3.3"
+    "@lhci/server": "^0.8.1",
+    "pg": "^8.7.1",
+    "pg-hstore": "^2.3.4"
   }
 }
