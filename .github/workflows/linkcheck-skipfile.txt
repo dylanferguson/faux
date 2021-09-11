@@ -2,8 +2,11 @@
 https://fonts.gstatic.com/?
 https://www.googletagmanager.com/?
 
-# Akamai blocks linkchecker's UA
+# Akamai blocks linkchecker
 https://www.akamai.com/us/en/products/performance/cloudlets/edge-redirector.jsp
 
 # HTTP 200 but missing anchor (?)
 https://tailwindcss.com/#designed-to-be-customized
+
+# Consistent 503 response
+https://developers.cloudflare.com/workers/.*
