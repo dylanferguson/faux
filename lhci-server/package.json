@@ -10,5 +10,8 @@
     "@lhci/server": "^0.8.1",
     "pg": "^8.7.1",
     "pg-hstore": "^2.3.4"
+  },
+  "volta": {
+    "extends": "../package.json"
   }
 }
