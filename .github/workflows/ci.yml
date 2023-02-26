@@ -16,11 +16,7 @@ jobs:
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
             ${{ runner.os }}-node-
-      - name: Node install
-        shell: bash -l {0}
-        run: |
-          nvm install
-          nvm use
+      - uses: volta-cli/action@v3
       - run: |
           npm ci
           npm run format:check
@@ -54,11 +50,7 @@ jobs:
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
             ${{ runner.os }}-node-
-      - name: Node install
-        shell: bash -l {0}
-        run: |
-          nvm install
-          nvm use
+      - uses: volta-cli/action@v3
       - run: npm ci
       - name: Run Cypress
         uses: cypress-io/github-action@v2

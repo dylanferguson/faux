@@ -28,11 +28,7 @@ jobs:
             ${{ runner.os }}-build-${{ env.cache-name }}-
             ${{ runner.os }}-build-
             ${{ runner.os }}-
-      - name: Node install
-        shell: bash -l {0}
-        run: |
-          nvm install
-          nvm use
+      - uses: volta-cli/action@v3
       - name: Predeploy
         run: |
           npm ci
