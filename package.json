@@ -43,7 +43,7 @@
   "dependencies": {
     "@contentful/rich-text-html-renderer": "^14.1.2",
     "@prefresh/next": "^1.5.0",
-    "@sentry/browser": "^5.30.0",
+    "@sentry/browser": "^8.33.1",
     "algoliasearch": "^4.12.1",
     "classnames": "^2.3.1",
     "next": "^9.4.4",
